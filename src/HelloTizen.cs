@@ -20,9 +20,48 @@ namespace Tizen
 	{
 		public class AppRegistry {}
 
-		public class UiApp
+		public class App
+		{
+			public virtual bool OnAppInitializing(AppRegistry appRegistry)
+			{
+				return true;
+			}
+
+			public virtual bool OnAppInitialized()
+			{
+				return true;
+			}
+
+			public virtual bool OnAppWillTerminate()
+			{
+				return true;
+			}
+
+			public virtual bool OnAppTerminating(Tizen.App.AppRegistry appRegistry, bool forcedTermination = false)
+			{
+				return true;
+			}
+
+			public virtual void OnLowMemory()
+			{
+			}
+
+			public virtual void OnBatteryLevelChanged(Tizen.System.BatteryLevel batteryLevel)
+			{
+			}
+		}
+
+		public class UiApp : App
 		{
 			public /*result*/ void AddFrame(Tizen.UI.Controls.Frame frame)
+			{
+			}
+
+			public virtual void OnForeground()
+			{
+			}
+
+			public virtual void OnBackground()
 			{
 			}
 		}
@@ -30,7 +69,12 @@ namespace Tizen
 
 	namespace System
 	{
-		interface IScreenEventListener {}
+		interface IScreenEventListener
+		{
+			void OnScreenOn();
+			void OnScreenOff();
+		}
+
 		public enum BatteryLevel {}
 	}
 }
@@ -68,7 +112,7 @@ public class HelloTizenApp : Tizen.App.UiApp, Tizen.System.IScreenEventListener
 	}
 
 	// Called when the UiApp is initializing.
-	public virtual bool OnAppInitializing(Tizen.App.AppRegistry appRegistry)
+	public override bool OnAppInitializing(Tizen.App.AppRegistry appRegistry)
 	{
 		// TODO:
 		// Initialize Frame and App specific data.
@@ -86,7 +130,7 @@ public class HelloTizenApp : Tizen.App.UiApp, Tizen.System.IScreenEventListener
 	}
 
 	// Called when the UiApp initializing is finished. 
-	public virtual bool OnAppInitialized()
+	public override bool OnAppInitialized()
 	{
 		// TODO:
 		// Comment.
@@ -101,7 +145,7 @@ public class HelloTizenApp : Tizen.App.UiApp, Tizen.System.IScreenEventListener
 	}
 	
 	// Called when the UiApp is requested to terminate. 
-	public virtual bool OnAppWillTerminate()
+	public override bool OnAppWillTerminate()
 	{
 		// TODO:
 		// Comment.
@@ -109,7 +153,7 @@ public class HelloTizenApp : Tizen.App.UiApp, Tizen.System.IScreenEventListener
 	}
 	
 	// Called when the UiApp is terminating.
-	public virtual bool OnAppTerminating(Tizen.App.AppRegistry appRegistry, bool forcedTermination = false)
+	public override bool OnAppTerminating(Tizen.App.AppRegistry appRegistry, bool forcedTermination = false)
 	{
 		// TODO:
 		// Deallocate resources allocated by this App for termination.
@@ -118,28 +162,28 @@ public class HelloTizenApp : Tizen.App.UiApp, Tizen.System.IScreenEventListener
 	}
 
 	// Called when the UiApp's frame moves to the top of the screen.
-	public virtual void OnForeground()
+	public override void OnForeground()
 	{
 		// TODO:
 		// Start or resume drawing when the application is moved to the foreground.
 	}
 
 	// Called when this UiApp's frame is moved from top of the screen to the background.
-	public virtual void OnBackground()
+	public override void OnBackground()
 	{
 		// TODO:
 		// Stop drawing when the application is moved to the background.
 	}
 
 	// Called when the system memory is not sufficient to run the UiApp any further.
-	public virtual void OnLowMemory()
+	public override void OnLowMemory()
 	{
 		// TODO:
 		// Free unused resources or close the application.
 	}
 
 	// Called when the battery level changes.
-	public virtual void OnBatteryLevelChanged(Tizen.System.BatteryLevel batteryLevel)
+	public override void OnBatteryLevelChanged(Tizen.System.BatteryLevel batteryLevel)
 	{
 		// TODO:
 		// Handle any changes in battery level here.
@@ -148,14 +192,14 @@ public class HelloTizenApp : Tizen.App.UiApp, Tizen.System.IScreenEventListener
 
 
 	// Called when the screen turns on.
-	public virtual void OnScreenOn()
+	public void OnScreenOn()
     {
 		// TODO:
 		// Get the released resources or resume the operations that were paused or stopped in OnScreenOff().
     }
 
 	// Called when the screen turns off.
-	public virtual void OnScreenOff()
+	public void OnScreenOff()
 	{
 		// TODO:
 		// Unless there is a strong reason to do otherwise, release resources (such as 3D, media, and sensors) to allow the device
