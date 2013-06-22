@@ -77,6 +77,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Tizen\" />
+    <Folder Include="Tizen\UI\" />
+    <Folder Include="Tizen\UI\Controls\" />
+    <Folder Include="Tizen\App\" />
+    <Folder Include="Tizen\System\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -87,6 +92,17 @@
     <Compile Include="..\src\HelloTizen.cs">
       <Link>HelloTizen.cs</Link>
     </Compile>
+    <Compile Include="Tizen\UI\Controls\Frame.cs" />
+    <Compile Include="Tizen\App\AppRegistry.cs" />
+    <Compile Include="Tizen\App\App.cs" />
+    <Compile Include="Tizen\App\UiApp.cs" />
+    <Compile Include="Tizen\System\IScreenEventListener.cs" />
+    <Compile Include="Tizen\System\BatteryLevel.cs" />
+    <Compile Include="HelloTizenFrame.cs" />
+    <Compile Include="Tizen\UI\Window.cs" />
+    <Compile Include="Tizen\UI\Container.cs" />
+    <Compile Include="Tizen\UI\Control.cs" />
+    <Compile Include="Tizen\Constants.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

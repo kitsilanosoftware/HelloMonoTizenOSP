@@ -1,95 +1,5 @@
-//#include <FApp.h>
-//#include <FBase.h>
-//#include <FSystem.h>
-//#include <FUi.h>
-//#include <FUiIme.h>
-//#include <FGraphics.h>
-//#include <gl.h>
-
-namespace Tizen
-{
-	namespace UI
-	{
-		namespace Controls
-		{
-			public class Frame {}
-		}
-	}
-
-	namespace App
-	{
-		public class AppRegistry {}
-
-		public class App
-		{
-			public virtual bool OnAppInitializing(AppRegistry appRegistry)
-			{
-				return true;
-			}
-
-			public virtual bool OnAppInitialized()
-			{
-				return true;
-			}
-
-			public virtual bool OnAppWillTerminate()
-			{
-				return true;
-			}
-
-			public virtual bool OnAppTerminating(Tizen.App.AppRegistry appRegistry, bool forcedTermination = false)
-			{
-				return true;
-			}
-
-			public virtual void OnLowMemory()
-			{
-			}
-
-			public virtual void OnBatteryLevelChanged(Tizen.System.BatteryLevel batteryLevel)
-			{
-			}
-		}
-
-		public class UiApp : App
-		{
-			public /*result*/ void AddFrame(Tizen.UI.Controls.Frame frame)
-			{
-			}
-
-			public virtual void OnForeground()
-			{
-			}
-
-			public virtual void OnBackground()
-			{
-			}
-		}
-	}
-
-	namespace System
-	{
-		interface IScreenEventListener
-		{
-			void OnScreenOn();
-			void OnScreenOff();
-		}
-
-		public enum BatteryLevel {}
-	}
-}
 
 
-class HelloTizenFrame : Tizen.UI.Controls.Frame
-{
-	public void Construct()
-	{
-	}
-
-	public void SetName(string name)
-	{
-	}
-}
 
 
 /**
@@ -101,14 +11,6 @@ public class HelloTizenApp : Tizen.App.UiApp, Tizen.System.IScreenEventListener
 	public static Tizen.App.UiApp CreateInstance()
 	{
 		return new HelloTizenApp();
-	}
-
-	HelloTizenApp()
-	{
-	}
-
-	~HelloTizenApp()
-	{
 	}
 
 	// Called when the UiApp is initializing.
