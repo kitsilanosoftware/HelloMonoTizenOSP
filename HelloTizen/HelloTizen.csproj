@@ -104,6 +104,8 @@
     <Compile Include="Tizen\UI\Control.cs" />
     <Compile Include="Tizen\Constants.cs" />
     <Compile Include="HelloTizen.cs" />
+    <Compile Include="HelloTizenEntry.cs" />
+    <Compile Include="Tizen\Utilities.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

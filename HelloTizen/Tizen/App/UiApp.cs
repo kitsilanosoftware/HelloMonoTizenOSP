@@ -1,4 +1,6 @@
 
+using System;
+
 namespace Tizen.App
 {
 	public class UiApp : App
@@ -13,6 +15,11 @@ namespace Tizen.App
 
 		public virtual void OnBackground()
 		{
+		}
+
+		public static int Execute(Func<UiApp> createInstance, string[] args)
+		{
+			return Constants.E_SUCCESS;
 		}
 	}
 }
