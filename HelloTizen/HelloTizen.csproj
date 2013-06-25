@@ -92,9 +92,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="..\src\HelloTizen.cs">
-      <Link>HelloTizen.cs</Link>
-    </Compile>
     <Compile Include="Tizen\UI\Controls\Frame.cs" />
     <Compile Include="Tizen\App\AppRegistry.cs" />
     <Compile Include="Tizen\App\App.cs" />
@@ -106,6 +103,7 @@
     <Compile Include="Tizen\UI\Container.cs" />
     <Compile Include="Tizen\UI\Control.cs" />
     <Compile Include="Tizen\Constants.cs" />
+    <Compile Include="HelloTizen.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
