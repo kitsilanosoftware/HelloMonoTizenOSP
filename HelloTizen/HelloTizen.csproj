@@ -80,20 +80,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Source\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main.cs" />
-    <Compile Include="AppDelegate.cs" />
-    <Compile Include="HelloTizenFrame.cs" />
-    <Compile Include="AppResourceId.cs" />
-    <Compile Include="HelloTizenFormFactory.cs" />
-    <Compile Include="HelloTizenMainForm.cs" />
-    <Compile Include="HelloTizenPanelFactory.cs" />
-    <Compile Include="HelloTizen.cs" />
-    <Compile Include="HelloTizenEntry.cs" />
+    <Compile Include="Source\AppDelegate.cs" />
+    <Compile Include="Source\AppResourceId.cs" />
+    <Compile Include="Source\HelloTizen.cs" />
+    <Compile Include="Source\HelloTizenEntry.cs" />
+    <Compile Include="Source\HelloTizenFormFactory.cs" />
+    <Compile Include="Source\HelloTizenFrame.cs" />
+    <Compile Include="Source\HelloTizenMainForm.cs" />
+    <Compile Include="Source\HelloTizenPanelFactory.cs" />
+    <Compile Include="Source\Main.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
