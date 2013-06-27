@@ -1,101 +1,87 @@
-#include "HelloTizenMainForm.h"
-#include "AppResourceId.h"
 
-using namespace Tizen::Base;
-using namespace Tizen::App;
-using namespace Tizen::Ui;
-using namespace Tizen::Ui::Controls;
-using namespace Tizen::Ui::Scenes;
+using Tizen;
 
 
-HelloTizenMainForm::HelloTizenMainForm(void)
+public class HelloTizenMainForm : Tizen.UI.Controls.Form,
+                                  Tizen.UI.IActionEventListener,
+                                  Tizen.UI.Controls.IFormBackEventListener,
+                                  Tizen.UI.Scenes.ISceneEventListener
 {
-}
+	public const int ID_BUTTON_OK = 101;
 
-HelloTizenMainForm::~HelloTizenMainForm(void)
-{
-}
-
-bool
-HelloTizenMainForm::Initialize(void)
-{
-	Construct(IDF_FORM);
-
-	return true;
-}
-
-result
-HelloTizenMainForm::OnInitializing(void)
-{
-	result r = E_SUCCESS;
-
-	// TODO:
-	// Add your initialization code here
-
-	// Setup back event listener
-	SetFormBackEventListener(this);
-
-	// Get a button via resource ID
-	Tizen::Ui::Controls::Button *pButtonOk = static_cast<Button*>(GetControl(IDC_BUTTON_OK));
-	if (pButtonOk != null)
+	bool Initialize()
 	{
-		pButtonOk->SetActionId(ID_BUTTON_OK);
-		pButtonOk->AddActionEventListener(*this);
+		//Construct(IDF_FORM);
+		return true;
 	}
 
-	return r;
-}
-
-result
-HelloTizenMainForm::OnTerminating(void)
-{
-	result r = E_SUCCESS;
-
-	// TODO:
-	// Add your termination code here
-	return r;
-}
-
-void
-HelloTizenMainForm::OnActionPerformed(const Tizen::Ui::Control& source, int actionId)
-{
-	SceneManager* pSceneManager = SceneManager::GetInstance();
-	AppAssert(pSceneManager);
-
-	switch(actionId)
+	ulong OnInitializing()
 	{
-	case ID_BUTTON_OK:
-		AppLog("OK Button is clicked!");
-		break;
+		ulong r = Tizen.Constants.E_SUCCESS;
 
-	default:
-		break;
+		// TODO:
+		// Add your initialization code here
+
+		// Setup back event listener
+		//SetFormBackEventListener(this);
+
+		// Get a button via resource ID
+		//Tizen.UI.Controls.Button buttonOk = (Tizen.UI.Controls.Button)GetControl(IDC_BUTTON_OK);
+		//if (buttonOk != null)
+		//{
+		//	buttonOk.SetActionId(ID_BUTTON_OK);
+		//	buttonOk.AddActionEventListener(this);
+		//}
+
+		return r;
+	}
+
+	ulong OnTerminating()
+	{
+		ulong r = Tizen.Constants.E_SUCCESS;
+
+		// TODO:
+		// Add your termination code here
+		return r;
+	}
+
+	void OnActionPerformed(Tizen.UI.Control source, int actionId)
+	{
+		//SceneManager sceneManager = SceneManager::GetInstance();
+		//Utilities.AppAssert(pSceneManager);
+
+		switch(actionId)
+		{
+		case ID_BUTTON_OK:
+			Utilities.AppLog("OK Button is clicked!");
+			break;
+
+		default:
+			break;
+		}
+	}
+
+	void OnFormBackRequested(Tizen.UI.Controls.Form source)
+	{
+		//Tizen.App.UiApp app = UiApp::GetInstance();
+		//Utilities.AppAssert(app != null);
+		//app.Terminate();
+	}
+
+	void OnSceneActivatedN(Tizen.UI.Scenes.SceneId previousSceneId,
+						   Tizen.UI.Scenes.SceneId currentSceneId,
+	                       Tizen.Base.Collection.IList args)
+	{
+		// TODO:
+		// Add your scene activate code here
+		Utilities.AppLog("OnSceneActivatedN");
+	}
+
+	void OnSceneDeactivated(Tizen.UI.Scenes.SceneId currentSceneId,
+										   Tizen.UI.Scenes.SceneId nextSceneId)
+	{
+		// TODO:
+		// Add your scene deactivate code here
+		Utilities.AppLog("OnSceneDeactivated");
 	}
 }
-
-void
-HelloTizenMainForm::OnFormBackRequested(Tizen::Ui::Controls::Form& source)
-{
-	UiApp* pApp = UiApp::GetInstance();
-	AppAssert(pApp);
-	pApp->Terminate();
-}
-
-void
-HelloTizenMainForm::OnSceneActivatedN(const Tizen::Ui::Scenes::SceneId& previousSceneId,
-										  const Tizen::Ui::Scenes::SceneId& currentSceneId, Tizen::Base::Collection::IList* pArgs)
-{
-	// TODO:
-	// Add your scene activate code here
-	AppLog("OnSceneActivatedN");
-}
-
-void
-HelloTizenMainForm::OnSceneDeactivated(const Tizen::Ui::Scenes::SceneId& currentSceneId,
-										   const Tizen::Ui::Scenes::SceneId& nextSceneId)
-{
-	// TODO:
-	// Add your scene deactivate code here
-	AppLog("OnSceneDeactivated");
-}
-

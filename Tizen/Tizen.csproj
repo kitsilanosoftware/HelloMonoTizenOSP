@@ -56,9 +56,15 @@
     <Compile Include="Tizen\UI\Scenes\SceneManager.cs" />
     <Compile Include="Tizen\UI\Scenes\IFormFactory.cs" />
     <Compile Include="Tizen\UI\Controls\Form.cs" />
+    <Compile Include="Tizen\UI\IActionEventListener.cs" />
+    <Compile Include="Tizen\UI\Controls\IFormBackEventListener.cs" />
+    <Compile Include="Tizen\UI\Scenes\ISceneEventListener.cs" />
+    <Compile Include="Tizen\Base\Collection\IList.cs" />
+    <Compile Include="Tizen\UI\Controls\Button.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tizen\UI\Scenes\" />
     <Folder Include="Tizen\Base\" />
+    <Folder Include="Tizen\Base\Collection\" />
   </ItemGroup>
 </Project>
