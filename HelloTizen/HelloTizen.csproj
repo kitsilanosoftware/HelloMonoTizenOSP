@@ -88,14 +88,12 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="HelloTizenFrame.cs" />
-    <Compile Include="HelloTizen.cs">
-      <DependentUpon>HelloTizenEntry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HelloTizenEntry.cs" />
     <Compile Include="AppResourceId.cs" />
     <Compile Include="HelloTizenFormFactory.cs" />
     <Compile Include="HelloTizenMainForm.cs" />
     <Compile Include="HelloTizenPanelFactory.cs" />
+    <Compile Include="HelloTizen.cs" />
+    <Compile Include="HelloTizenEntry.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
