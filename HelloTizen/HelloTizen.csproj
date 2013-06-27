@@ -107,7 +107,6 @@
     <None Include="..\inc\tizenx.h">
       <Link>tizenx.h</Link>
     </None>
-    <None Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
