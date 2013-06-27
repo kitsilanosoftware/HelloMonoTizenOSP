@@ -98,9 +98,6 @@
     <None Include="..\inc\HelloTizenMainForm.h">
       <Link>HelloTizenMainForm.h</Link>
     </None>
-    <None Include="..\inc\tizenx.h">
-      <Link>tizenx.h</Link>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
