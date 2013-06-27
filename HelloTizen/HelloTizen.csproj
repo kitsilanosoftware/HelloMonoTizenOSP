@@ -94,8 +94,8 @@
     <Compile Include="HelloTizenEntry.cs" />
     <Compile Include="AppResourceId.cs" />
     <Compile Include="HelloTizenFormFactory.cs" />
-    <Compile Include="HelloTizenPanelFactory.cs" />
     <Compile Include="HelloTizenMainForm.cs" />
+    <Compile Include="HelloTizenPanelFactory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
