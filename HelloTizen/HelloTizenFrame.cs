@@ -1,4 +1,7 @@
 
+using Tizen;
+
+
 class HelloTizenFrame : Tizen.UI.Controls.Frame
 {
 	public void SetName(string name)

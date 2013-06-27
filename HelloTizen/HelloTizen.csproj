@@ -80,32 +80,47 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
-    <Folder Include="Tizen\" />
-    <Folder Include="Tizen\UI\" />
-    <Folder Include="Tizen\UI\Controls\" />
-    <Folder Include="Tizen\App\" />
-    <Folder Include="Tizen\System\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
+    <None Include="..\src\AppResourceId.cs">
+      <Link>AppResourceId.cs</Link>
+    </None>
+    <None Include="..\src\HelloTizenFormFactory.cs">
+      <Link>HelloTizenFormFactory.cs</Link>
+    </None>
+    <None Include="..\src\HelloTizenMainForm.cs">
+      <Link>HelloTizenMainForm.cs</Link>
+    </None>
+    <None Include="..\src\HelloTizenPanelFactory.cs">
+      <Link>HelloTizenPanelFactory.cs</Link>
+    </None>
+    <None Include="..\inc\AppResourceId.h">
+      <Link>AppResourceId.h</Link>
+    </None>
+    <None Include="..\inc\HelloTizenMainForm.h">
+      <Link>HelloTizenMainForm.h</Link>
+    </None>
+    <None Include="..\inc\HelloTizenPanelFactory.h">
+      <Link>HelloTizenPanelFactory.h</Link>
+    </None>
+    <None Include="..\inc\tizenx.h">
+      <Link>tizenx.h</Link>
+    </None>
+    <None Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Tizen\UI\Controls\Frame.cs" />
-    <Compile Include="Tizen\App\AppRegistry.cs" />
-    <Compile Include="Tizen\App\App.cs" />
-    <Compile Include="Tizen\App\UiApp.cs" />
-    <Compile Include="Tizen\System\IScreenEventListener.cs" />
-    <Compile Include="Tizen\System\BatteryLevel.cs" />
     <Compile Include="HelloTizenFrame.cs" />
-    <Compile Include="Tizen\UI\Window.cs" />
-    <Compile Include="Tizen\UI\Container.cs" />
-    <Compile Include="Tizen\UI\Control.cs" />
-    <Compile Include="Tizen\Constants.cs" />
     <Compile Include="HelloTizen.cs" />
     <Compile Include="HelloTizenEntry.cs" />
-    <Compile Include="Tizen\Utilities.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Tizen\Tizen.csproj">
+      <Project>{06C000DB-DA5B-491E-970B-54D5902A23EA}</Project>
+      <Name>Tizen</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
