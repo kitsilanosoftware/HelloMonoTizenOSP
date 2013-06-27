@@ -83,12 +83,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
-    <None Include="..\inc\AppResourceId.h">
-      <Link>AppResourceId.h</Link>
-    </None>
-    <None Include="..\inc\HelloTizenMainForm.h">
-      <Link>HelloTizenMainForm.h</Link>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
