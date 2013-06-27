@@ -1,24 +1,19 @@
-#include "HelloTizenPanelFactory.h"
 
-using namespace Tizen::Ui::Scenes;
+using Tizen;
+using Tizen.UI.Scenes;
 
 
-HelloTizenPanelFactory::HelloTizenPanelFactory(void)
+public class HelloTizenPanelFactory : Tizen.UI.Scenes.IPanelFactory
 {
-}
+	public /*override*/ Tizen.UI.Controls.Panel CreatePanelN(Tizen.Base.String panelId, Tizen.UI.Scenes.SceneId sceneId)
+	{
+		SceneManager sceneManager = SceneManager.GetInstance();
+		Utilities.AppAssert(sceneManager != null);
 
-HelloTizenPanelFactory::~HelloTizenPanelFactory(void)
-{
-}
+		Tizen.UI.Controls.Panel newPanel = null;
 
-Tizen::Ui::Controls::Panel*
-HelloTizenPanelFactory::CreatePanelN(const Tizen::Base::String& panelId, const Tizen::Ui::Scenes::SceneId& sceneId)
-{
-	SceneManager* pSceneManager = SceneManager::GetInstance();
-	AppAssert(pSceneManager);
-	Tizen::Ui::Controls::Panel* pNewPanel = null;
-
-	// TODO:
-	// Add your panel creation code here
-	return pNewPanel;
+		// TODO:
+		// Add your panel creation code here
+		return newPanel;
+	}
 }

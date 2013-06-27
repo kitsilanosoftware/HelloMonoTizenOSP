@@ -92,17 +92,11 @@
     <None Include="..\src\HelloTizenMainForm.cs">
       <Link>HelloTizenMainForm.cs</Link>
     </None>
-    <None Include="..\src\HelloTizenPanelFactory.cs">
-      <Link>HelloTizenPanelFactory.cs</Link>
-    </None>
     <None Include="..\inc\AppResourceId.h">
       <Link>AppResourceId.h</Link>
     </None>
     <None Include="..\inc\HelloTizenMainForm.h">
       <Link>HelloTizenMainForm.h</Link>
-    </None>
-    <None Include="..\inc\HelloTizenPanelFactory.h">
-      <Link>HelloTizenPanelFactory.h</Link>
     </None>
     <None Include="..\inc\tizenx.h">
       <Link>tizenx.h</Link>
@@ -114,6 +108,9 @@
     <Compile Include="HelloTizenFrame.cs" />
     <Compile Include="HelloTizen.cs" />
     <Compile Include="HelloTizenEntry.cs" />
+    <Compile Include="..\src\HelloTizenPanelFactory.cs">
+      <Link>HelloTizenPanelFactory.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

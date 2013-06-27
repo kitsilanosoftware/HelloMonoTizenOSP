@@ -49,5 +49,14 @@
     <Compile Include="Tizen\UI\Control.cs" />
     <Compile Include="Tizen\Constants.cs" />
     <Compile Include="Tizen\Utilities.cs" />
+    <Compile Include="Tizen\UI\Scenes\IPanelFactory.cs" />
+    <Compile Include="Tizen\UI\Controls\Panel.cs" />
+    <Compile Include="Tizen\Base\String.cs" />
+    <Compile Include="Tizen\UI\Scenes\SceneId.cs" />
+    <Compile Include="Tizen\UI\Scenes\SceneManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tizen\UI\Scenes\" />
+    <Folder Include="Tizen\Base\" />
   </ItemGroup>
 </Project>

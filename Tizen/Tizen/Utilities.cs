@@ -3,6 +3,10 @@ namespace Tizen
 {
 	public class Utilities
 	{
+		public static void AppAssert(bool condition)
+		{	
+		}
+
 		public static void AppLog(string format, params object[] args)
 		{
 		}
