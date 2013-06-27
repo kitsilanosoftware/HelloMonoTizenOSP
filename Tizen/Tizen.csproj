@@ -54,6 +54,8 @@
     <Compile Include="Tizen\Base\String.cs" />
     <Compile Include="Tizen\UI\Scenes\SceneId.cs" />
     <Compile Include="Tizen\UI\Scenes\SceneManager.cs" />
+    <Compile Include="Tizen\UI\Scenes\IFormFactory.cs" />
+    <Compile Include="Tizen\UI\Controls\Form.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tizen\UI\Scenes\" />

@@ -17,7 +17,7 @@ public class EntryPoint
 		Utilities.AppLog("Application started.");
 
 		int r = Tizen.App.UiApp.Execute(HelloTizenApp.CreateInstance, args);
-		Utilities.TryLog(r == Constants.E_SUCCESS, "[%s] Application execution failed", Utilities.GetErrorMessage(r));
+		Utilities.TryLog(r == Tizen.Constants.E_SUCCESS, "[%s] Application execution failed", Utilities.GetErrorMessage(r));
 
 		Utilities.AppLog("Application finished.");
 

@@ -83,12 +83,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
-    <None Include="..\src\AppResourceId.cs">
-      <Link>AppResourceId.cs</Link>
-    </None>
-    <None Include="..\src\HelloTizenFormFactory.cs">
-      <Link>HelloTizenFormFactory.cs</Link>
-    </None>
     <None Include="..\src\HelloTizenMainForm.cs">
       <Link>HelloTizenMainForm.cs</Link>
     </None>
@@ -103,11 +97,13 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="HelloTizenFrame.cs" />
-    <Compile Include="HelloTizen.cs" />
-    <Compile Include="HelloTizenEntry.cs" />
-    <Compile Include="..\src\HelloTizenPanelFactory.cs">
-      <Link>HelloTizenPanelFactory.cs</Link>
+    <Compile Include="HelloTizen.cs">
+      <DependentUpon>HelloTizenEntry.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelloTizenEntry.cs" />
+    <Compile Include="AppResourceId.cs" />
+    <Compile Include="HelloTizenFormFactory.cs" />
+    <Compile Include="HelloTizenPanelFactory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
