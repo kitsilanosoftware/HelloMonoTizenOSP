@@ -2,11 +2,9 @@
 # File which we don't want Git to track
 
 *.DS_Store
-HelloTizen.userprefs
+*.userprefs
 
-HelloTizen/.DS_Store
 HelloTizen/bin/**
 HelloTizen/obj/**
 
-Tizen/.DS_Store
 Tizen/bin/**
