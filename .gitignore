@@ -4,7 +4,5 @@
 *.DS_Store
 *.userprefs
 
-HelloTizen/bin/**
-HelloTizen/obj/**
-
-Tizen/bin/**
+bin/
+obj/
