@@ -2,10 +2,10 @@
 using Tizen;
 
 
-public class HelloTizenMainForm : Tizen.UI.Controls.Form,
-                                  Tizen.UI.IActionEventListener,
-                                  Tizen.UI.Controls.IFormBackEventListener,
-                                  Tizen.UI.Scenes.ISceneEventListener
+public class HelloTizenMainForm : Tizen.Ui.Controls.Form,
+                                  Tizen.Ui.IActionEventListener,
+                                  Tizen.Ui.Controls.IFormBackEventListener,
+                                  Tizen.Ui.Scenes.ISceneEventListener
 {
 	public const int ID_BUTTON_OK = 101;
 
@@ -45,7 +45,7 @@ public class HelloTizenMainForm : Tizen.UI.Controls.Form,
 		return r;
 	}
 
-	void OnActionPerformed(Tizen.UI.Control source, int actionId)
+	void OnActionPerformed(Tizen.Ui.Control source, int actionId)
 	{
 		//SceneManager sceneManager = SceneManager::GetInstance();
 		//Utilities.AppAssert(pSceneManager);
@@ -61,15 +61,15 @@ public class HelloTizenMainForm : Tizen.UI.Controls.Form,
 		}
 	}
 
-	void OnFormBackRequested(Tizen.UI.Controls.Form source)
+	void OnFormBackRequested(Tizen.Ui.Controls.Form source)
 	{
 		//Tizen.App.UiApp app = UiApp::GetInstance();
 		//Utilities.AppAssert(app != null);
 		//app.Terminate();
 	}
 
-	void OnSceneActivatedN(Tizen.UI.Scenes.SceneId previousSceneId,
-						   Tizen.UI.Scenes.SceneId currentSceneId,
+	void OnSceneActivatedN(Tizen.Ui.Scenes.SceneId previousSceneId,
+						   Tizen.Ui.Scenes.SceneId currentSceneId,
 	                       Tizen.Base.Collection.IList args)
 	{
 		// TODO:
@@ -77,8 +77,8 @@ public class HelloTizenMainForm : Tizen.UI.Controls.Form,
 		Utilities.AppLog("OnSceneActivatedN");
 	}
 
-	void OnSceneDeactivated(Tizen.UI.Scenes.SceneId currentSceneId,
-										   Tizen.UI.Scenes.SceneId nextSceneId)
+	void OnSceneDeactivated(Tizen.Ui.Scenes.SceneId currentSceneId,
+										   Tizen.Ui.Scenes.SceneId nextSceneId)
 	{
 		// TODO:
 		// Add your scene deactivate code here

@@ -1,9 +1,9 @@
 
-namespace Tizen.UI.Scenes
+namespace Tizen.Ui.Scenes
 {
 	public interface IFormFactory
 	{
-		Tizen.UI.Controls.Form CreateFormN(Tizen.Base.String formId, Tizen.UI.Scenes.SceneId sceneId);
+		Tizen.Ui.Controls.Form CreateFormN(Tizen.Base.String formId, Tizen.Ui.Scenes.SceneId sceneId);
 	}
 }
 

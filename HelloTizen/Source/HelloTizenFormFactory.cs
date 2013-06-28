@@ -1,15 +1,15 @@
 
 using Tizen;
-using Tizen.UI.Scenes;
+using Tizen.Ui.Scenes;
 
 
-public class HelloTizenFormFactory : Tizen.UI.Scenes.IFormFactory
+public class HelloTizenFormFactory : Tizen.Ui.Scenes.IFormFactory
 {
-	public Tizen.UI.Controls.Form CreateFormN (Tizen.Base.String formId, Tizen.UI.Scenes.SceneId sceneId)
+	public Tizen.Ui.Controls.Form CreateFormN (Tizen.Base.String formId, Tizen.Ui.Scenes.SceneId sceneId)
 	{
 		SceneManager sceneManager = SceneManager.GetInstance();
 		Utilities.AppAssert(sceneManager != null);
-		Tizen.UI.Controls.Form newForm = null;
+		Tizen.Ui.Controls.Form newForm = null;
 
 		if (formId.Equals(Constants.IDF_FORM))
 		{

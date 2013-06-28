@@ -1,6 +1,6 @@
 using System;
 
-namespace Tizen.UI
+namespace Tizen.Ui
 {
 	public interface IActionEventListener
 	{

@@ -1,6 +1,6 @@
 using System;
 
-namespace Tizen.UI.Scenes
+namespace Tizen.Ui.Scenes
 {
 	public class SceneId
 	{

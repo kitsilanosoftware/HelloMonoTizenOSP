@@ -1,11 +1,11 @@
 
 using Tizen;
-using Tizen.UI.Scenes;
+using Tizen.Ui.Scenes;
 
 
-public class HelloTizenPanelFactory : Tizen.UI.Scenes.IPanelFactory
+public class HelloTizenPanelFactory : Tizen.Ui.Scenes.IPanelFactory
 {
-	public /*override*/ Tizen.UI.Controls.Panel CreatePanelN(Tizen.Base.String panelId, Tizen.UI.Scenes.SceneId sceneId)
+	public /*override*/ Tizen.UI.Controls.Panel CreatePanelN(Tizen.Base.String panelId, Tizen.Ui.Scenes.SceneId sceneId)
 	{
 		SceneManager sceneManager = SceneManager.GetInstance();
 		Utilities.AppAssert(sceneManager != null);

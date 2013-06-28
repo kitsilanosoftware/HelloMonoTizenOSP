@@ -1,5 +1,5 @@
 
-namespace Tizen.UI.Controls
+namespace Tizen.Ui.Controls
 {
 	public interface IFormBackEventListener
 	{

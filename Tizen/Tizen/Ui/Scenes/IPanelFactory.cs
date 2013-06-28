@@ -1,6 +1,6 @@
 
 
-namespace Tizen.UI.Scenes
+namespace Tizen.Ui.Scenes
 {
 	public interface IPanelFactory
 	{

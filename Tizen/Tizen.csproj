@@ -38,7 +38,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Compile Include="Tizen\UI\Controls\Frame.cs" />
+    <Compile Include="Tizen\Ui\Controls\Frame.cs" />
     <Compile Include="Tizen\App\AppRegistry.cs" />
     <Compile Include="Tizen\App\App.cs" />
     <Compile Include="Tizen\App\UiApp.cs" />

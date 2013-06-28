@@ -1,5 +1,5 @@
 
-namespace Tizen.UI
+namespace Tizen.Ui
 {
 	public class Window : Container
 	{

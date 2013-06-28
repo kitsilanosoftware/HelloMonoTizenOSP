@@ -1,4 +1,4 @@
-namespace Tizen.UI
+namespace Tizen.Ui
 {
 	public class Control
 	{
