@@ -44,26 +44,26 @@
     <Compile Include="Tizen\App\UiApp.cs" />
     <Compile Include="Tizen\System\IScreenEventListener.cs" />
     <Compile Include="Tizen\System\BatteryLevel.cs" />
-    <Compile Include="Tizen\UI\Window.cs" />
-    <Compile Include="Tizen\UI\Container.cs" />
-    <Compile Include="Tizen\UI\Control.cs" />
+    <Compile Include="Tizen\Ui\Window.cs" />
+    <Compile Include="Tizen\Ui\Container.cs" />
+    <Compile Include="Tizen\Ui\Control.cs" />
     <Compile Include="Tizen\Constants.cs" />
     <Compile Include="Tizen\Utilities.cs" />
-    <Compile Include="Tizen\UI\Scenes\IPanelFactory.cs" />
-    <Compile Include="Tizen\UI\Controls\Panel.cs" />
+    <Compile Include="Tizen\Ui\Scenes\IPanelFactory.cs" />
+    <Compile Include="Tizen\Ui\Controls\Panel.cs" />
     <Compile Include="Tizen\Base\String.cs" />
-    <Compile Include="Tizen\UI\Scenes\SceneId.cs" />
-    <Compile Include="Tizen\UI\Scenes\SceneManager.cs" />
-    <Compile Include="Tizen\UI\Scenes\IFormFactory.cs" />
-    <Compile Include="Tizen\UI\Controls\Form.cs" />
-    <Compile Include="Tizen\UI\IActionEventListener.cs" />
-    <Compile Include="Tizen\UI\Controls\IFormBackEventListener.cs" />
-    <Compile Include="Tizen\UI\Scenes\ISceneEventListener.cs" />
+    <Compile Include="Tizen\Ui\Scenes\SceneId.cs" />
+    <Compile Include="Tizen\Ui\Scenes\SceneManager.cs" />
+    <Compile Include="Tizen\Ui\Scenes\IFormFactory.cs" />
+    <Compile Include="Tizen\Ui\Controls\Form.cs" />
+    <Compile Include="Tizen\Ui\IActionEventListener.cs" />
+    <Compile Include="Tizen\Ui\Controls\IFormBackEventListener.cs" />
+    <Compile Include="Tizen\Ui\Scenes\ISceneEventListener.cs" />
     <Compile Include="Tizen\Base\Collection\IList.cs" />
-    <Compile Include="Tizen\UI\Controls\Button.cs" />
+    <Compile Include="Tizen\Ui\Controls\Button.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Tizen\UI\Scenes\" />
+    <Folder Include="Tizen\Ui\Scenes\" />
     <Folder Include="Tizen\Base\" />
     <Folder Include="Tizen\Base\Collection\" />
   </ItemGroup>
