@@ -1,10 +1,14 @@
 
 
-namespace Tizen.UI.Controls
+namespace Tizen.Ui.Controls
 {
-	public class Button
+	public class Button : Control
 	{
-		public Button ()
+		public void SetActionId(int actionId)
+		{
+		}
+
+		public void AddActionEventListener(IActionEventListener listener)
 		{
 		}
 	}

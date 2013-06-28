@@ -1,5 +1,7 @@
 
 using Tizen;
+using Tizen.Base;
+using Tizen.Ui.Scenes;
 
 
 class HelloTizenFrame : Tizen.Ui.Controls.Frame
@@ -11,16 +13,14 @@ class HelloTizenFrame : Tizen.Ui.Controls.Frame
 	ulong OnInitializing()
 	{
 		// Prepare Scene management.
-		//SceneManager* pSceneManager = SceneManager::GetInstance();
-		//static HelloTizenFormFactory formFactory;
-		//static HelloTizenPanelFactory panelFactory;
-		//pSceneManager->RegisterFormFactory(formFactory);
-		//pSceneManager->RegisterPanelFactory(panelFactory);
-		//pSceneManager->RegisterScene(L"workflow");
+		SceneManager sceneManager = SceneManager.GetInstance();
+		sceneManager.RegisterFormFactory(new HelloTizenFormFactory());
+		sceneManager.RegisterPanelFactory(new HelloTizenPanelFactory());
+		sceneManager.RegisterScene(new Tizen.Base.String("workflow"));
 
 		// Go to the scene.
 		ulong r = Tizen.Constants.E_FAILURE;
-		//r = pSceneManager->GoForward(SceneTransitionId(ID_SCNT_MAINSCENE));
+		r = sceneManager.GoForward(new Tizen.Base.String(Constants.ID_SCNT_MAINSCENE));
 
 		// TODO: Add your initialization code here
 		return r;

@@ -1,4 +1,7 @@
 
+using Tizen;
+
+
 namespace Tizen.Ui
 {
 	public class Container : Control
@@ -8,6 +11,15 @@ namespace Tizen.Ui
 			return Tizen.Constants.E_SUCCESS;
 		}
 
+		public Control GetControl(int index)
+		{
+			return null;
+		}
+
+		public Control GetControl(Base.String name, bool recursive=false)
+		{
+			return null;
+		}
 	}
 }
 

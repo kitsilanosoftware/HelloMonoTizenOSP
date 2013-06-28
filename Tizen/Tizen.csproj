@@ -5,11 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{06C000DB-DA5B-491E-970B-54D5902A23EA}</ProjectGuid>
-    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{9EDF0E89-8D2A-4213-80A1-AD04E3285A42}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Tizen</RootNamespace>
-    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>Tizen</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -34,9 +32,7 @@
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="monotouch" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Compile Include="Tizen\Ui\Controls\Frame.cs" />
     <Compile Include="Tizen\App\AppRegistry.cs" />
@@ -61,10 +57,12 @@
     <Compile Include="Tizen\Ui\Scenes\ISceneEventListener.cs" />
     <Compile Include="Tizen\Base\Collection\IList.cs" />
     <Compile Include="Tizen\Ui\Controls\Button.cs" />
+    <Compile Include="Tizen\System\PowerManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tizen\Ui\Scenes\" />
     <Folder Include="Tizen\Base\" />
     <Folder Include="Tizen\Base\Collection\" />
   </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

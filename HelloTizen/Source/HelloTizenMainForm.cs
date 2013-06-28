@@ -9,7 +9,7 @@ public class HelloTizenMainForm : Tizen.Ui.Controls.Form,
 {
 	public const int ID_BUTTON_OK = 101;
 
-	bool Initialize()
+	public bool Initialize()
 	{
 		//Construct(IDF_FORM);
 		return true;
@@ -23,15 +23,15 @@ public class HelloTizenMainForm : Tizen.Ui.Controls.Form,
 		// Add your initialization code here
 
 		// Setup back event listener
-		//SetFormBackEventListener(this);
+		SetFormBackEventListener(this);
 
 		// Get a button via resource ID
-		//Tizen.UI.Controls.Button buttonOk = (Tizen.UI.Controls.Button)GetControl(IDC_BUTTON_OK);
-		//if (buttonOk != null)
-		//{
-		//	buttonOk.SetActionId(ID_BUTTON_OK);
-		//	buttonOk.AddActionEventListener(this);
-		//}
+		Tizen.Ui.Controls.Button buttonOk = (Tizen.Ui.Controls.Button)GetControl(new Tizen.Base.String(Constants.IDC_BUTTON_OK));
+		if (buttonOk != null)
+		{
+			buttonOk.SetActionId(ID_BUTTON_OK);
+			buttonOk.AddActionEventListener(this);
+		}
 
 		return r;
 	}

@@ -13,10 +13,10 @@ public class HelloTizenFormFactory : Tizen.Ui.Scenes.IFormFactory
 
 		if (formId.Equals(Constants.IDF_FORM))
 		{
-			//HelloTizenMainForm form = new HelloTizenMainForm();
-			//form.Initialize();
-			//sceneManager.AddSceneEventListener(sceneId, form);
-			//newForm = form;
+			HelloTizenMainForm form = new HelloTizenMainForm();
+			form.Initialize();
+			sceneManager.AddSceneEventListener(sceneId, form);
+			newForm = form;
 		}
 		// TODO:
 		// Add your form creation code here

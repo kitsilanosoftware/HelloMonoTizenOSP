@@ -1,5 +1,6 @@
 
 using Tizen;
+using Tizen.System;
 
 
 /**
@@ -24,7 +25,7 @@ public class HelloTizenApp : Tizen.App.UiApp, Tizen.System.IScreenEventListener
 		// If this method returns false, the App will be terminated.
 
 		// Uncomment the following statement to listen to the screen on/off events.
-		//PowerManager::SetScreenEventListener(*this);
+		//PowerManager.SetScreenEventListener(this);
 
 		// TODO:
 		// Add your initialization code here
