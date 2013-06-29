@@ -1,15 +1,14 @@
 HelloTizen
 ==========
 
-"Hello World" app for Tizen, to be converted to C#
+The "Hello World" app from the Tizen SDK, converted from C++ to C#.
 
     /HelloTizen                   The HelloTizen sample application from the Tizen SDK, converted by hand to C#
     /Tizen                        Mocked up managed assembly for the Tizen SDK.   Just the subset needed for HelloTizen.
 
-All the HelloTizen application code is converted to C# as of 28th June 2013.
 
-There are still some decisions to be made on how to map typedefs and other language features which don't cleanly map from C++ into C#.
+TODO
 
-The proxy Tizen assembly still doesn't have any implementation.
-The first pass on that will be to write P/Invoke code by hand, and then to try to get that running.
-The second pass will be to switch to CppSharp, and automatically generate that assembly.
+- Generate more complete Tizen assemblies using CppSharp
+- Get the application running on the Tizen simulator
+- Create a MonoDevelop plugin which can launch the simulator
