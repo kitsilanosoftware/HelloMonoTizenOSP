@@ -6,11 +6,7 @@ HelloTizen
     /HelloTizen                   The HelloTizen sample application from the Tizen SDK, converted by hand to C#
     /Tizen                        Mocked up managed assembly for the Tizen SDK.   Just the subset needed for HelloTizen.
 
-    /ConsoleApp                   Default console application, for diffing the CSPROJ files against.
-    /Library                      Default library project, for diffing the CSPROJ files against.
-    /PortableClassLibrary         Default PCL, for diffing the CSPROJ files against.
-
-All the HelloTizen code is converted to C# as of 28th June 2013.
+All the HelloTizen application code is converted to C# as of 28th June 2013.
 
 There are still some decisions to be made on how to map typedefs and other language features which don't cleanly map from C++ into C#.
 
