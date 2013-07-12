@@ -36,6 +36,7 @@ How to build
     Switch to C:\SourceTreeProjects\CppSharp\build
     run GenerateProjects.bat
     choose [2] for VS2012 generation
+    cd vs2012
     open CppSharp.sln
 
 TODO
