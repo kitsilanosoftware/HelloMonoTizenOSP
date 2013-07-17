@@ -21,7 +21,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="??0Battery@System@Tizen@@AAE@XZ")]
-                public static extern IntPtr Battery0(global::System.IntPtr instance);
+                public static extern global::System.IntPtr Battery0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Gets the current charge remaining in the battery as a percentage.
@@ -29,7 +29,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="?GetCurrentLevelInPercentage@Battery@System@Tizen@@SAKAAH@Z")]
-                public static extern uint GetCurrentLevelInPercentage0(System.IntPtr level);
+                public static extern uint GetCurrentLevelInPercentage0(global::System.IntPtr level);
 
                 /// <summary>
                 /// Gets the current charging level of the battery.
@@ -45,13 +45,13 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="?IsCharging@Battery@System@Tizen@@SAKAA_N@Z")]
-                public static extern uint IsCharging0(System.IntPtr charging);
+                public static extern uint IsCharging0(global::System.IntPtr charging);
             }
 
-            public System.IntPtr _Instance { get; protected set; }
+            public global::System.IntPtr _Instance { get; protected set; }
 
             internal Battery(Battery.Internal* native)
-                : this(new System.IntPtr(native))
+                : this(new global::System.IntPtr(native))
             {
             }
 
@@ -60,7 +60,7 @@ namespace Tizen
             {
             }
 
-            internal Battery(System.IntPtr native)
+            internal Battery(global::System.IntPtr native)
             {
                 _Instance = native;
             }
@@ -79,7 +79,7 @@ namespace Tizen
             /// <summary>
             /// Gets the current charge remaining in the battery as a percentage.
             /// </summary>
-            public static uint GetCurrentLevelInPercentage(System.IntPtr level)
+            public static uint GetCurrentLevelInPercentage(global::System.IntPtr level)
             {
                 var arg0 = level;
                 var ret = Internal.GetCurrentLevelInPercentage0(arg0);
@@ -99,7 +99,7 @@ namespace Tizen
             /// <summary>
             /// Checks whether the battery is currently charging.
             /// </summary>
-            public static uint IsCharging(System.IntPtr charging)
+            public static uint IsCharging(global::System.IntPtr charging)
             {
                 var arg0 = charging;
                 var ret = Internal.IsCharging0(arg0);

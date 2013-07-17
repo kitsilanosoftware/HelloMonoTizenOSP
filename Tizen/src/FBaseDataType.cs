@@ -35,13 +35,13 @@ public unsafe partial class UUID_ : IDisposable
         [SuppressUnmanagedCodeSecurity]
         [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
             EntryPoint="??0UUID_@@QAE@XZ")]
-        public static extern System.IntPtr UUID_0(System.IntPtr instance);
+        public static extern global::System.IntPtr UUID_0(global::System.IntPtr instance);
     }
 
-    public System.IntPtr _Instance { get; protected set; }
+    public global::System.IntPtr _Instance { get; protected set; }
 
     internal UUID_(UUID_.Internal* native)
-        : this(new System.IntPtr(native))
+        : this(new global::System.IntPtr(native))
     {
     }
 
@@ -50,7 +50,7 @@ public unsafe partial class UUID_ : IDisposable
     {
     }
 
-    internal UUID_(System.IntPtr native)
+    internal UUID_(global::System.IntPtr native)
     {
         _Instance = native;
     }

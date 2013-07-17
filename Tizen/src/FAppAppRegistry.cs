@@ -21,7 +21,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="??0AppRegistry@App@Tizen@@AAE@XZ")]
-                public static extern IntPtr AppRegistry0(IntPtr instance);
+                public static extern global::System.IntPtr AppRegistry0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Adds a string value along with the specified key.
@@ -37,7 +37,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?Add@AppRegistry@App@Tizen@@QAEKABVString@Base@3@H@Z")]
-                public static extern uint Add1(System.IntPtr instance, System.IntPtr key, int value);
+                public static extern uint Add1(global::System.IntPtr instance, global::System.IntPtr key, int value);
 
                 /// <summary>
                 /// Adds a floating point value along with the specified key.
@@ -45,7 +45,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?Add@AppRegistry@App@Tizen@@QAEKABVString@Base@3@N@Z")]
-                public static extern uint Add2(System.IntPtr instance, System.IntPtr key, double value);
+                public static extern uint Add2(global::System.IntPtr instance, global::System.IntPtr key, double value);
 
                 /// <summary>
                 /// Sets a string value associated with the specified key.
@@ -53,7 +53,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?Set@AppRegistry@App@Tizen@@QAEKABVString@Base@3@0@Z")]
-                public static extern uint Set0(System.IntPtr instance, System.IntPtr key, System.IntPtr value);
+                public static extern uint Set0(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
 
                 /// <summary>
                 /// Sets an integer value associated with the specified key.
@@ -61,7 +61,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?Set@AppRegistry@App@Tizen@@QAEKABVString@Base@3@H@Z")]
-                public static extern uint Set1(System.IntPtr instance, System.IntPtr key, int value);
+                public static extern uint Set1(global::System.IntPtr instance, global::System.IntPtr key, int value);
 
                 /// <summary>
                 /// Sets a floating point value associated with the specified key.
@@ -69,7 +69,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?Set@AppRegistry@App@Tizen@@QAEKABVString@Base@3@N@Z")]
-                public static extern uint Set2(System.IntPtr instance, System.IntPtr key, double value);
+                public static extern uint Set2(global::System.IntPtr instance, global::System.IntPtr key, double value);
 
                 /// <summary>
                 /// Saves the values temporarily in the persistent storage. The %Save() method is invoked internally when the instance of this class is deleted.
@@ -77,7 +77,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?Save@AppRegistry@App@Tizen@@QAEKXZ")]
-                public static extern uint Save0(System.IntPtr instance);
+                public static extern uint Save0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Removes a preference associated with the specified key.
@@ -85,7 +85,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?Remove@AppRegistry@App@Tizen@@QAEKABVString@Base@3@@Z")]
-                public static extern uint Remove0(System.IntPtr instance, System.IntPtr key);
+                public static extern uint Remove0(global::System.IntPtr instance, global::System.IntPtr key);
 
                 /// <summary>
                 /// Gets a string value associated with the specified key.
@@ -93,7 +93,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?Get@AppRegistry@App@Tizen@@QBEKABVString@Base@3@AAV453@@Z")]
-                public static extern uint Get0(System.IntPtr instance, System.IntPtr key, System.IntPtr value);
+                public static extern uint Get0(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
 
                 /// <summary>
                 /// Gets an integer value associated with the specified key.
@@ -101,7 +101,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?Get@AppRegistry@App@Tizen@@QBEKABVString@Base@3@AAH@Z")]
-                public static extern uint Get00(System.IntPtr instance, System.IntPtr key, System.IntPtr value);
+                public static extern uint Get00(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
 
                 /// <summary>
                 /// Gets a floating point value associated with the specified key.
@@ -109,7 +109,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?Get@AppRegistry@App@Tizen@@QBEKABVString@Base@3@AAN@Z")]
-                public static extern uint Get1(System.IntPtr instance, System.IntPtr key, System.IntPtr value);
+                public static extern uint Get1(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
 
                 /// <summary>
                 /// Gets the %AppRegistry instance pointer.
@@ -117,13 +117,13 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="?GetInstance@AppRegistry@App@Tizen@@SAPAV123@XZ")]
-                public static extern System.IntPtr GetInstance0();
+                public static extern global::System.IntPtr GetInstance0();
             }
 
-            public System.IntPtr _Instance { get; protected set; }
+            public global::System.IntPtr _Instance { get; protected set; }
 
             internal AppRegistry(AppRegistry.Internal* native)
-                : this(new System.IntPtr(native))
+                : this(new global::System.IntPtr(native))
             {
             }
 
@@ -132,7 +132,7 @@ namespace Tizen
             {
             }
 
-            internal AppRegistry(System.IntPtr native)
+            internal AppRegistry(global::System.IntPtr native)
             {
                 _Instance = native;
             }
@@ -153,8 +153,8 @@ namespace Tizen
             /// </summary>
             public uint Add(String key, String value)
             {
-                var arg0 = new Std.String();
-                var arg1 = new Std.String();
+                var arg0 = key._Instance;
+                var arg1 = value._Instance;
                 var ret = Internal.Add0(_Instance, arg0, arg1);
                 return ret;
             }
@@ -164,7 +164,7 @@ namespace Tizen
             /// </summary>
             public uint Add(String key, int value)
             {
-                var arg0 = new Std.String();
+                var arg0 = key._Instance;
                 var ret = Internal.Add1(_Instance, arg0, value);
                 return ret;
             }
@@ -174,7 +174,7 @@ namespace Tizen
             /// </summary>
             public uint Add(String key, double value)
             {
-                var arg0 = new Std.String();
+                var arg0 = key._Instance;
                 var ret = Internal.Add2(_Instance, arg0, value);
                 return ret;
             }
@@ -184,8 +184,8 @@ namespace Tizen
             /// </summary>
             public uint Set(String key, String value)
             {
-                var arg0 = new Std.String();
-                var arg1 = new Std.String();
+                var arg0 = key._Instance;
+                var arg1 = value._Instance;
                 var ret = Internal.Set0(_Instance, arg0, arg1);
                 return ret;
             }
@@ -195,7 +195,7 @@ namespace Tizen
             /// </summary>
             public uint Set(String key, int value)
             {
-                var arg0 = new Std.String();
+                var arg0 = key._Instance;
                 var ret = Internal.Set1(_Instance, arg0, value);
                 return ret;
             }
@@ -205,7 +205,7 @@ namespace Tizen
             /// </summary>
             public uint Set(String key, double value)
             {
-                var arg0 = new Std.String();
+                var arg0 = key._Instance;
                 var ret = Internal.Set2(_Instance, arg0, value);
                 return ret;
             }
@@ -224,7 +224,7 @@ namespace Tizen
             /// </summary>
             public uint Remove(String key)
             {
-                var arg0 = new Std.String();
+                var arg0 = key._Instance;
                 var ret = Internal.Remove0(_Instance, arg0);
                 return ret;
             }
@@ -234,8 +234,8 @@ namespace Tizen
             /// </summary>
             public uint Get(String key, String value)
             {
-                var arg0 = new Std.String();
-                var arg1 = new Std.String();
+                var arg0 = key._Instance;
+                var arg1 = value._Instance;
                 var ret = Internal.Get0(_Instance, arg0, arg1);
                 return ret;
             }
@@ -243,9 +243,9 @@ namespace Tizen
             /// <summary>
             /// Gets an integer value associated with the specified key.
             /// </summary>
-            public uint Get0(String key, System.IntPtr value)
+            public uint Get0(String key, global::System.IntPtr value)
             {
-                var arg0 = new Std.String();
+                var arg0 = key._Instance;
                 var arg1 = value;
                 var ret = Internal.Get00(_Instance, arg0, arg1);
                 return ret;
@@ -254,9 +254,9 @@ namespace Tizen
             /// <summary>
             /// Gets a floating point value associated with the specified key.
             /// </summary>
-            public uint Get(String key, System.IntPtr value)
+            public uint Get(String key, global::System.IntPtr value)
             {
-                var arg0 = new Std.String();
+                var arg0 = key._Instance;
                 var arg1 = value;
                 var ret = Internal.Get1(_Instance, arg0, arg1);
                 return ret;

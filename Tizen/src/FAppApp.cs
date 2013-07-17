@@ -13,10 +13,10 @@ public partial class TizenFAppApp
         [SuppressUnmanagedCodeSecurity]
         [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
             EntryPoint="main")]
-        public static extern int main0(int argc, System.IntPtr pArgv);
+        public static extern int main0(int argc, global::System.IntPtr pArgv);
     }
 
-    public static int main(int argc, System.IntPtr pArgv)
+    public static int main(int argc, global::System.IntPtr pArgv)
     {
         var arg1 = Marshal.StringToHGlobalAnsi(pArgv);
         var ret = Internal.main0(argc, arg1);
@@ -49,7 +49,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="??0App@0Tizen@@IAE@XZ")]
-                public static extern System.IntPtr App0(System.IntPtr instance);
+                public static extern global::System.IntPtr App0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Gets an instance of AppRegistry that manages the application's states and preferences.
@@ -57,7 +57,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?GetAppRegistry@App@1Tizen@@QBEPAVAppRegistry@12@XZ")]
-                public static extern System.IntPtr GetAppRegistry0(System.IntPtr instance);
+                public static extern global::System.IntPtr GetAppRegistry0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Gets the current state of the application.
@@ -65,7 +65,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?GetAppState@App@1Tizen@@QBE?AW4AppState@12@XZ")]
-                public static extern AppState GetAppState0(System.IntPtr instance);
+                public static extern AppState GetAppState0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Gets the locale-independent name of the application.
@@ -73,7 +73,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?GetAppName@App@1Tizen@@QBE?AVString@Base@2@XZ")]
-                public static extern String.Internal GetAppName0(System.IntPtr instance, System.IntPtr _return);
+                public static extern String.Internal GetAppName0(global::System.IntPtr instance, global::System.IntPtr _return);
 
                 /// <summary>
                 /// Gets the display name of the application. If the system language setting is changed, the %GetAppDisplayName() method returns the localized application name. The display name is displayed in applications like Launcher, Setting, Task Manager, and so on.
@@ -81,7 +81,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?GetAppDisplayName@App@1Tizen@@QBE?AVString@Base@2@XZ")]
-                public static extern String.Internal GetAppDisplayName0(System.IntPtr instance, System.IntPtr _return);
+                public static extern String.Internal GetAppDisplayName0(global::System.IntPtr instance, global::System.IntPtr _return);
 
                 /// <summary>
                 /// Gets the version of the application.
@@ -89,7 +89,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?GetAppVersion@App@1Tizen@@QBE?AVString@Base@2@XZ")]
-                public static extern String.Internal GetAppVersion0(System.IntPtr instance, System.IntPtr _return);
+                public static extern String.Internal GetAppVersion0(global::System.IntPtr instance, global::System.IntPtr _return);
 
                 /// <summary>
                 /// Gets the application ID.
@@ -97,7 +97,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?GetAppId@App@1Tizen@@QBE?AVString@Base@2@XZ")]
-                public static extern String.Internal GetAppId0(System.IntPtr instance);
+                public static extern String.Internal GetAppId0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Gets the path of the application's root directory where the application is installed.
@@ -105,7 +105,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?GetAppRootPath@App@1Tizen@@QBE?AVString@Base@2@XZ")]
-                public static extern String.Internal GetAppRootPath0(System.IntPtr instance, System.IntPtr _return);
+                public static extern String.Internal GetAppRootPath0(global::System.IntPtr instance, global::System.IntPtr _return);
 
                 /// <summary>
                 /// Gets the path of the application's data directory used to store its own private data.
@@ -113,7 +113,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?GetAppDataPath@App@1Tizen@@QBE?AVString@Base@2@XZ")]
-                public static extern String.Internal GetAppDataPath0(System.IntPtr instance, System.IntPtr _return);
+                public static extern String.Internal GetAppDataPath0(global::System.IntPtr instance, global::System.IntPtr _return);
 
                 /// <summary>
                 /// Gets the path of the application's resource directory that ships resource files delivered with the application package.
@@ -121,7 +121,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?GetAppResourcePath@App@1Tizen@@QBE?AVString@Base@2@XZ")]
-                public static extern String.Internal GetAppResourcePath0(System.IntPtr instance, System.IntPtr _return);
+                public static extern String.Internal GetAppResourcePath0(global::System.IntPtr instance, global::System.IntPtr _return);
 
                 /// <summary>
                 /// Gets the path of the application's shared directory to export data to other applications.
@@ -129,7 +129,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?GetAppSharedPath@App@1Tizen@@QBE?AVString@Base@2@XZ")]
-                public static extern String.Internal GetAppSharedPath0(System.IntPtr instance, System.IntPtr _return);
+                public static extern String.Internal GetAppSharedPath0(global::System.IntPtr instance, global::System.IntPtr _return);
 
                 /// <summary>
                 /// Terminates the application while it is running. The OnAppTerminating() method is called after the %Terminate() method is executed successfully.
@@ -137,7 +137,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?Terminate@App@1Tizen@@QAEKXZ")]
-                public static extern uint Terminate0(System.IntPtr instance);
+                public static extern uint Terminate0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Called when the application's initialization is finished. After the %OnAppInitialized() method succeeds, the application's state changes to App::RUNNING. If this method fails, the application's state changes to App::TERMINATING and the App::OnAppTerminating() method is called.
@@ -146,7 +146,7 @@ namespace Tizen
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?OnAppInitialized@App@1Tizen@@UAE_NXZ")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool OnAppInitialized0(System.IntPtr instance);
+                public static extern bool OnAppInitialized0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Called when the application is requested to terminate. The %OnAppWillTerminate() method returns false to prevent the application from getting terminated. If this method returns true, the application's state changes to App::TERMINATING and the App::OnAppTerminating() method is called.
@@ -155,7 +155,7 @@ namespace Tizen
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?OnAppWillTerminate@App@1Tizen@@UAE_NXZ")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool OnAppWillTerminate0(System.IntPtr instance);
+                public static extern bool OnAppWillTerminate0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Called when the system detects that the system wide memory or application heap memory is insufficient to run the application any further. Resources that are not in use currently can be released using the %OnLowMemory() method.
@@ -163,7 +163,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?OnLowMemory@App@1Tizen@@UAEXXZ")]
-                public static extern void OnLowMemory0(System.IntPtr instance);
+                public static extern void OnLowMemory0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Called when the battery level changes. It is recommended that the application consuming more battery power must be terminated if the battery level is Tizen::System::BATTERY_LEVEL_CRITICAL.
@@ -171,7 +171,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?OnBatteryLevelChanged@App@1Tizen@@UAEXW4BatteryLevel@System@2@@Z")]
-                public static extern void OnBatteryLevelChanged0(System.IntPtr instance, BatteryLevel batteryLevel);
+                public static extern void OnBatteryLevelChanged0(global::System.IntPtr instance, BatteryLevel batteryLevel);
 
                 /// <summary>
                 /// Gets the %App instance's pointer.
@@ -179,13 +179,13 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="?GetInstance@App@1Tizen@@SAPAV112@XZ")]
-                public static extern System.IntPtr GetInstance0();
+                public static extern global::System.IntPtr GetInstance0();
             }
 
-            public System.IntPtr _Instance { get; protected set; }
+            public global::System.IntPtr _Instance { get; protected set; }
 
             internal App(App.Internal* native)
-                : this(new System.IntPtr(native))
+                : this(new global::System.IntPtr(native))
             {
             }
 
@@ -194,7 +194,7 @@ namespace Tizen
             {
             }
 
-            internal App(System.IntPtr native)
+            internal App(global::System.IntPtr native)
             {
                 _Instance = native;
             }
@@ -267,7 +267,7 @@ namespace Tizen
             public String GetAppId()
             {
                 var ret = Internal.GetAppId0(_Instance);
-                return ret;
+                return new Tizen.Base.String(ret);
             }
 
             /// <summary>

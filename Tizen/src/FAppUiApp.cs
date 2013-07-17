@@ -38,7 +38,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="??0UiApp@App@Tizen@@IAE@XZ")]
-                public static extern System.IntPtr UiApp0(System.IntPtr instance);
+                public static extern global::System.IntPtr UiApp0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Gets the UI state of the UI application.
@@ -46,7 +46,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?GetAppUiState@UiApp@App@Tizen@@QBE?AW4AppUiState@23@XZ")]
-                public static extern AppUiState GetAppUiState0(System.IntPtr instance);
+                public static extern AppUiState GetAppUiState0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Called when a UI application moves to the foreground. User interaction is enabled when the UI application moves to the foreground. A UI application moves to the foreground when:
@@ -54,7 +54,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?OnForeground@UiApp@App@Tizen@@UAEXXZ")]
-                public static extern void OnForeground0(System.IntPtr instance);
+                public static extern void OnForeground0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Called when another UI application moves to the top or a system pop-up is displayed. User interaction is disabled when the UI application is in the background. A UI application moves to the background when:
@@ -62,7 +62,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?OnBackground@UiApp@App@Tizen@@UAEXXZ")]
-                public static extern void OnBackground0(System.IntPtr instance);
+                public static extern void OnBackground0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Gets the %UiApp instance's pointer.
@@ -70,11 +70,11 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="?GetInstance@UiApp@App@Tizen@@SAPAV123@XZ")]
-                public static extern System.IntPtr GetInstance0();
+                public static extern global::System.IntPtr GetInstance0();
             }
 
             internal UiApp(UiApp.Internal* native)
-                : this(new System.IntPtr(native))
+                : this(new global::System.IntPtr(native))
             {
             }
 
@@ -83,7 +83,7 @@ namespace Tizen
             {
             }
 
-            internal UiApp(System.IntPtr native)
+            internal UiApp(global::System.IntPtr native)
                 : base(native)
             {
             }

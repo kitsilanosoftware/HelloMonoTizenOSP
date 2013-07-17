@@ -56,7 +56,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="??0PowerManager@System@Tizen@@AAE@XZ")]
-                public static extern System.IntPtr PowerManager0(System.IntPtr instance);
+                public static extern global::System.IntPtr PowerManager0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Changes the policy of the screen power management.
@@ -149,10 +149,10 @@ namespace Tizen
                 public static extern bool IsCharging0();
             }
 
-            public System.IntPtr _Instance { get; protected set; }
+            public global::System.IntPtr _Instance { get; protected set; }
 
             internal PowerManager(PowerManager.Internal* native)
-                : this(new System.IntPtr(native))
+                : this(new global::System.IntPtr(native))
             {
             }
 
@@ -161,7 +161,7 @@ namespace Tizen
             {
             }
 
-            internal PowerManager(System.IntPtr native)
+            internal PowerManager(global::System.IntPtr native)
             {
                 _Instance = native;
             }
