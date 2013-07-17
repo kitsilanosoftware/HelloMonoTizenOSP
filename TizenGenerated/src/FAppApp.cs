@@ -11,7 +11,7 @@ public partial class TizenFAppApp
     public struct Internal
     {
         [SuppressUnmanagedCodeSecurity]
-        [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
+        [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
             EntryPoint="main")]
         public static extern int main0(int argc, System.IntPtr pArgv);
     }
@@ -35,6 +35,9 @@ namespace Tizen
     namespace App
     {
 
+        /// <summary>
+        /// This class is the base class of a %Tizen native application.
+        /// </summary>
         public unsafe partial class App : IDisposable
         {
             [StructLayout(LayoutKind.Explicit, Size = 8)]
@@ -47,6 +50,14 @@ namespace Tizen
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="??0App@0Tizen@@IAE@XZ")]
                 public static extern System.IntPtr App0(System.IntPtr instance);
+
+                /// <summary>
+                /// Gets an instance of AppRegistry that manages the application's states and preferences.
+                /// </summary>
+                [SuppressUnmanagedCodeSecurity]
+                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
+                    EntryPoint="?GetAppRegistry@App@1Tizen@@QBEPAVAppRegistry@12@XZ")]
+                public static extern System.IntPtr GetAppRegistry0(System.IntPtr instance);
 
                 /// <summary>
                 /// Gets the current state of the application.
@@ -200,6 +211,15 @@ namespace Tizen
             }
 
             /// <summary>
+            /// Gets an instance of AppRegistry that manages the application's states and preferences.
+            /// </summary>
+            public AppRegistry GetAppRegistry()
+            {
+                var ret = Internal.GetAppRegistry0(_Instance);
+                return new Tizen.App.AppRegistry(ret);
+            }
+
+            /// <summary>
             /// Gets the current state of the application.
             /// </summary>
             public AppState GetAppState()
@@ -304,6 +324,14 @@ namespace Tizen
             }
 
             /// <summary>
+            /// Called when the application's state changes to App::INITIALIZING. In general, most of the activities involved in initializing the application, including restoring the application's states, must be done in the %OnAppInitializing() method. If this method fails, the application's state changes to App::TERMINATED.
+            /// </summary>
+            public bool OnAppInitializing(AppRegistry appRegistry)
+            {
+                throw new System.NotImplementedException();
+            }
+
+            /// <summary>
             /// Called when the application's initialization is finished. After the %OnAppInitialized() method succeeds, the application's state changes to App::RUNNING. If this method fails, the application's state changes to App::TERMINATING and the App::OnAppTerminating() method is called.
             /// </summary>
             public bool OnAppInitialized()
@@ -319,6 +347,14 @@ namespace Tizen
             {
                 var ret = Internal.OnAppWillTerminate0(_Instance);
                 return ret;
+            }
+
+            /// <summary>
+            /// Called when the application's state changes to App::TERMINATING. All the activities involved in terminating the application, including saving the application's states, must be done in the %OnAppTerminating() method. After this method, the application code cannot be executed. The application is destroyed subsequently.
+            /// </summary>
+            public bool OnAppTerminating(AppRegistry appRegistry, bool urgentTermination)
+            {
+                throw new System.NotImplementedException();
             }
 
             /// <summary>

@@ -14,42 +14,42 @@ public partial class TizenFBaseLog
         /// @}
         /// </summary>
         [SuppressUnmanagedCodeSecurity]
-        [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
+        [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
             EntryPoint="AppLogInternal")]
         public static extern void AppLogInternal0(System.IntPtr pFunction, int lineNumber, System.IntPtr pFormat);
 
         [SuppressUnmanagedCodeSecurity]
-        [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
+        [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
             EntryPoint="AppLogDebugInternal")]
         public static extern void AppLogDebugInternal0(System.IntPtr pFunction, int lineNumber, System.IntPtr pFormat);
 
         [SuppressUnmanagedCodeSecurity]
-        [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
+        [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
             EntryPoint="AppLogExceptionInternal")]
         public static extern void AppLogExceptionInternal0(System.IntPtr pFunction, int lineNumber, System.IntPtr pFormat);
 
         [SuppressUnmanagedCodeSecurity]
-        [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
+        [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
             EntryPoint="AppassertInternal")]
         public static extern void AppassertInternal0(System.IntPtr pFunction, int lineNumber);
 
         [SuppressUnmanagedCodeSecurity]
-        [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
+        [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
             EntryPoint="AppassertfInternal")]
         public static extern void AppassertfInternal0(System.IntPtr expr, System.IntPtr pFunction, int lineNumber, System.IntPtr pFormat);
 
         [SuppressUnmanagedCodeSecurity]
-        [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
+        [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
             EntryPoint="AppLogTagInternal")]
         public static extern void AppLogTagInternal0(System.IntPtr pTag, System.IntPtr pFunction, int lineNumber, System.IntPtr pFormat);
 
         [SuppressUnmanagedCodeSecurity]
-        [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
+        [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
             EntryPoint="AppLogDebugTagInternal")]
         public static extern void AppLogDebugTagInternal0(System.IntPtr pTag, System.IntPtr pFunction, int lineNumber, System.IntPtr pFormat);
 
         [SuppressUnmanagedCodeSecurity]
-        [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
+        [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
             EntryPoint="AppLogExceptionTagInternal")]
         public static extern void AppLogExceptionTagInternal0(System.IntPtr pTag, System.IntPtr pFunction, int lineNumber, System.IntPtr pFormat);
     }
