@@ -21,7 +21,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="??0AppRegistry@App@Tizen@@AAE@XZ")]
-                public static extern System.IntPtr AppRegistry0(System.IntPtr instance);
+                public static extern IntPtr AppRegistry0(IntPtr instance);
 
                 /// <summary>
                 /// Adds a string value along with the specified key.
@@ -29,7 +29,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="?Add@AppRegistry@App@Tizen@@QAEKABVString@Base@3@0@Z")]
-                public static extern uint Add0(System.IntPtr instance, System.IntPtr key, System.IntPtr value);
+                public static extern uint Add0(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
 
                 /// <summary>
                 /// Adds an integer value along with the specified key.

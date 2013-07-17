@@ -21,7 +21,7 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="??0Battery@System@Tizen@@AAE@XZ")]
-                public static extern System.IntPtr Battery0(System.IntPtr instance);
+                public static extern IntPtr Battery0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Gets the current charge remaining in the battery as a percentage.
