@@ -49,7 +49,10 @@ namespace Tizen
                 public static extern AppUiState GetAppUiState0(global::System.IntPtr instance);
 
                 /// <summary>
-                /// Called when a UI application moves to the foreground. User interaction is enabled when the UI application moves to the foreground. A UI application moves to the foreground when:
+                /// Called when a UI application moves to the foreground.
+                /// User interaction is enabled when the UI application moves
+                /// to the foreground. A UI application moves to the foreground
+                /// when:
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -57,7 +60,10 @@ namespace Tizen
                 public static extern void OnForeground0(global::System.IntPtr instance);
 
                 /// <summary>
-                /// Called when another UI application moves to the top or a system pop-up is displayed. User interaction is disabled when the UI application is in the background. A UI application moves to the background when:
+                /// Called when another UI application moves to the top or
+                /// a system pop-up is displayed. User interaction is disabled
+                /// when the UI application is in the background. A UI
+                /// application moves to the background when:
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -103,7 +109,9 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Called when a UI application moves to the foreground. User interaction is enabled when the UI application moves to the foreground. A UI application moves to the foreground when:
+            /// Called when a UI application moves to the foreground. User
+            /// interaction is enabled when the UI application moves to the
+            /// foreground. A UI application moves to the foreground when:
             /// </summary>
             public void OnForeground()
             {
@@ -111,7 +119,10 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Called when another UI application moves to the top or a system pop-up is displayed. User interaction is disabled when the UI application is in the background. A UI application moves to the background when:
+            /// Called when another UI application moves to the top or a
+            /// system pop-up is displayed. User interaction is disabled when
+            /// the UI application is in the background. A UI application moves
+            /// to the background when:
             /// </summary>
             public void OnBackground()
             {

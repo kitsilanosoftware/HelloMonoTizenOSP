@@ -11,7 +11,8 @@ namespace Tizen
     namespace System
     {
         /// <summary>
-        /// Defines the representation of the remaining charge in the battery.
+        /// Defines the representation of the remaining charge in the
+        /// battery.
         /// </summary>
         public enum BatteryLevel
         {
@@ -33,7 +34,8 @@ namespace Tizen
         }
 
         /// <summary>
-        /// Defines the representation of the charge remaining in the battery.
+        /// Defines the representation of the charge remaining in the
+        /// battery.
         /// </summary>
         public enum PowerMode
         {
@@ -51,7 +53,9 @@ namespace Tizen
             public struct Internal
             {
                 /// <summary>
-                /// This is the default constructor for this class. This default constructor is intentionally declared as private so that only the platform can create an instance.
+                /// This is the default constructor for this class. This
+                /// default constructor is intentionally declared as private so
+                /// that only the platform can create an instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -116,7 +120,8 @@ namespace Tizen
                 public static extern uint TurnScreenOff0();
 
                 /// <summary>
-                /// Changes the policy of the CPU (Central Processing Unit) power management.
+                /// Changes the policy of the CPU (Central Processing Unit)
+                /// power management.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
@@ -124,7 +129,8 @@ namespace Tizen
                 public static extern uint KeepCpuAwake0(bool enable);
 
                 /// <summary>
-                /// Gets the current charge remaining in the battery as a percentage.
+                /// Gets the current charge remaining in the battery as a
+                /// percentage.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
@@ -241,7 +247,8 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Changes the policy of the CPU (Central Processing Unit) power management.
+            /// Changes the policy of the CPU (Central Processing Unit)
+            /// power management.
             /// </summary>
             public static uint KeepCpuAwake(bool enable)
             {
@@ -250,7 +257,8 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Gets the current charge remaining in the battery as a percentage.
+            /// Gets the current charge remaining in the battery as a
+            /// percentage.
             /// </summary>
             public static int GetCurrentBatteryLevelInPercentage()
             {

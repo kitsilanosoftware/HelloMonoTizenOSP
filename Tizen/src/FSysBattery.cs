@@ -16,7 +16,9 @@ namespace Tizen
             public struct Internal
             {
                 /// <summary>
-                /// This is the default constructor for this class. This default constructor is intentionally declared as private so that only the platform can create an instance.
+                /// This is the default constructor for this class. This
+                /// default constructor is intentionally declared as private so
+                /// that only the platform can create an instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -24,7 +26,8 @@ namespace Tizen
                 public static extern global::System.IntPtr Battery0(global::System.IntPtr instance);
 
                 /// <summary>
-                /// Gets the current charge remaining in the battery as a percentage.
+                /// Gets the current charge remaining in the battery as a
+                /// percentage.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
@@ -77,7 +80,8 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Gets the current charge remaining in the battery as a percentage.
+            /// Gets the current charge remaining in the battery as a
+            /// percentage.
             /// </summary>
             public static uint GetCurrentLevelInPercentage(global::System.IntPtr level)
             {

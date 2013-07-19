@@ -34,8 +34,22 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\CppSharp\src\Runtime\StdString.cs">
+      <Link>src\StdString.cs</Link>
+    </Compile>
+    <Compile Include="..\..\CppSharp\src\Runtime\StdVector.cs">
+      <Link>src\StdVector.cs</Link>
+    </Compile>
+    <Compile Include="..\..\CppSharp\src\Runtime\SymbolResolver.cs">
+      <Link>src\SymbolResolver.cs</Link>
+    </Compile>
     <Compile Include="src\*.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\CppSharp\src\Runtime\CppSharp.Runtime.csproj">
+      <Project>{189ff169-0498-10bc-2dca-f5401922f0c7}</Project>
+      <Name>CppSharp.Runtime</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

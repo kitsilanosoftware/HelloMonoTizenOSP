@@ -52,7 +52,8 @@ namespace Tizen
                 public static extern global::System.IntPtr App0(global::System.IntPtr instance);
 
                 /// <summary>
-                /// Gets an instance of AppRegistry that manages the application's states and preferences.
+                /// Gets an instance of AppRegistry that manages the
+                /// application's states and preferences.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -76,7 +77,11 @@ namespace Tizen
                 public static extern String.Internal GetAppName0(global::System.IntPtr instance, global::System.IntPtr _return);
 
                 /// <summary>
-                /// Gets the display name of the application. If the system language setting is changed, the %GetAppDisplayName() method returns the localized application name. The display name is displayed in applications like Launcher, Setting, Task Manager, and so on.
+                /// Gets the display name of the application. If the system
+                /// language setting is changed, the %GetAppDisplayName()
+                /// method returns the localized application name. The display
+                /// name is displayed in applications like Launcher, Setting,
+                /// Task Manager, and so on.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -100,7 +105,8 @@ namespace Tizen
                 public static extern String.Internal GetAppId0(global::System.IntPtr instance);
 
                 /// <summary>
-                /// Gets the path of the application's root directory where the application is installed.
+                /// Gets the path of the application's root directory where
+                /// the application is installed.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -108,7 +114,8 @@ namespace Tizen
                 public static extern String.Internal GetAppRootPath0(global::System.IntPtr instance, global::System.IntPtr _return);
 
                 /// <summary>
-                /// Gets the path of the application's data directory used to store its own private data.
+                /// Gets the path of the application's data directory used
+                /// to store its own private data.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -116,7 +123,9 @@ namespace Tizen
                 public static extern String.Internal GetAppDataPath0(global::System.IntPtr instance, global::System.IntPtr _return);
 
                 /// <summary>
-                /// Gets the path of the application's resource directory that ships resource files delivered with the application package.
+                /// Gets the path of the application's resource directory
+                /// that ships resource files delivered with the application
+                /// package.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -124,7 +133,8 @@ namespace Tizen
                 public static extern String.Internal GetAppResourcePath0(global::System.IntPtr instance, global::System.IntPtr _return);
 
                 /// <summary>
-                /// Gets the path of the application's shared directory to export data to other applications.
+                /// Gets the path of the application's shared directory to
+                /// export data to other applications.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -132,7 +142,9 @@ namespace Tizen
                 public static extern String.Internal GetAppSharedPath0(global::System.IntPtr instance, global::System.IntPtr _return);
 
                 /// <summary>
-                /// Terminates the application while it is running. The OnAppTerminating() method is called after the %Terminate() method is executed successfully.
+                /// Terminates the application while it is running. The
+                /// OnAppTerminating() method is called after the %Terminate()
+                /// method is executed successfully.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -140,7 +152,12 @@ namespace Tizen
                 public static extern uint Terminate0(global::System.IntPtr instance);
 
                 /// <summary>
-                /// Called when the application's initialization is finished. After the %OnAppInitialized() method succeeds, the application's state changes to App::RUNNING. If this method fails, the application's state changes to App::TERMINATING and the App::OnAppTerminating() method is called.
+                /// Called when the application's initialization is
+                /// finished. After the %OnAppInitialized() method succeeds,
+                /// the application's state changes to App::RUNNING. If this
+                /// method fails, the application's state changes to
+                /// App::TERMINATING and the App::OnAppTerminating() method is
+                /// called.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -149,7 +166,12 @@ namespace Tizen
                 public static extern bool OnAppInitialized0(global::System.IntPtr instance);
 
                 /// <summary>
-                /// Called when the application is requested to terminate. The %OnAppWillTerminate() method returns false to prevent the application from getting terminated. If this method returns true, the application's state changes to App::TERMINATING and the App::OnAppTerminating() method is called.
+                /// Called when the application is requested to terminate.
+                /// The %OnAppWillTerminate() method returns false to prevent
+                /// the application from getting terminated. If this method
+                /// returns true, the application's state changes to
+                /// App::TERMINATING and the App::OnAppTerminating() method is
+                /// called.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -158,7 +180,10 @@ namespace Tizen
                 public static extern bool OnAppWillTerminate0(global::System.IntPtr instance);
 
                 /// <summary>
-                /// Called when the system detects that the system wide memory or application heap memory is insufficient to run the application any further. Resources that are not in use currently can be released using the %OnLowMemory() method.
+                /// Called when the system detects that the system wide
+                /// memory or application heap memory is insufficient to run
+                /// the application any further. Resources that are not in use
+                /// currently can be released using the %OnLowMemory() method.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -166,7 +191,10 @@ namespace Tizen
                 public static extern void OnLowMemory0(global::System.IntPtr instance);
 
                 /// <summary>
-                /// Called when the battery level changes. It is recommended that the application consuming more battery power must be terminated if the battery level is Tizen::System::BATTERY_LEVEL_CRITICAL.
+                /// Called when the battery level changes. It is
+                /// recommended that the application consuming more battery
+                /// power must be terminated if the battery level is
+                /// Tizen::System::BATTERY_LEVEL_CRITICAL.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -211,7 +239,8 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Gets an instance of AppRegistry that manages the application's states and preferences.
+            /// Gets an instance of AppRegistry that manages the
+            /// application's states and preferences.
             /// </summary>
             public AppRegistry GetAppRegistry()
             {
@@ -240,7 +269,11 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Gets the display name of the application. If the system language setting is changed, the %GetAppDisplayName() method returns the localized application name. The display name is displayed in applications like Launcher, Setting, Task Manager, and so on.
+            /// Gets the display name of the application. If the system
+            /// language setting is changed, the %GetAppDisplayName() method
+            /// returns the localized application name. The display name is
+            /// displayed in applications like Launcher, Setting, Task Manager,
+            /// and so on.
             /// </summary>
             public String GetAppDisplayName()
             {
@@ -267,11 +300,12 @@ namespace Tizen
             public String GetAppId()
             {
                 var ret = Internal.GetAppId0(_Instance);
-                return new Tizen.Base.String(ret);
+                return ret;
             }
 
             /// <summary>
-            /// Gets the path of the application's root directory where the application is installed.
+            /// Gets the path of the application's root directory where the
+            /// application is installed.
             /// </summary>
             public String GetAppRootPath()
             {
@@ -282,7 +316,8 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Gets the path of the application's data directory used to store its own private data.
+            /// Gets the path of the application's data directory used to
+            /// store its own private data.
             /// </summary>
             public String GetAppDataPath()
             {
@@ -293,7 +328,8 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Gets the path of the application's resource directory that ships resource files delivered with the application package.
+            /// Gets the path of the application's resource directory that
+            /// ships resource files delivered with the application package.
             /// </summary>
             public String GetAppResourcePath()
             {
@@ -304,7 +340,8 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Gets the path of the application's shared directory to export data to other applications.
+            /// Gets the path of the application's shared directory to
+            /// export data to other applications.
             /// </summary>
             public String GetAppSharedPath()
             {
@@ -315,7 +352,9 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Terminates the application while it is running. The OnAppTerminating() method is called after the %Terminate() method is executed successfully.
+            /// Terminates the application while it is running. The
+            /// OnAppTerminating() method is called after the %Terminate()
+            /// method is executed successfully.
             /// </summary>
             public uint Terminate()
             {
@@ -324,7 +363,12 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Called when the application's state changes to App::INITIALIZING. In general, most of the activities involved in initializing the application, including restoring the application's states, must be done in the %OnAppInitializing() method. If this method fails, the application's state changes to App::TERMINATED.
+            /// Called when the application's state changes to
+            /// App::INITIALIZING. In general, most of the activities involved
+            /// in initializing the application, including restoring the
+            /// application's states, must be done in the %OnAppInitializing()
+            /// method. If this method fails, the application's state changes
+            /// to App::TERMINATED.
             /// </summary>
             public bool OnAppInitializing(AppRegistry appRegistry)
             {
@@ -332,7 +376,11 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Called when the application's initialization is finished. After the %OnAppInitialized() method succeeds, the application's state changes to App::RUNNING. If this method fails, the application's state changes to App::TERMINATING and the App::OnAppTerminating() method is called.
+            /// Called when the application's initialization is finished.
+            /// After the %OnAppInitialized() method succeeds, the
+            /// application's state changes to App::RUNNING. If this method
+            /// fails, the application's state changes to App::TERMINATING and
+            /// the App::OnAppTerminating() method is called.
             /// </summary>
             public bool OnAppInitialized()
             {
@@ -341,7 +389,11 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Called when the application is requested to terminate. The %OnAppWillTerminate() method returns false to prevent the application from getting terminated. If this method returns true, the application's state changes to App::TERMINATING and the App::OnAppTerminating() method is called.
+            /// Called when the application is requested to terminate. The
+            /// %OnAppWillTerminate() method returns false to prevent the
+            /// application from getting terminated. If this method returns
+            /// true, the application's state changes to App::TERMINATING and
+            /// the App::OnAppTerminating() method is called.
             /// </summary>
             public bool OnAppWillTerminate()
             {
@@ -350,7 +402,12 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Called when the application's state changes to App::TERMINATING. All the activities involved in terminating the application, including saving the application's states, must be done in the %OnAppTerminating() method. After this method, the application code cannot be executed. The application is destroyed subsequently.
+            /// Called when the application's state changes to
+            /// App::TERMINATING. All the activities involved in terminating
+            /// the application, including saving the application's states,
+            /// must be done in the %OnAppTerminating() method. After this
+            /// method, the application code cannot be executed. The
+            /// application is destroyed subsequently.
             /// </summary>
             public bool OnAppTerminating(AppRegistry appRegistry, bool urgentTermination)
             {
@@ -358,7 +415,10 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Called when the system detects that the system wide memory or application heap memory is insufficient to run the application any further. Resources that are not in use currently can be released using the %OnLowMemory() method.
+            /// Called when the system detects that the system wide memory
+            /// or application heap memory is insufficient to run the
+            /// application any further. Resources that are not in use
+            /// currently can be released using the %OnLowMemory() method.
             /// </summary>
             public void OnLowMemory()
             {
@@ -366,7 +426,10 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Called when the battery level changes. It is recommended that the application consuming more battery power must be terminated if the battery level is Tizen::System::BATTERY_LEVEL_CRITICAL.
+            /// Called when the battery level changes. It is recommended
+            /// that the application consuming more battery power must be
+            /// terminated if the battery level is
+            /// Tizen::System::BATTERY_LEVEL_CRITICAL.
             /// </summary>
             public void OnBatteryLevelChanged(BatteryLevel batteryLevel)
             {

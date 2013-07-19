@@ -10,7 +10,8 @@ using System.Security;
 /// byte is an unsigned char datatype.
 /// </summary>
 /// <summary>
-/// result is an unsigned long type and indicates the result of the method execution.
+/// result is an unsigned long type and indicates the result of the method
+/// execution.
 /// </summary>
 /// <summary>
 /// The invocation ID is returned when a request is sent.

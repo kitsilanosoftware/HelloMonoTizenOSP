@@ -16,7 +16,8 @@ namespace Tizen
             public struct Internal
             {
                 /// <summary>
-                /// This default constructor is intentionally declared as private to implement the %Singleton semantic.
+                /// This default constructor is intentionally declared as
+                /// private to implement the %Singleton semantic.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -40,7 +41,8 @@ namespace Tizen
                 public static extern uint Add1(global::System.IntPtr instance, global::System.IntPtr key, int value);
 
                 /// <summary>
-                /// Adds a floating point value along with the specified key.
+                /// Adds a floating point value along with the specified
+                /// key.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -56,7 +58,8 @@ namespace Tizen
                 public static extern uint Set0(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
 
                 /// <summary>
-                /// Sets an integer value associated with the specified key.
+                /// Sets an integer value associated with the specified
+                /// key.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -64,7 +67,8 @@ namespace Tizen
                 public static extern uint Set1(global::System.IntPtr instance, global::System.IntPtr key, int value);
 
                 /// <summary>
-                /// Sets a floating point value associated with the specified key.
+                /// Sets a floating point value associated with the
+                /// specified key.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -72,7 +76,9 @@ namespace Tizen
                 public static extern uint Set2(global::System.IntPtr instance, global::System.IntPtr key, double value);
 
                 /// <summary>
-                /// Saves the values temporarily in the persistent storage. The %Save() method is invoked internally when the instance of this class is deleted.
+                /// Saves the values temporarily in the persistent storage.
+                /// The %Save() method is invoked internally when the instance
+                /// of this class is deleted.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -96,7 +102,8 @@ namespace Tizen
                 public static extern uint Get0(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
 
                 /// <summary>
-                /// Gets an integer value associated with the specified key.
+                /// Gets an integer value associated with the specified
+                /// key.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -104,7 +111,8 @@ namespace Tizen
                 public static extern uint Get00(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
 
                 /// <summary>
-                /// Gets a floating point value associated with the specified key.
+                /// Gets a floating point value associated with the
+                /// specified key.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
@@ -153,8 +161,8 @@ namespace Tizen
             /// </summary>
             public uint Add(String key, String value)
             {
-                var arg0 = key._Instance;
-                var arg1 = value._Instance;
+                var arg0 = new Std.String();
+                var arg1 = new Std.String();
                 var ret = Internal.Add0(_Instance, arg0, arg1);
                 return ret;
             }
@@ -164,7 +172,7 @@ namespace Tizen
             /// </summary>
             public uint Add(String key, int value)
             {
-                var arg0 = key._Instance;
+                var arg0 = new Std.String();
                 var ret = Internal.Add1(_Instance, arg0, value);
                 return ret;
             }
@@ -174,7 +182,7 @@ namespace Tizen
             /// </summary>
             public uint Add(String key, double value)
             {
-                var arg0 = key._Instance;
+                var arg0 = new Std.String();
                 var ret = Internal.Add2(_Instance, arg0, value);
                 return ret;
             }
@@ -184,8 +192,8 @@ namespace Tizen
             /// </summary>
             public uint Set(String key, String value)
             {
-                var arg0 = key._Instance;
-                var arg1 = value._Instance;
+                var arg0 = new Std.String();
+                var arg1 = new Std.String();
                 var ret = Internal.Set0(_Instance, arg0, arg1);
                 return ret;
             }
@@ -195,23 +203,26 @@ namespace Tizen
             /// </summary>
             public uint Set(String key, int value)
             {
-                var arg0 = key._Instance;
+                var arg0 = new Std.String();
                 var ret = Internal.Set1(_Instance, arg0, value);
                 return ret;
             }
 
             /// <summary>
-            /// Sets a floating point value associated with the specified key.
+            /// Sets a floating point value associated with the specified
+            /// key.
             /// </summary>
             public uint Set(String key, double value)
             {
-                var arg0 = key._Instance;
+                var arg0 = new Std.String();
                 var ret = Internal.Set2(_Instance, arg0, value);
                 return ret;
             }
 
             /// <summary>
-            /// Saves the values temporarily in the persistent storage. The %Save() method is invoked internally when the instance of this class is deleted.
+            /// Saves the values temporarily in the persistent storage. The
+            /// %Save() method is invoked internally when the instance of this
+            /// class is deleted.
             /// </summary>
             public uint Save()
             {
@@ -224,7 +235,7 @@ namespace Tizen
             /// </summary>
             public uint Remove(String key)
             {
-                var arg0 = key._Instance;
+                var arg0 = new Std.String();
                 var ret = Internal.Remove0(_Instance, arg0);
                 return ret;
             }
@@ -234,8 +245,8 @@ namespace Tizen
             /// </summary>
             public uint Get(String key, String value)
             {
-                var arg0 = key._Instance;
-                var arg1 = value._Instance;
+                var arg0 = new Std.String();
+                var arg1 = new Std.String();
                 var ret = Internal.Get0(_Instance, arg0, arg1);
                 return ret;
             }
@@ -245,18 +256,19 @@ namespace Tizen
             /// </summary>
             public uint Get0(String key, global::System.IntPtr value)
             {
-                var arg0 = key._Instance;
+                var arg0 = new Std.String();
                 var arg1 = value;
                 var ret = Internal.Get00(_Instance, arg0, arg1);
                 return ret;
             }
 
             /// <summary>
-            /// Gets a floating point value associated with the specified key.
+            /// Gets a floating point value associated with the specified
+            /// key.
             /// </summary>
             public uint Get(String key, global::System.IntPtr value)
             {
-                var arg0 = key._Instance;
+                var arg0 = new Std.String();
                 var arg1 = value;
                 var ret = Internal.Get1(_Instance, arg0, arg1);
                 return ret;
