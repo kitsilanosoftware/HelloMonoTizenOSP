@@ -35,13 +35,10 @@ namespace Tizen
     namespace App
     {
 
-        /// <summary>
-        /// This class is the base class of a %Tizen native application.
-        /// </summary>
-        public unsafe partial class App : IDisposable
+        public unsafe partial class App : Tizen.Base.Object, IDisposable
         {
             [StructLayout(LayoutKind.Explicit, Size = 8)]
-            public struct Internal
+            public new struct Internal
             {
                 /// <summary>
                 /// This is the default constructor for this class.
@@ -50,15 +47,6 @@ namespace Tizen
                 [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
                     EntryPoint="??0App@0Tizen@@IAE@XZ")]
                 public static extern global::System.IntPtr App0(global::System.IntPtr instance);
-
-                /// <summary>
-                /// Gets an instance of AppRegistry that manages the
-                /// application's states and preferences.
-                /// </summary>
-                [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?GetAppRegistry@App@1Tizen@@QBEPAVAppRegistry@12@XZ")]
-                public static extern global::System.IntPtr GetAppRegistry0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Gets the current state of the application.
@@ -210,8 +198,6 @@ namespace Tizen
                 public static extern global::System.IntPtr GetInstance0();
             }
 
-            public global::System.IntPtr _Instance { get; protected set; }
-
             internal App(App.Internal* native)
                 : this(new global::System.IntPtr(native))
             {
@@ -223,29 +209,13 @@ namespace Tizen
             }
 
             internal App(global::System.IntPtr native)
+                : base(native)
             {
-                _Instance = native;
             }
 
-            public void Dispose()
+            protected override void Dispose(bool disposing)
             {
-                Dispose(disposing: true);
-                GC.SuppressFinalize(this);
-            }
-
-            protected virtual void Dispose(bool disposing)
-            {
-                Marshal.FreeHGlobal(_Instance);
-            }
-
-            /// <summary>
-            /// Gets an instance of AppRegistry that manages the
-            /// application's states and preferences.
-            /// </summary>
-            public AppRegistry GetAppRegistry()
-            {
-                var ret = Internal.GetAppRegistry0(_Instance);
-                return new Tizen.App.AppRegistry(ret);
+                base.Dispose(disposing);
             }
 
             /// <summary>
@@ -300,7 +270,7 @@ namespace Tizen
             public String GetAppId()
             {
                 var ret = Internal.GetAppId0(_Instance);
-                return ret;
+                return new Tizen.Base.String(ret);
             }
 
             /// <summary>
@@ -363,19 +333,6 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Called when the application's state changes to
-            /// App::INITIALIZING. In general, most of the activities involved
-            /// in initializing the application, including restoring the
-            /// application's states, must be done in the %OnAppInitializing()
-            /// method. If this method fails, the application's state changes
-            /// to App::TERMINATED.
-            /// </summary>
-            public bool OnAppInitializing(AppRegistry appRegistry)
-            {
-                throw new System.NotImplementedException();
-            }
-
-            /// <summary>
             /// Called when the application's initialization is finished.
             /// After the %OnAppInitialized() method succeeds, the
             /// application's state changes to App::RUNNING. If this method
@@ -399,19 +356,6 @@ namespace Tizen
             {
                 var ret = Internal.OnAppWillTerminate0(_Instance);
                 return ret;
-            }
-
-            /// <summary>
-            /// Called when the application's state changes to
-            /// App::TERMINATING. All the activities involved in terminating
-            /// the application, including saving the application's states,
-            /// must be done in the %OnAppTerminating() method. After this
-            /// method, the application code cannot be executed. The
-            /// application is destroyed subsequently.
-            /// </summary>
-            public bool OnAppTerminating(AppRegistry appRegistry, bool urgentTermination)
-            {
-                throw new System.NotImplementedException();
             }
 
             /// <summary>

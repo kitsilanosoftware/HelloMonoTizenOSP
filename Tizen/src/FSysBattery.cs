@@ -10,10 +10,10 @@ namespace Tizen
 {
     namespace System
     {
-        public unsafe partial class Battery : IDisposable
+        public unsafe partial class Battery : Tizen.Base.Object, IDisposable
         {
             [StructLayout(LayoutKind.Explicit, Size = 4)]
-            public struct Internal
+            public new struct Internal
             {
                 /// <summary>
                 /// This is the default constructor for this class. This
@@ -51,8 +51,6 @@ namespace Tizen
                 public static extern uint IsCharging0(global::System.IntPtr charging);
             }
 
-            public global::System.IntPtr _Instance { get; protected set; }
-
             internal Battery(Battery.Internal* native)
                 : this(new global::System.IntPtr(native))
             {
@@ -64,19 +62,13 @@ namespace Tizen
             }
 
             internal Battery(global::System.IntPtr native)
+                : base(native)
             {
-                _Instance = native;
             }
 
-            public void Dispose()
+            protected override void Dispose(bool disposing)
             {
-                Dispose(disposing: true);
-                GC.SuppressFinalize(this);
-            }
-
-            protected virtual void Dispose(bool disposing)
-            {
-                Marshal.FreeHGlobal(_Instance);
+                base.Dispose(disposing);
             }
 
             /// <summary>

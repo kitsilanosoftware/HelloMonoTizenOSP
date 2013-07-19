@@ -47,10 +47,10 @@ namespace Tizen
             POWER_MODE_SLEEP = 1
         }
 
-        public unsafe partial class PowerManager : IDisposable
+        public unsafe partial class PowerManager : Tizen.Base.Object, IDisposable
         {
             [StructLayout(LayoutKind.Explicit, Size = 8)]
-            public struct Internal
+            public new struct Internal
             {
                 /// <summary>
                 /// This is the default constructor for this class. This
@@ -155,8 +155,6 @@ namespace Tizen
                 public static extern bool IsCharging0();
             }
 
-            public global::System.IntPtr _Instance { get; protected set; }
-
             internal PowerManager(PowerManager.Internal* native)
                 : this(new global::System.IntPtr(native))
             {
@@ -168,19 +166,13 @@ namespace Tizen
             }
 
             internal PowerManager(global::System.IntPtr native)
+                : base(native)
             {
-                _Instance = native;
             }
 
-            public void Dispose()
+            protected override void Dispose(bool disposing)
             {
-                Dispose(disposing: true);
-                GC.SuppressFinalize(this);
-            }
-
-            protected virtual void Dispose(bool disposing)
-            {
-                Marshal.FreeHGlobal(_Instance);
+                base.Dispose(disposing);
             }
 
             /// <summary>
