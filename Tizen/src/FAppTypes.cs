@@ -13,7 +13,7 @@ namespace Tizen
         /// <summary>
         /// Defines the various states of an application's life cycle.
         /// </summary>
-        public enum AppState
+        public enum AppState : uint
         {
             /// <summary>The application has been launched</summary>
             INITIALIZING = 0,
@@ -29,7 +29,7 @@ namespace Tizen
         /// Defines the UI state of an application.
         /// </summary>
         [Flags]
-        public enum AppUiState
+        public enum AppUiState : uint
         {
             /// <summary>The application is completely visible on foreground</summary>
             APP_UI_STATE_FOREGROUND = 1,
@@ -43,7 +43,7 @@ namespace Tizen
         /// Defines the application control result.
         /// </summary>
         [Flags]
-        public enum AppCtrlResult
+        public enum AppCtrlResult : uint
         {
             /// <summary>The application operation is successful</summary>
             APP_CTRL_RESULT_SUCCEEDED = 0,

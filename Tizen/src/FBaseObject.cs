@@ -22,8 +22,8 @@ namespace Tizen
                 /// This is the default constructor for this class.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="??0Object@Base@Tizen@@QAE@XZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6ObjectC2Ev")]
                 public static extern global::System.IntPtr Object0(global::System.IntPtr instance);
 
                 /// <summary>
@@ -31,8 +31,8 @@ namespace Tizen
                 /// equal to the value of the current instance of %Object.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Equals@Object@Base@Tizen@@UBE_NABV123@@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6Object6EqualsERKS1_")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
                 public static extern bool Equals0(global::System.IntPtr instance, global::System.IntPtr obj);
 
@@ -40,8 +40,8 @@ namespace Tizen
                 /// Gets the hash value of the current instance of %Object.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?GetHashCode@Object@Base@Tizen@@UBEHXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6Object11GetHashCodeEv")]
                 public static extern int GetHashCode0(global::System.IntPtr instance);
             }
 

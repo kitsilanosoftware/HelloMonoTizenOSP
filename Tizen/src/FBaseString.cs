@@ -24,8 +24,8 @@ namespace Tizen
                 /// of 16 bytes.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="??0String@Base@Tizen@@QAE@XZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6StringC2Ev")]
                 public static extern global::System.IntPtr String0(global::System.IntPtr instance);
 
                 /// <summary>
@@ -33,8 +33,8 @@ namespace Tizen
                 /// capacity.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="??0String@Base@Tizen@@QAE@H@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6StringC2Ei")]
                 public static extern global::System.IntPtr String1(global::System.IntPtr instance, int capacity);
 
                 /// <summary>
@@ -42,8 +42,8 @@ namespace Tizen
                 /// Unicode character.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="??0String@Base@Tizen@@QAE@_W@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6StringC2Ew")]
                 public static extern global::System.IntPtr String2(global::System.IntPtr instance, char ch);
 
                 /// <summary>
@@ -51,8 +51,8 @@ namespace Tizen
                 /// Unicode string.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="??0String@Base@Tizen@@QAE@PB_W@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6StringC2EPKw")]
                 public static extern global::System.IntPtr String3(global::System.IntPtr instance, global::System.IntPtr pValue);
 
                 /// <summary>
@@ -60,16 +60,16 @@ namespace Tizen
                 /// character string.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="??0String@Base@Tizen@@QAE@PBD@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6StringC2EPKc")]
                 public static extern global::System.IntPtr String4(global::System.IntPtr instance, global::System.IntPtr pValue);
 
                 /// <summary>
                 /// Checks the two strings for equality.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="??8String@Base@Tizen@@QBE_NABV012@@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6StringeqERKS1_")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
                 public static extern bool OperatorEqualEqual0(global::System.IntPtr instance, global::System.IntPtr rhs);
 
@@ -77,8 +77,8 @@ namespace Tizen
                 /// Checks the two strings for inequality.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="??9String@Base@Tizen@@QBE_NABV012@@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6StringneERKS1_")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
                 public static extern bool OperatorExclaimEqual0(global::System.IntPtr instance, global::System.IntPtr rhs);
 
@@ -86,8 +86,8 @@ namespace Tizen
                 /// Checks whether the string is empty.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?IsEmpty@String@Base@Tizen@@QBE_NXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String7IsEmptyEv")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
                 public static extern bool IsEmpty0(global::System.IntPtr instance);
 
@@ -96,8 +96,8 @@ namespace Tizen
                 /// instance after converting it.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Append@String@Base@Tizen@@QAEK_W@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6AppendEw")]
                 public static extern uint Append0(global::System.IntPtr instance, char ch);
 
                 /// <summary>
@@ -105,8 +105,8 @@ namespace Tizen
                 /// instance after converting it.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Append@String@Base@Tizen@@QAEKD@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6AppendEc")]
                 public static extern uint Append1(global::System.IntPtr instance, sbyte ch);
 
                 /// <summary>
@@ -114,8 +114,8 @@ namespace Tizen
                 /// int value to this instance of %String.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Append@String@Base@Tizen@@QAEKH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6AppendEi")]
                 public static extern uint Append00(global::System.IntPtr instance, int i);
 
                 /// <summary>
@@ -123,8 +123,8 @@ namespace Tizen
                 /// value to this instance of %String.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Append@String@Base@Tizen@@QAEKF@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6AppendEs")]
                 public static extern uint Append2(global::System.IntPtr instance, short s);
 
                 /// <summary>
@@ -132,8 +132,8 @@ namespace Tizen
                 /// value to this instance of %String.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Append@String@Base@Tizen@@QAEKJ@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6AppendEl")]
                 public static extern uint Append3(global::System.IntPtr instance, int l);
 
                 /// <summary>
@@ -141,8 +141,8 @@ namespace Tizen
                 /// value to this instance of %String.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Append@String@Base@Tizen@@QAEK_J@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6AppendEx")]
                 public static extern uint Append4(global::System.IntPtr instance, long ll);
 
                 /// <summary>
@@ -150,8 +150,8 @@ namespace Tizen
                 /// value to this instance of %String.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Append@String@Base@Tizen@@QAEKM@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6AppendEf")]
                 public static extern uint Append5(global::System.IntPtr instance, float f);
 
                 /// <summary>
@@ -159,8 +159,8 @@ namespace Tizen
                 /// value to this instance of %String.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Append@String@Base@Tizen@@QAEKN@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6AppendEd")]
                 public static extern uint Append6(global::System.IntPtr instance, double d);
 
                 /// <summary>
@@ -168,8 +168,8 @@ namespace Tizen
                 /// this instance of %String.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Append@String@Base@Tizen@@QAEKPB_W@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6AppendEPKw")]
                 public static extern uint Append7(global::System.IntPtr instance, global::System.IntPtr p);
 
                 /// <summary>
@@ -177,8 +177,8 @@ namespace Tizen
                 /// instance of %String.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Append@String@Base@Tizen@@QAEKABV123@@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6AppendERKS1_")]
                 public static extern uint Append8(global::System.IntPtr instance, global::System.IntPtr str);
 
                 /// <summary>
@@ -187,16 +187,16 @@ namespace Tizen
                 /// the default capacity.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Clear@String@Base@Tizen@@QAEXXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String5ClearEv")]
                 public static extern void Clear0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Compares the values of the two strings.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
-                    EntryPoint="?Compare@String@Base@Tizen@@SAHABV123@0@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String7CompareERKS1_S3_")]
                 public static extern int Compare0(global::System.IntPtr str0, global::System.IntPtr str1);
 
                 /// <summary>
@@ -204,8 +204,8 @@ namespace Tizen
                 /// of the specified instance of %String.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?CompareTo@String@Base@Tizen@@QBEHABV123@@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String9CompareToERKS1_")]
                 public static extern int CompareTo0(global::System.IntPtr instance, global::System.IntPtr str);
 
                 /// <summary>
@@ -216,8 +216,8 @@ namespace Tizen
                 /// length.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?EnsureCapacity@String@Base@Tizen@@QAEKH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String14EnsureCapacityEi")]
                 public static extern uint EnsureCapacity0(global::System.IntPtr instance, int minLength);
 
                 /// <summary>
@@ -226,8 +226,8 @@ namespace Tizen
                 /// %String.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Equals@String@Base@Tizen@@UBE_NABVObject@23@@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String6EqualsERKNS0_6ObjectE")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
                 public static extern bool Equals0(global::System.IntPtr instance, global::System.IntPtr obj);
 
@@ -237,8 +237,8 @@ namespace Tizen
                 /// sensitivity can be controlled.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Equals@String@Base@Tizen@@QBE_NABV123@_N@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String6EqualsERKS1_b")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
                 public static extern bool Equals1(global::System.IntPtr instance, global::System.IntPtr str, bool caseSensitive);
 
@@ -247,24 +247,24 @@ namespace Tizen
                 /// the value of the calling instance to the resultant string.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
-                    EntryPoint="?Format@String@Base@Tizen@@QAAKHPB_WZZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6FormatEiPKwz")]
                 public static extern uint Format0(global::System.IntPtr instance, int length, global::System.IntPtr pFormat);
 
                 /// <summary>
                 /// Gets the hash value of the current instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?GetHashCode@String@Base@Tizen@@UBEHXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String11GetHashCodeEv")]
                 public static extern int GetHashCode0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Gets the character at the specified position.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?GetCharAt@String@Base@Tizen@@QBEKHAA_W@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String9GetCharAtEiRw")]
                 public static extern uint GetCharAt0(global::System.IntPtr instance, int indexAt, global::System.IntPtr ch);
 
                 /// <summary>
@@ -273,8 +273,8 @@ namespace Tizen
                 /// specified character in this instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?IndexOf@String@Base@Tizen@@QBEK_WHAAH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String7IndexOfEwiRi")]
                 public static extern uint IndexOf0(global::System.IntPtr instance, char ch, int startIndex, global::System.IntPtr indexOf);
 
                 /// <summary>
@@ -283,8 +283,8 @@ namespace Tizen
                 /// of the specified substring.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?IndexOf@String@Base@Tizen@@QBEKABV123@HAAH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String7IndexOfERKS1_iRi")]
                 public static extern uint IndexOf1(global::System.IntPtr instance, global::System.IntPtr str, int startIndex, global::System.IntPtr indexOf);
 
                 /// <summary>
@@ -293,8 +293,8 @@ namespace Tizen
                 /// instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Insert@String@Base@Tizen@@QAEK_WH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6InsertEwi")]
                 public static extern uint Insert0(global::System.IntPtr instance, char ch, int indexAt);
 
                 /// <summary>
@@ -302,8 +302,8 @@ namespace Tizen
                 /// value at the specified position in the calling instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Insert@String@Base@Tizen@@QAEKDH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6InsertEci")]
                 public static extern uint Insert1(global::System.IntPtr instance, sbyte ch, int indexAt);
 
                 /// <summary>
@@ -311,8 +311,8 @@ namespace Tizen
                 /// integer at the specified position in the calling instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Insert@String@Base@Tizen@@QAEKFH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6InsertEsi")]
                 public static extern uint Insert2(global::System.IntPtr instance, short s, int indexAt);
 
                 /// <summary>
@@ -320,8 +320,8 @@ namespace Tizen
                 /// integer at the specified position in the calling instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Insert@String@Base@Tizen@@QAEKHH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6InsertEii")]
                 public static extern uint Insert00(global::System.IntPtr instance, int i, int indexAt);
 
                 /// <summary>
@@ -329,8 +329,8 @@ namespace Tizen
                 /// value at the specified position in the calling instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Insert@String@Base@Tizen@@QAEKJH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6InsertEli")]
                 public static extern uint Insert3(global::System.IntPtr instance, int l, int indexAt);
 
                 /// <summary>
@@ -338,8 +338,8 @@ namespace Tizen
                 /// value at the specified position in the calling instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Insert@String@Base@Tizen@@QAEK_JH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6InsertExi")]
                 public static extern uint Insert4(global::System.IntPtr instance, long ll, int indexAt);
 
                 /// <summary>
@@ -347,8 +347,8 @@ namespace Tizen
                 /// value at the specified position in the calling instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Insert@String@Base@Tizen@@QAEKMH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6InsertEfi")]
                 public static extern uint Insert5(global::System.IntPtr instance, float f, int indexAt);
 
                 /// <summary>
@@ -356,8 +356,8 @@ namespace Tizen
                 /// value at the specified position in the calling instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Insert@String@Base@Tizen@@QAEKNH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6InsertEdi")]
                 public static extern uint Insert6(global::System.IntPtr instance, double d, int indexAt);
 
                 /// <summary>
@@ -366,8 +366,8 @@ namespace Tizen
                 /// calling instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Insert@String@Base@Tizen@@QAEKPB_WH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6InsertEPKwi")]
                 public static extern uint Insert7(global::System.IntPtr instance, global::System.IntPtr p, int indexAt);
 
                 /// <summary>
@@ -376,8 +376,8 @@ namespace Tizen
                 /// instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Insert@String@Base@Tizen@@QAEKABV123@H@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6InsertERKS1_i")]
                 public static extern uint Insert8(global::System.IntPtr instance, global::System.IntPtr str, int indexAt);
 
                 /// <summary>
@@ -387,8 +387,8 @@ namespace Tizen
                 /// backward towards the beginning.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?LastIndexOf@String@Base@Tizen@@QBEK_WHAAH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String11LastIndexOfEwiRi")]
                 public static extern uint LastIndexOf0(global::System.IntPtr instance, char ch, int startIndex, global::System.IntPtr indexOf);
 
                 /// <summary>
@@ -398,32 +398,32 @@ namespace Tizen
                 /// backward towards the beginning.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?LastIndexOf@String@Base@Tizen@@QBEKABV123@HAAH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String11LastIndexOfERKS1_iRi")]
                 public static extern uint LastIndexOf1(global::System.IntPtr instance, global::System.IntPtr str, int startIndex, global::System.IntPtr indexOf);
 
                 /// <summary>
                 /// Removes the characters within the specified range.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Remove@String@Base@Tizen@@QAEKHH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String6RemoveEii")]
                 public static extern uint Remove0(global::System.IntPtr instance, int startIndex, int length);
 
                 /// <summary>
                 /// Replaces all occurrences of the specified characters.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Replace@String@Base@Tizen@@QAEX_W0@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String7ReplaceEww")]
                 public static extern void Replace0(global::System.IntPtr instance, char original, char replace);
 
                 /// <summary>
                 /// Replaces all occurrences of the specified string.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Replace@String@Base@Tizen@@QAEKABV123@0@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String7ReplaceERKS1_S3_")]
                 public static extern uint Replace1(global::System.IntPtr instance, global::System.IntPtr original, global::System.IntPtr replace);
 
                 /// <summary>
@@ -431,8 +431,8 @@ namespace Tizen
                 /// the substring of this instance of %String.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Replace@String@Base@Tizen@@QAEKABV123@0H@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String7ReplaceERKS1_S3_i")]
                 public static extern uint Replace2(global::System.IntPtr instance, global::System.IntPtr original, global::System.IntPtr replace, int startIndex);
 
                 /// <summary>
@@ -440,16 +440,16 @@ namespace Tizen
                 /// instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Reverse@String@Base@Tizen@@QAEXXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String7ReverseEv")]
                 public static extern void Reverse0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Sets the capacity of this instance of %String.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?SetCapacity@String@Base@Tizen@@QAEKH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String11SetCapacityEi")]
                 public static extern uint SetCapacity0(global::System.IntPtr instance, int newCapacity);
 
                 /// <summary>
@@ -457,24 +457,24 @@ namespace Tizen
                 /// given character.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?SetCharAt@String@Base@Tizen@@QAEK_WH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String9SetCharAtEwi")]
                 public static extern uint SetCharAt0(global::System.IntPtr instance, char ch, int indexAt);
 
                 /// <summary>
                 /// Sets the length of this instance of %String.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?SetLength@String@Base@Tizen@@QAEKH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String9SetLengthEi")]
                 public static extern uint SetLength0(global::System.IntPtr instance, int newLength);
 
                 /// <summary>
                 /// Gets a substring starting from the given index.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?SubString@String@Base@Tizen@@QBEKHAAV123@@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String9SubStringEiRS1_")]
                 public static extern uint SubString0(global::System.IntPtr instance, int startIndex, global::System.IntPtr @out);
 
                 /// <summary>
@@ -482,8 +482,8 @@ namespace Tizen
                 /// specified index.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?SubString@String@Base@Tizen@@QBEKHHAAV123@@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String9SubStringEiiRS1_")]
                 public static extern uint SubString1(global::System.IntPtr instance, int startIndex, int length, global::System.IntPtr @out);
 
                 /// <summary>
@@ -491,8 +491,8 @@ namespace Tizen
                 /// text from the given index.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?StartsWith@String@Base@Tizen@@QBE_NABV123@H@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String10StartsWithERKS1_i")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
                 public static extern bool StartsWith0(global::System.IntPtr instance, global::System.IntPtr str, int startIndex);
 
@@ -501,8 +501,8 @@ namespace Tizen
                 /// of the calling instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?EndsWith@String@Base@Tizen@@QBE_NABV123@@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String8EndsWithERKS1_")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
                 public static extern bool EndsWith0(global::System.IntPtr instance, global::System.IntPtr str);
 
@@ -510,8 +510,8 @@ namespace Tizen
                 /// [Deprecated]
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?ToLower@String@Base@Tizen@@QBEKAAV123@@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String7ToLowerERS1_")]
                 public static extern uint ToLower0(global::System.IntPtr instance, global::System.IntPtr @out);
 
                 /// <summary>
@@ -520,16 +520,16 @@ namespace Tizen
                 /// alphabets are also supported.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?ToLowerCase@String@Base@Tizen@@QBEKAAV123@@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String11ToLowerCaseERS1_")]
                 public static extern uint ToLowerCase0(global::System.IntPtr instance, global::System.IntPtr @out);
 
                 /// <summary>
                 /// [Deprecated]
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?ToUpper@String@Base@Tizen@@QBEKAAV123@@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String7ToUpperERS1_")]
                 public static extern uint ToUpper0(global::System.IntPtr instance, global::System.IntPtr @out);
 
                 /// <summary>
@@ -538,16 +538,16 @@ namespace Tizen
                 /// alphabets are also supported.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?ToUpperCase@String@Base@Tizen@@QBEKAAV123@@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String11ToUpperCaseERS1_")]
                 public static extern uint ToUpperCase0(global::System.IntPtr instance, global::System.IntPtr @out);
 
                 /// <summary>
                 /// [Deprecated]
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?ToLower@String@Base@Tizen@@QAEXXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String7ToLowerEv")]
                 public static extern void ToLower1(global::System.IntPtr instance);
 
                 /// <summary>
@@ -556,16 +556,16 @@ namespace Tizen
                 /// also supported.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?ToLowerCase@String@Base@Tizen@@QAEXXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String11ToLowerCaseEv")]
                 public static extern void ToLowerCase1(global::System.IntPtr instance);
 
                 /// <summary>
                 /// [Deprecated]
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?ToUpper@String@Base@Tizen@@QAEXXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String7ToUpperEv")]
                 public static extern void ToUpper1(global::System.IntPtr instance);
 
                 /// <summary>
@@ -574,24 +574,24 @@ namespace Tizen
                 /// also supported.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?ToUpperCase@String@Base@Tizen@@QAEXXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String11ToUpperCaseEv")]
                 public static extern void ToUpperCase1(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Trims the leading and trailing whitespace characters.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Trim@String@Base@Tizen@@QAEXXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen4Base6String4TrimEv")]
                 public static extern void Trim0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Gets the current capacity of this %String instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?GetCapacity@String@Base@Tizen@@QBEHXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String11GetCapacityEv")]
                 public static extern int GetCapacity0(global::System.IntPtr instance);
 
                 /// <summary>
@@ -599,16 +599,16 @@ namespace Tizen
                 /// instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?GetLength@String@Base@Tizen@@QBEHXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String9GetLengthEv")]
                 public static extern int GetLength0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Gets a pointer to the instance's internal buffer.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?GetPointer@String@Base@Tizen@@QBEPB_WXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String10GetPointerEv")]
                 public static extern global::System.IntPtr GetPointer0(global::System.IntPtr instance);
 
                 /// <summary>
@@ -616,8 +616,8 @@ namespace Tizen
                 /// substring.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="?Contains@String@Base@Tizen@@QBE_NABV123@@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZNK5Tizen4Base6String8ContainsERKS1_")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
                 public static extern bool Contains0(global::System.IntPtr instance, global::System.IntPtr str);
             }

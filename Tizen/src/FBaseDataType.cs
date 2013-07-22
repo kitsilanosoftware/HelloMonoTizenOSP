@@ -34,8 +34,8 @@ public unsafe partial class UUID_ : IDisposable
         public fixed byte c[8];
 
         [SuppressUnmanagedCodeSecurity]
-        [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-            EntryPoint="??0UUID_@@QAE@XZ")]
+        [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
+            EntryPoint="_ZN5UUID_C2Ev")]
         public static extern global::System.IntPtr UUID_0(global::System.IntPtr instance);
     }
 

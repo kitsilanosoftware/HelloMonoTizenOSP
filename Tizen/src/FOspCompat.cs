@@ -10,14 +10,22 @@ public delegate int funread(global::System.IntPtr _cookie, global::System.IntPtr
 
 public delegate int funwrite(global::System.IntPtr _cookie, string _buf, int _n);
 
-public delegate long funseek(global::System.IntPtr _cookie, long _off, int _whence);
-
 public delegate int funclose(global::System.IntPtr _cookie);
 
 public partial class TizenFOspCompat
 {
     public struct Internal
     {
+        [SuppressUnmanagedCodeSecurity]
+        [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+            EntryPoint="strlwr")]
+        public static extern global::System.IntPtr strlwr0(global::System.IntPtr pcStr);
+
+        [SuppressUnmanagedCodeSecurity]
+        [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+            EntryPoint="strupr")]
+        public static extern global::System.IntPtr strupr0(global::System.IntPtr pcStr);
+
         [SuppressUnmanagedCodeSecurity]
         [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
             EntryPoint="wcslcat")]
@@ -86,7 +94,7 @@ public partial class TizenFOspCompat
         [SuppressUnmanagedCodeSecurity]
         [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
             EntryPoint="fiprintf")]
-        public static extern int fiprintf0(_iobuf.Internal fp, global::System.IntPtr fmt0);
+        public static extern int fiprintf0(_IO_FILE.Internal fp, global::System.IntPtr fmt0);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
@@ -111,22 +119,33 @@ public partial class TizenFOspCompat
         [SuppressUnmanagedCodeSecurity]
         [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
             EntryPoint="fiscanf")]
-        public static extern int fiscanf0(_iobuf.Internal fp, global::System.IntPtr fmt0);
-
-        [SuppressUnmanagedCodeSecurity]
-        [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
-            EntryPoint="funopen")]
-        public static extern _iobuf.Internal funopen0(global::System.IntPtr cookie, global::System.IntPtr readfn, global::System.IntPtr writefn, global::System.IntPtr seekfn, global::System.IntPtr closefn);
+        public static extern int fiscanf0(_IO_FILE.Internal fp, global::System.IntPtr fmt0);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
             EntryPoint="fropen")]
-        public static extern _iobuf.Internal fropen0(global::System.IntPtr cookie, global::System.IntPtr readfn);
+        public static extern _IO_FILE.Internal fropen0(global::System.IntPtr cookie, global::System.IntPtr readfn);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
             EntryPoint="fwopen")]
-        public static extern _iobuf.Internal fwopen0(global::System.IntPtr cookie, global::System.IntPtr writefn);
+        public static extern _IO_FILE.Internal fwopen0(global::System.IntPtr cookie, global::System.IntPtr writefn);
+    }
+
+    public static global::System.IntPtr strlwr(global::System.IntPtr pcStr)
+    {
+        var arg0 = Marshal.StringToHGlobalAnsi(pcStr);
+        var ret = Internal.strlwr0(arg0);
+        Marshal.FreeHGlobal(arg0);
+        return ret;
+    }
+
+    public static global::System.IntPtr strupr(global::System.IntPtr pcStr)
+    {
+        var arg0 = Marshal.StringToHGlobalAnsi(pcStr);
+        var ret = Internal.strupr0(arg0);
+        Marshal.FreeHGlobal(arg0);
+        return ret;
     }
 
     public static uint wcslcat(global::System.IntPtr wcDst, global::System.IntPtr wcSrc, uint siz)
@@ -250,7 +269,7 @@ public partial class TizenFOspCompat
         return ret;
     }
 
-    public static int fiprintf(_iobuf fp, string fmt0)
+    public static int fiprintf(_IO_FILE fp, string fmt0)
     {
         var arg0 = fp._Instance;
         var arg1 = Marshal.StringToHGlobalAnsi(fmt0);
@@ -298,7 +317,7 @@ public partial class TizenFOspCompat
         return ret;
     }
 
-    public static int fiscanf(_iobuf fp, string fmt0)
+    public static int fiscanf(_IO_FILE fp, string fmt0)
     {
         var arg0 = fp._Instance;
         var arg1 = Marshal.StringToHGlobalAnsi(fmt0);
@@ -307,31 +326,20 @@ public partial class TizenFOspCompat
         return ret;
     }
 
-    public static _iobuf funopen(global::System.IntPtr cookie, funread readfn, funwrite writefn, funseek seekfn, funclose closefn)
-    {
-        var arg0 = cookie;
-        var arg1 = Marshal.GetFunctionPointerForDelegate(readfn);
-        var arg2 = Marshal.GetFunctionPointerForDelegate(writefn);
-        var arg3 = Marshal.GetFunctionPointerForDelegate(seekfn);
-        var arg4 = Marshal.GetFunctionPointerForDelegate(closefn);
-        var ret = Internal.funopen0(arg0, arg1, arg2, arg3, arg4);
-        return new _iobuf(ret);
-    }
-
-    public static _iobuf fropen(global::System.IntPtr cookie, funread readfn)
+    public static _IO_FILE fropen(global::System.IntPtr cookie, funread readfn)
     {
         var arg0 = cookie;
         var arg1 = Marshal.GetFunctionPointerForDelegate(readfn);
         var ret = Internal.fropen0(arg0, arg1);
-        return new _iobuf(ret);
+        return new _IO_FILE(ret);
     }
 
-    public static _iobuf fwopen(global::System.IntPtr cookie, funwrite writefn)
+    public static _IO_FILE fwopen(global::System.IntPtr cookie, funwrite writefn)
     {
         var arg0 = cookie;
         var arg1 = Marshal.GetFunctionPointerForDelegate(writefn);
         var ret = Internal.fwopen0(arg0, arg1);
-        return new _iobuf(ret);
+        return new _IO_FILE(ret);
     }
 }
 namespace Tizen
@@ -347,8 +355,5 @@ namespace Tizen
         namespace Wifi
         {
         }
-    }
-    namespace System
-    {
     }
 }

@@ -33,6 +33,9 @@ How to build
     open llvm.sln
     build the clang project, in RelWithDebInfo config    (this is incredibly slow, maybe 2 hours)
 
+    Only at that stage can this junction be set up (which should maybe be replaced by a build step?)
+    mklink /J C:\SourceTreeProjects\CppSharp\build\vs2012\lib\lib C:\SourceTreeProjects\CppSharp\deps\llvm\build\bin\lib
+
     Switch to C:\SourceTreeProjects\CppSharp\build
     run GenerateProjects.bat
     choose [2] for VS2012 generation

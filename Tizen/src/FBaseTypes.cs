@@ -13,7 +13,7 @@ namespace Tizen
         /// <summary>
         /// Defines the order of sorting.
         /// </summary>
-        public enum SortOrder
+        public enum SortOrder : uint
         {
             /// <summary>A constant for sorting the results in ascending order</summary>
             SORT_ORDER_ASCENDING = 0,
@@ -26,7 +26,7 @@ namespace Tizen
         /// <summary>
         /// Defines the matching criteria for strings.
         /// </summary>
-        public enum StringMatchCriteria
+        public enum StringMatchCriteria : uint
         {
             /// <summary>A constant for matching the strings exactly</summary>
             STRING_MATCH_CRITERIA_EXACT = 0,
@@ -38,7 +38,7 @@ namespace Tizen
             STRING_MATCH_CRITERIA_WILDCARD = 3
         }
 
-        public enum ComparisonOperator
+        public enum ComparisonOperator : uint
         {
             /// <summary>A comparison operator that checks the value equality</summary>
             COMPARISON_OP_EQUAL = 0,
