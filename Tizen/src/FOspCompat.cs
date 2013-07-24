@@ -356,7 +356,4 @@ namespace Tizen
         {
         }
     }
-    namespace System
-    {
-    }
 }

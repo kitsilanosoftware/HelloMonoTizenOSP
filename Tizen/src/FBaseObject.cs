@@ -10,6 +10,9 @@ namespace Tizen
 {
     namespace Base
     {
+        /// <summary>
+        /// This class is the root class of Tizen.
+        /// </summary>
         public unsafe partial class Object : IDisposable
         {
             [StructLayout(LayoutKind.Explicit, Size = 4)]
