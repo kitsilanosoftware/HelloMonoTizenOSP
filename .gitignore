@@ -2,6 +2,7 @@
 # File which we don't want Git to track
 
 *.DS_Store
+*.suo
 *.userprefs
 
 bin/
