@@ -18,24 +18,24 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6ObjectC2Ev")]
-                public static extern System.IntPtr Object0(System.IntPtr instance);
+                public static extern global::System.IntPtr Object0(global::System.IntPtr instance);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6Object6EqualsERKS1_")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool Equals0(System.IntPtr instance, System.IntPtr obj);
+                public static extern bool Equals0(global::System.IntPtr instance, global::System.IntPtr obj);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6Object11GetHashCodeEv")]
-                public static extern int GetHashCode0(System.IntPtr instance);
+                public static extern int GetHashCode0(global::System.IntPtr instance);
             }
 
-            public System.IntPtr _Instance { get; protected set; }
+            public global::System.IntPtr _Instance { get; protected set; }
 
             internal Object(Object.Internal* native)
-                : this(new System.IntPtr(native))
+                : this(new global::System.IntPtr(native))
             {
             }
 
@@ -44,7 +44,7 @@ namespace Tizen
             {
             }
 
-            internal Object(System.IntPtr native)
+            internal Object(global::System.IntPtr native)
             {
                 _Instance = native;
             }

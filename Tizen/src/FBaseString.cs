@@ -18,344 +18,344 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6StringC2Ev")]
-                public static extern System.IntPtr String0(System.IntPtr instance);
+                public static extern global::System.IntPtr String0(global::System.IntPtr instance);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6StringC2Ei")]
-                public static extern System.IntPtr String1(System.IntPtr instance, int capacity);
+                public static extern global::System.IntPtr String1(global::System.IntPtr instance, int capacity);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6StringC2Ew")]
-                public static extern System.IntPtr String2(System.IntPtr instance, char ch);
+                public static extern global::System.IntPtr String2(global::System.IntPtr instance, char ch);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6StringC2EPKw")]
-                public static extern System.IntPtr String3(System.IntPtr instance, System.IntPtr pValue);
+                public static extern global::System.IntPtr String3(global::System.IntPtr instance, global::System.IntPtr pValue);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6StringC2EPKc")]
-                public static extern System.IntPtr String4(System.IntPtr instance, System.IntPtr pValue);
+                public static extern global::System.IntPtr String4(global::System.IntPtr instance, global::System.IntPtr pValue);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6StringeqERKS1_")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool OperatorEqualEqual0(System.IntPtr instance, System.IntPtr rhs);
+                public static extern bool OperatorEqualEqual0(global::System.IntPtr instance, global::System.IntPtr rhs);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6StringneERKS1_")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool OperatorExclaimEqual0(System.IntPtr instance, System.IntPtr rhs);
+                public static extern bool OperatorExclaimEqual0(global::System.IntPtr instance, global::System.IntPtr rhs);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String7IsEmptyEv")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool IsEmpty0(System.IntPtr instance);
+                public static extern bool IsEmpty0(global::System.IntPtr instance);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEw")]
-                public static extern uint Append0(System.IntPtr instance, char ch);
+                public static extern uint Append0(global::System.IntPtr instance, char ch);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEc")]
-                public static extern uint Append1(System.IntPtr instance, sbyte ch);
+                public static extern uint Append1(global::System.IntPtr instance, sbyte ch);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEi")]
-                public static extern uint Append00(System.IntPtr instance, int i);
+                public static extern uint Append00(global::System.IntPtr instance, int i);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEs")]
-                public static extern uint Append2(System.IntPtr instance, short s);
+                public static extern uint Append2(global::System.IntPtr instance, short s);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEl")]
-                public static extern uint Append3(System.IntPtr instance, int l);
+                public static extern uint Append3(global::System.IntPtr instance, int l);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEx")]
-                public static extern uint Append4(System.IntPtr instance, long ll);
+                public static extern uint Append4(global::System.IntPtr instance, long ll);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEf")]
-                public static extern uint Append5(System.IntPtr instance, float f);
+                public static extern uint Append5(global::System.IntPtr instance, float f);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEd")]
-                public static extern uint Append6(System.IntPtr instance, double d);
+                public static extern uint Append6(global::System.IntPtr instance, double d);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEPKw")]
-                public static extern uint Append7(System.IntPtr instance, System.IntPtr p);
+                public static extern uint Append7(global::System.IntPtr instance, global::System.IntPtr p);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendERKS1_")]
-                public static extern uint Append8(System.IntPtr instance, System.IntPtr str);
+                public static extern uint Append8(global::System.IntPtr instance, global::System.IntPtr str);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String5ClearEv")]
-                public static extern void Clear0(System.IntPtr instance);
+                public static extern void Clear0(global::System.IntPtr instance);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String7CompareERKS1_S3_")]
-                public static extern int Compare0(System.IntPtr str0, System.IntPtr str1);
+                public static extern int Compare0(global::System.IntPtr str0, global::System.IntPtr str1);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String9CompareToERKS1_")]
-                public static extern int CompareTo0(System.IntPtr instance, System.IntPtr str);
+                public static extern int CompareTo0(global::System.IntPtr instance, global::System.IntPtr str);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String14EnsureCapacityEi")]
-                public static extern uint EnsureCapacity0(System.IntPtr instance, int minLength);
+                public static extern uint EnsureCapacity0(global::System.IntPtr instance, int minLength);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String6EqualsERKNS0_6ObjectE")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool Equals0(System.IntPtr instance, System.IntPtr obj);
+                public static extern bool Equals0(global::System.IntPtr instance, global::System.IntPtr obj);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String6EqualsERKS1_b")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool Equals1(System.IntPtr instance, System.IntPtr str, bool caseSensitive);
+                public static extern bool Equals1(global::System.IntPtr instance, global::System.IntPtr str, bool caseSensitive);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6FormatEiPKwz")]
-                public static extern uint Format0(System.IntPtr instance, int length, System.IntPtr pFormat);
+                public static extern uint Format0(global::System.IntPtr instance, int length, global::System.IntPtr pFormat);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String11GetHashCodeEv")]
-                public static extern int GetHashCode0(System.IntPtr instance);
+                public static extern int GetHashCode0(global::System.IntPtr instance);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String9GetCharAtEiRw")]
-                public static extern uint GetCharAt0(System.IntPtr instance, int indexAt, System.IntPtr ch);
+                public static extern uint GetCharAt0(global::System.IntPtr instance, int indexAt, global::System.IntPtr ch);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String7IndexOfEwiRi")]
-                public static extern uint IndexOf0(System.IntPtr instance, char ch, int startIndex, System.IntPtr indexOf);
+                public static extern uint IndexOf0(global::System.IntPtr instance, char ch, int startIndex, global::System.IntPtr indexOf);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String7IndexOfERKS1_iRi")]
-                public static extern uint IndexOf1(System.IntPtr instance, System.IntPtr str, int startIndex, System.IntPtr indexOf);
+                public static extern uint IndexOf1(global::System.IntPtr instance, global::System.IntPtr str, int startIndex, global::System.IntPtr indexOf);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertEwi")]
-                public static extern uint Insert0(System.IntPtr instance, char ch, int indexAt);
+                public static extern uint Insert0(global::System.IntPtr instance, char ch, int indexAt);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertEci")]
-                public static extern uint Insert1(System.IntPtr instance, sbyte ch, int indexAt);
+                public static extern uint Insert1(global::System.IntPtr instance, sbyte ch, int indexAt);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertEsi")]
-                public static extern uint Insert2(System.IntPtr instance, short s, int indexAt);
+                public static extern uint Insert2(global::System.IntPtr instance, short s, int indexAt);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertEii")]
-                public static extern uint Insert00(System.IntPtr instance, int i, int indexAt);
+                public static extern uint Insert00(global::System.IntPtr instance, int i, int indexAt);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertEli")]
-                public static extern uint Insert3(System.IntPtr instance, int l, int indexAt);
+                public static extern uint Insert3(global::System.IntPtr instance, int l, int indexAt);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertExi")]
-                public static extern uint Insert4(System.IntPtr instance, long ll, int indexAt);
+                public static extern uint Insert4(global::System.IntPtr instance, long ll, int indexAt);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertEfi")]
-                public static extern uint Insert5(System.IntPtr instance, float f, int indexAt);
+                public static extern uint Insert5(global::System.IntPtr instance, float f, int indexAt);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertEdi")]
-                public static extern uint Insert6(System.IntPtr instance, double d, int indexAt);
+                public static extern uint Insert6(global::System.IntPtr instance, double d, int indexAt);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertEPKwi")]
-                public static extern uint Insert7(System.IntPtr instance, System.IntPtr p, int indexAt);
+                public static extern uint Insert7(global::System.IntPtr instance, global::System.IntPtr p, int indexAt);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertERKS1_i")]
-                public static extern uint Insert8(System.IntPtr instance, System.IntPtr str, int indexAt);
+                public static extern uint Insert8(global::System.IntPtr instance, global::System.IntPtr str, int indexAt);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String11LastIndexOfEwiRi")]
-                public static extern uint LastIndexOf0(System.IntPtr instance, char ch, int startIndex, System.IntPtr indexOf);
+                public static extern uint LastIndexOf0(global::System.IntPtr instance, char ch, int startIndex, global::System.IntPtr indexOf);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String11LastIndexOfERKS1_iRi")]
-                public static extern uint LastIndexOf1(System.IntPtr instance, System.IntPtr str, int startIndex, System.IntPtr indexOf);
+                public static extern uint LastIndexOf1(global::System.IntPtr instance, global::System.IntPtr str, int startIndex, global::System.IntPtr indexOf);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6RemoveEii")]
-                public static extern uint Remove0(System.IntPtr instance, int startIndex, int length);
+                public static extern uint Remove0(global::System.IntPtr instance, int startIndex, int length);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String7ReplaceEww")]
-                public static extern void Replace0(System.IntPtr instance, char original, char replace);
+                public static extern void Replace0(global::System.IntPtr instance, char original, char replace);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String7ReplaceERKS1_S3_")]
-                public static extern uint Replace1(System.IntPtr instance, System.IntPtr original, System.IntPtr replace);
+                public static extern uint Replace1(global::System.IntPtr instance, global::System.IntPtr original, global::System.IntPtr replace);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String7ReplaceERKS1_S3_i")]
-                public static extern uint Replace2(System.IntPtr instance, System.IntPtr original, System.IntPtr replace, int startIndex);
+                public static extern uint Replace2(global::System.IntPtr instance, global::System.IntPtr original, global::System.IntPtr replace, int startIndex);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String7ReverseEv")]
-                public static extern void Reverse0(System.IntPtr instance);
+                public static extern void Reverse0(global::System.IntPtr instance);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String11SetCapacityEi")]
-                public static extern uint SetCapacity0(System.IntPtr instance, int newCapacity);
+                public static extern uint SetCapacity0(global::System.IntPtr instance, int newCapacity);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String9SetCharAtEwi")]
-                public static extern uint SetCharAt0(System.IntPtr instance, char ch, int indexAt);
+                public static extern uint SetCharAt0(global::System.IntPtr instance, char ch, int indexAt);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String9SetLengthEi")]
-                public static extern uint SetLength0(System.IntPtr instance, int newLength);
+                public static extern uint SetLength0(global::System.IntPtr instance, int newLength);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String9SubStringEiRS1_")]
-                public static extern uint SubString0(System.IntPtr instance, int startIndex, System.IntPtr @out);
+                public static extern uint SubString0(global::System.IntPtr instance, int startIndex, global::System.IntPtr @out);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String9SubStringEiiRS1_")]
-                public static extern uint SubString1(System.IntPtr instance, int startIndex, int length, System.IntPtr @out);
+                public static extern uint SubString1(global::System.IntPtr instance, int startIndex, int length, global::System.IntPtr @out);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String10StartsWithERKS1_i")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool StartsWith0(System.IntPtr instance, System.IntPtr str, int startIndex);
+                public static extern bool StartsWith0(global::System.IntPtr instance, global::System.IntPtr str, int startIndex);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String8EndsWithERKS1_")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool EndsWith0(System.IntPtr instance, System.IntPtr str);
+                public static extern bool EndsWith0(global::System.IntPtr instance, global::System.IntPtr str);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String7ToLowerERS1_")]
-                public static extern uint ToLower0(System.IntPtr instance, System.IntPtr @out);
+                public static extern uint ToLower0(global::System.IntPtr instance, global::System.IntPtr @out);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String11ToLowerCaseERS1_")]
-                public static extern uint ToLowerCase0(System.IntPtr instance, System.IntPtr @out);
+                public static extern uint ToLowerCase0(global::System.IntPtr instance, global::System.IntPtr @out);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String7ToUpperERS1_")]
-                public static extern uint ToUpper0(System.IntPtr instance, System.IntPtr @out);
+                public static extern uint ToUpper0(global::System.IntPtr instance, global::System.IntPtr @out);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String11ToUpperCaseERS1_")]
-                public static extern uint ToUpperCase0(System.IntPtr instance, System.IntPtr @out);
+                public static extern uint ToUpperCase0(global::System.IntPtr instance, global::System.IntPtr @out);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String7ToLowerEv")]
-                public static extern void ToLower1(System.IntPtr instance);
+                public static extern void ToLower1(global::System.IntPtr instance);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String11ToLowerCaseEv")]
-                public static extern void ToLowerCase1(System.IntPtr instance);
+                public static extern void ToLowerCase1(global::System.IntPtr instance);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String7ToUpperEv")]
-                public static extern void ToUpper1(System.IntPtr instance);
+                public static extern void ToUpper1(global::System.IntPtr instance);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String11ToUpperCaseEv")]
-                public static extern void ToUpperCase1(System.IntPtr instance);
+                public static extern void ToUpperCase1(global::System.IntPtr instance);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String4TrimEv")]
-                public static extern void Trim0(System.IntPtr instance);
+                public static extern void Trim0(global::System.IntPtr instance);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String11GetCapacityEv")]
-                public static extern int GetCapacity0(System.IntPtr instance);
+                public static extern int GetCapacity0(global::System.IntPtr instance);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String9GetLengthEv")]
-                public static extern int GetLength0(System.IntPtr instance);
+                public static extern int GetLength0(global::System.IntPtr instance);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String10GetPointerEv")]
-                public static extern System.IntPtr GetPointer0(System.IntPtr instance);
+                public static extern global::System.IntPtr GetPointer0(global::System.IntPtr instance);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String8ContainsERKS1_")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool Contains0(System.IntPtr instance, System.IntPtr str);
+                public static extern bool Contains0(global::System.IntPtr instance, global::System.IntPtr str);
             }
 
             internal String(String.Internal* native)
-                : this(new System.IntPtr(native))
+                : this(new global::System.IntPtr(native))
             {
             }
 
@@ -364,7 +364,7 @@ namespace Tizen
             {
             }
 
-            internal String(System.IntPtr native)
+            internal String(global::System.IntPtr native)
                 : base(native)
             {
             }
@@ -390,7 +390,7 @@ namespace Tizen
                 Internal.String2(_Instance, ch);
             }
 
-            public String(System.IntPtr pValue)
+            public String(global::System.IntPtr pValue)
                 : this(IntPtr.Zero)
             {
                 var arg0 = Marshal.StringToHGlobalAnsi(pValue);
@@ -481,7 +481,7 @@ namespace Tizen
                 return ret;
             }
 
-            public uint Append(System.IntPtr p)
+            public uint Append(global::System.IntPtr p)
             {
                 var arg0 = Marshal.StringToHGlobalAnsi(p);
                 var ret = Internal.Append7(_Instance, arg0);
@@ -528,7 +528,7 @@ namespace Tizen
                 return ret;
             }
 
-            public uint Format(int length, System.IntPtr pFormat)
+            public uint Format(int length, global::System.IntPtr pFormat)
             {
                 var arg1 = Marshal.StringToHGlobalAnsi(pFormat);
                 var ret = Internal.Format0(_Instance, length, arg1);
@@ -542,7 +542,7 @@ namespace Tizen
                 return ret;
             }
 
-            public uint GetCharAt(int indexAt, System.IntPtr ch)
+            public uint GetCharAt(int indexAt, global::System.IntPtr ch)
             {
                 var arg1 = Marshal.StringToHGlobalAnsi(ch);
                 var ret = Internal.GetCharAt0(_Instance, indexAt, arg1);
@@ -550,14 +550,14 @@ namespace Tizen
                 return ret;
             }
 
-            public uint IndexOf(char ch, int startIndex, System.IntPtr indexOf)
+            public uint IndexOf(char ch, int startIndex, global::System.IntPtr indexOf)
             {
                 var arg2 = indexOf;
                 var ret = Internal.IndexOf0(_Instance, ch, startIndex, arg2);
                 return ret;
             }
 
-            public uint IndexOf(Tizen.Base.String str, int startIndex, System.IntPtr indexOf)
+            public uint IndexOf(Tizen.Base.String str, int startIndex, global::System.IntPtr indexOf)
             {
                 var arg0 = str._Instance;
                 var arg2 = indexOf;
@@ -613,7 +613,7 @@ namespace Tizen
                 return ret;
             }
 
-            public uint Insert(System.IntPtr p, int indexAt)
+            public uint Insert(global::System.IntPtr p, int indexAt)
             {
                 var arg0 = Marshal.StringToHGlobalAnsi(p);
                 var ret = Internal.Insert7(_Instance, arg0, indexAt);
@@ -628,14 +628,14 @@ namespace Tizen
                 return ret;
             }
 
-            public uint LastIndexOf(char ch, int startIndex, System.IntPtr indexOf)
+            public uint LastIndexOf(char ch, int startIndex, global::System.IntPtr indexOf)
             {
                 var arg2 = indexOf;
                 var ret = Internal.LastIndexOf0(_Instance, ch, startIndex, arg2);
                 return ret;
             }
 
-            public uint LastIndexOf(Tizen.Base.String str, int startIndex, System.IntPtr indexOf)
+            public uint LastIndexOf(Tizen.Base.String str, int startIndex, global::System.IntPtr indexOf)
             {
                 var arg0 = str._Instance;
                 var arg2 = indexOf;
@@ -786,7 +786,7 @@ namespace Tizen
                 return ret;
             }
 
-            public System.IntPtr GetPointer()
+            public global::System.IntPtr GetPointer()
             {
                 var ret = Internal.GetPointer0(_Instance);
                 return ret;

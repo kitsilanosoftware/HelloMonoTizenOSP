@@ -18,71 +18,71 @@ namespace Tizen
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistryC2Ev")]
-                public static extern System.IntPtr AppRegistry0(System.IntPtr instance);
+                public static extern global::System.IntPtr AppRegistry0(global::System.IntPtr instance);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry3AddERKNS_4Base6StringES5_")]
-                public static extern uint Add0(System.IntPtr instance, System.IntPtr key, System.IntPtr value);
+                public static extern uint Add0(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry3AddERKNS_4Base6StringEi")]
-                public static extern uint Add1(System.IntPtr instance, System.IntPtr key, int value);
+                public static extern uint Add1(global::System.IntPtr instance, global::System.IntPtr key, int value);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry3AddERKNS_4Base6StringEd")]
-                public static extern uint Add2(System.IntPtr instance, System.IntPtr key, double value);
+                public static extern uint Add2(global::System.IntPtr instance, global::System.IntPtr key, double value);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry3SetERKNS_4Base6StringES5_")]
-                public static extern uint Set0(System.IntPtr instance, System.IntPtr key, System.IntPtr value);
+                public static extern uint Set0(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry3SetERKNS_4Base6StringEi")]
-                public static extern uint Set1(System.IntPtr instance, System.IntPtr key, int value);
+                public static extern uint Set1(global::System.IntPtr instance, global::System.IntPtr key, int value);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry3SetERKNS_4Base6StringEd")]
-                public static extern uint Set2(System.IntPtr instance, System.IntPtr key, double value);
+                public static extern uint Set2(global::System.IntPtr instance, global::System.IntPtr key, double value);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry4SaveEv")]
-                public static extern uint Save0(System.IntPtr instance);
+                public static extern uint Save0(global::System.IntPtr instance);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry6RemoveERKNS_4Base6StringE")]
-                public static extern uint Remove0(System.IntPtr instance, System.IntPtr key);
+                public static extern uint Remove0(global::System.IntPtr instance, global::System.IntPtr key);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen3App11AppRegistry3GetERKNS_4Base6StringERS3_")]
-                public static extern uint Get0(System.IntPtr instance, System.IntPtr key, System.IntPtr value);
+                public static extern uint Get0(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen3App11AppRegistry3GetERKNS_4Base6StringERi")]
-                public static extern uint Get00(System.IntPtr instance, System.IntPtr key, System.IntPtr value);
+                public static extern uint Get00(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen3App11AppRegistry3GetERKNS_4Base6StringERd")]
-                public static extern uint Get1(System.IntPtr instance, System.IntPtr key, System.IntPtr value);
+                public static extern uint Get1(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry11GetInstanceEv")]
-                public static extern System.IntPtr GetInstance0();
+                public static extern global::System.IntPtr GetInstance0();
             }
 
             internal AppRegistry(AppRegistry.Internal* native)
-                : this(new System.IntPtr(native))
+                : this(new global::System.IntPtr(native))
             {
             }
 
@@ -91,7 +91,7 @@ namespace Tizen
             {
             }
 
-            internal AppRegistry(System.IntPtr native)
+            internal AppRegistry(global::System.IntPtr native)
                 : base(native)
             {
             }
@@ -166,7 +166,7 @@ namespace Tizen
                 return ret;
             }
 
-            public uint Get0(Tizen.Base.String key, System.IntPtr value)
+            public uint Get0(Tizen.Base.String key, global::System.IntPtr value)
             {
                 var arg0 = key._Instance;
                 var arg1 = value;
@@ -174,7 +174,7 @@ namespace Tizen
                 return ret;
             }
 
-            public uint Get(Tizen.Base.String key, System.IntPtr value)
+            public uint Get(Tizen.Base.String key, global::System.IntPtr value)
             {
                 var arg0 = key._Instance;
                 var arg1 = value;
