@@ -10,9 +10,6 @@ namespace Tizen
 {
     namespace App
     {
-        /// <summary>
-        /// Defines the various states of an application's life cycle.
-        /// </summary>
         public enum AppState : uint
         {
             /// <summary>The application has been launched</summary>
@@ -25,46 +22,30 @@ namespace Tizen
             TERMINATED = 3
         }
 
-        /// <summary>
-        /// Defines the UI state of an application.
-        /// </summary>
         [Flags]
         public enum AppUiState : uint
         {
             /// <summary>The application is completely visible on foreground</summary>
-            APP_UI_STATE_FOREGROUND = 1,
+            APP_UI_STATE_FOREGROUND = 0x1,
             /// <summary>The application is partially hidden by another window, such as a system pop-up</summary>
-            APP_UI_STATE_PARTIAL_BACKGROUND = 2,
+            APP_UI_STATE_PARTIAL_BACKGROUND = 0x2,
             /// <summary>The application is completely hidden by a full-screen window, usually by another application or an application control</summary>
-            APP_UI_STATE_BACKGROUND = 4
+            APP_UI_STATE_BACKGROUND = 0x4
         }
 
-        /// <summary>
-        /// Defines the application control result.
-        /// </summary>
         [Flags]
         public enum AppCtrlResult : uint
         {
             /// <summary>The application operation is successful</summary>
-            APP_CTRL_RESULT_SUCCEEDED = 0,
+            APP_CTRL_RESULT_SUCCEEDED = 0x0,
             /// <summary>The application operation has failed</summary>
-            APP_CTRL_RESULT_FAILED = 1,
+            APP_CTRL_RESULT_FAILED = 0x1,
             /// <summary>The application operation is canceled by the callee application</summary>
-            APP_CTRL_RESULT_CANCELED = 2,
+            APP_CTRL_RESULT_CANCELED = 0x2,
             /// <summary>The callee application is terminated without sending the result</summary>
-            APP_CTRL_RESULT_TERMINATED = 4,
+            APP_CTRL_RESULT_TERMINATED = 0x4,
             /// <summary>The application operation is aborted by the platform</summary>
-            APP_CTRL_RESULT_ABORTED = 8
+            APP_CTRL_RESULT_ABORTED = 0x8
         }
-
-        /// <summary>
-        /// The package ID
-        /// </summary>
-        /// <summary>
-        /// The application ID
-        /// </summary>
-        /// <summary>
-        /// [Deprecated]
-        /// </summary>
     }
 }

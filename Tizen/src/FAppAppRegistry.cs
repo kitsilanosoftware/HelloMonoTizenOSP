@@ -15,121 +15,74 @@ namespace Tizen
             [StructLayout(LayoutKind.Explicit, Size = 8)]
             public new struct Internal
             {
-                /// <summary>
-                /// This default constructor is intentionally declared as
-                /// private to implement the %Singleton semantic.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistryC2Ev")]
-                public static extern global::System.IntPtr AppRegistry0(global::System.IntPtr instance);
+                public static extern System.IntPtr AppRegistry0(System.IntPtr instance);
 
-                /// <summary>
-                /// Adds a string value along with the specified key.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry3AddERKNS_4Base6StringES5_")]
-                public static extern uint Add0(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
+                public static extern uint Add0(System.IntPtr instance, System.IntPtr key, System.IntPtr value);
 
-                /// <summary>
-                /// Adds an integer value along with the specified key.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry3AddERKNS_4Base6StringEi")]
-                public static extern uint Add1(global::System.IntPtr instance, global::System.IntPtr key, int value);
+                public static extern uint Add1(System.IntPtr instance, System.IntPtr key, int value);
 
-                /// <summary>
-                /// Adds a floating point value along with the specified
-                /// key.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry3AddERKNS_4Base6StringEd")]
-                public static extern uint Add2(global::System.IntPtr instance, global::System.IntPtr key, double value);
+                public static extern uint Add2(System.IntPtr instance, System.IntPtr key, double value);
 
-                /// <summary>
-                /// Sets a string value associated with the specified key.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry3SetERKNS_4Base6StringES5_")]
-                public static extern uint Set0(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
+                public static extern uint Set0(System.IntPtr instance, System.IntPtr key, System.IntPtr value);
 
-                /// <summary>
-                /// Sets an integer value associated with the specified
-                /// key.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry3SetERKNS_4Base6StringEi")]
-                public static extern uint Set1(global::System.IntPtr instance, global::System.IntPtr key, int value);
+                public static extern uint Set1(System.IntPtr instance, System.IntPtr key, int value);
 
-                /// <summary>
-                /// Sets a floating point value associated with the
-                /// specified key.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry3SetERKNS_4Base6StringEd")]
-                public static extern uint Set2(global::System.IntPtr instance, global::System.IntPtr key, double value);
+                public static extern uint Set2(System.IntPtr instance, System.IntPtr key, double value);
 
-                /// <summary>
-                /// Saves the values temporarily in the persistent storage.
-                /// The %Save() method is invoked internally when the instance
-                /// of this class is deleted.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry4SaveEv")]
-                public static extern uint Save0(global::System.IntPtr instance);
+                public static extern uint Save0(System.IntPtr instance);
 
-                /// <summary>
-                /// Removes a preference associated with the specified key.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry6RemoveERKNS_4Base6StringE")]
-                public static extern uint Remove0(global::System.IntPtr instance, global::System.IntPtr key);
+                public static extern uint Remove0(System.IntPtr instance, System.IntPtr key);
 
-                /// <summary>
-                /// Gets a string value associated with the specified key.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen3App11AppRegistry3GetERKNS_4Base6StringERS3_")]
-                public static extern uint Get0(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
+                public static extern uint Get0(System.IntPtr instance, System.IntPtr key, System.IntPtr value);
 
-                /// <summary>
-                /// Gets an integer value associated with the specified
-                /// key.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen3App11AppRegistry3GetERKNS_4Base6StringERi")]
-                public static extern uint Get00(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
+                public static extern uint Get00(System.IntPtr instance, System.IntPtr key, System.IntPtr value);
 
-                /// <summary>
-                /// Gets a floating point value associated with the
-                /// specified key.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen3App11AppRegistry3GetERKNS_4Base6StringERd")]
-                public static extern uint Get1(global::System.IntPtr instance, global::System.IntPtr key, global::System.IntPtr value);
+                public static extern uint Get1(System.IntPtr instance, System.IntPtr key, System.IntPtr value);
 
-                /// <summary>
-                /// Gets the %AppRegistry instance pointer.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen3App11AppRegistry11GetInstanceEv")]
-                public static extern global::System.IntPtr GetInstance0();
+                public static extern System.IntPtr GetInstance0();
             }
 
             internal AppRegistry(AppRegistry.Internal* native)
-                : this(new global::System.IntPtr(native))
+                : this(new System.IntPtr(native))
             {
             }
 
@@ -138,7 +91,7 @@ namespace Tizen
             {
             }
 
-            internal AppRegistry(global::System.IntPtr native)
+            internal AppRegistry(System.IntPtr native)
                 : base(native)
             {
             }
@@ -148,10 +101,7 @@ namespace Tizen
                 base.Dispose(disposing);
             }
 
-            /// <summary>
-            /// Adds a string value along with the specified key.
-            /// </summary>
-            public uint Add(String key, String value)
+            public uint Add(Tizen.Base.String key, Tizen.Base.String value)
             {
                 var arg0 = key._Instance;
                 var arg1 = value._Instance;
@@ -159,30 +109,21 @@ namespace Tizen
                 return ret;
             }
 
-            /// <summary>
-            /// Adds an integer value along with the specified key.
-            /// </summary>
-            public uint Add(String key, int value)
+            public uint Add(Tizen.Base.String key, int value)
             {
                 var arg0 = key._Instance;
                 var ret = Internal.Add1(_Instance, arg0, value);
                 return ret;
             }
 
-            /// <summary>
-            /// Adds a floating point value along with the specified key.
-            /// </summary>
-            public uint Add(String key, double value)
+            public uint Add(Tizen.Base.String key, double value)
             {
                 var arg0 = key._Instance;
                 var ret = Internal.Add2(_Instance, arg0, value);
                 return ret;
             }
 
-            /// <summary>
-            /// Sets a string value associated with the specified key.
-            /// </summary>
-            public uint Set(String key, String value)
+            public uint Set(Tizen.Base.String key, Tizen.Base.String value)
             {
                 var arg0 = key._Instance;
                 var arg1 = value._Instance;
@@ -190,52 +131,34 @@ namespace Tizen
                 return ret;
             }
 
-            /// <summary>
-            /// Sets an integer value associated with the specified key.
-            /// </summary>
-            public uint Set(String key, int value)
+            public uint Set(Tizen.Base.String key, int value)
             {
                 var arg0 = key._Instance;
                 var ret = Internal.Set1(_Instance, arg0, value);
                 return ret;
             }
 
-            /// <summary>
-            /// Sets a floating point value associated with the specified
-            /// key.
-            /// </summary>
-            public uint Set(String key, double value)
+            public uint Set(Tizen.Base.String key, double value)
             {
                 var arg0 = key._Instance;
                 var ret = Internal.Set2(_Instance, arg0, value);
                 return ret;
             }
 
-            /// <summary>
-            /// Saves the values temporarily in the persistent storage. The
-            /// %Save() method is invoked internally when the instance of this
-            /// class is deleted.
-            /// </summary>
             public uint Save()
             {
                 var ret = Internal.Save0(_Instance);
                 return ret;
             }
 
-            /// <summary>
-            /// Removes a preference associated with the specified key.
-            /// </summary>
-            public uint Remove(String key)
+            public uint Remove(Tizen.Base.String key)
             {
                 var arg0 = key._Instance;
                 var ret = Internal.Remove0(_Instance, arg0);
                 return ret;
             }
 
-            /// <summary>
-            /// Gets a string value associated with the specified key.
-            /// </summary>
-            public uint Get(String key, String value)
+            public uint Get(Tizen.Base.String key, Tizen.Base.String value)
             {
                 var arg0 = key._Instance;
                 var arg1 = value._Instance;
@@ -243,10 +166,7 @@ namespace Tizen
                 return ret;
             }
 
-            /// <summary>
-            /// Gets an integer value associated with the specified key.
-            /// </summary>
-            public uint Get0(String key, global::System.IntPtr value)
+            public uint Get0(Tizen.Base.String key, System.IntPtr value)
             {
                 var arg0 = key._Instance;
                 var arg1 = value;
@@ -254,11 +174,7 @@ namespace Tizen
                 return ret;
             }
 
-            /// <summary>
-            /// Gets a floating point value associated with the specified
-            /// key.
-            /// </summary>
-            public uint Get(String key, global::System.IntPtr value)
+            public uint Get(Tizen.Base.String key, System.IntPtr value)
             {
                 var arg0 = key._Instance;
                 var arg1 = value;
@@ -266,10 +182,7 @@ namespace Tizen
                 return ret;
             }
 
-            /// <summary>
-            /// Gets the %AppRegistry instance pointer.
-            /// </summary>
-            public static AppRegistry GetInstance()
+            public static Tizen.App.AppRegistry GetInstance()
             {
                 var ret = Internal.GetInstance0();
                 return new Tizen.App.AppRegistry(ret);

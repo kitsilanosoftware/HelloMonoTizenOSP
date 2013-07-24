@@ -10,9 +10,6 @@ namespace Tizen
 {
     namespace Base
     {
-        /// <summary>
-        /// Defines the order of sorting.
-        /// </summary>
         public enum SortOrder : uint
         {
             /// <summary>A constant for sorting the results in ascending order</summary>
@@ -23,9 +20,6 @@ namespace Tizen
             SORT_ORDER_NONE = 2
         }
 
-        /// <summary>
-        /// Defines the matching criteria for strings.
-        /// </summary>
         public enum StringMatchCriteria : uint
         {
             /// <summary>A constant for matching the strings exactly</summary>

@@ -13,8 +13,11 @@ Workspace setup
     Clone https://github.com/brighttwin/clang.git to C:\SourceTreeProjects\clang
     Clone https://github.com/brighttwin/llvm.git to C:\SourceTreeProjects\llvm
     Clone https://github.com/brighttwin/CppSharp.git to C:\SourceTreeProjects\CppSharp
-    mklink /J C:\SourceTreeProjects\CppSharp\deps\llvm C:\SourceTreeProjects\llvm
+    Clone https://github.com/brighttwin/CppSharpTizen.git to C:\SourceTreeProjects\CppSharpTizen
+
     mklink /J C:\SourceTreeProjects\llvm\tools\clang C:\SourceTreeProjects\clang
+    mklink /J C:\SourceTreeProjects\CppSharp\deps\llvm C:\SourceTreeProjects\llvm
+    mklink /J C:\SourceTreeProjects\CppSharp\examples\Tizen C:\SourceTreeProjects\CppSharpTizen
 
 How to build
 

@@ -10,620 +10,352 @@ namespace Tizen
 {
     namespace Base
     {
-        /// <summary>
-        /// This class represents a mutable sequence of Unicode characters.
-        /// </summary>
         public unsafe partial class String : Tizen.Base.Object, IDisposable
         {
             [StructLayout(LayoutKind.Explicit, Size = 28)]
             public new struct Internal
             {
-                /// <summary>
-                /// This is the default constructor for this class. It
-                /// creates an empty %String instance with the default capacity
-                /// of 16 bytes.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6StringC2Ev")]
-                public static extern global::System.IntPtr String0(global::System.IntPtr instance);
+                public static extern System.IntPtr String0(System.IntPtr instance);
 
-                /// <summary>
-                /// Initializes this instance of %String with the specified
-                /// capacity.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6StringC2Ei")]
-                public static extern global::System.IntPtr String1(global::System.IntPtr instance, int capacity);
+                public static extern System.IntPtr String1(System.IntPtr instance, int capacity);
 
-                /// <summary>
-                /// Initializes this instance of %String with the specified
-                /// Unicode character.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6StringC2Ew")]
-                public static extern global::System.IntPtr String2(global::System.IntPtr instance, char ch);
+                public static extern System.IntPtr String2(System.IntPtr instance, char ch);
 
-                /// <summary>
-                /// Initializes this instance of %String with the specified
-                /// Unicode string.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6StringC2EPKw")]
-                public static extern global::System.IntPtr String3(global::System.IntPtr instance, global::System.IntPtr pValue);
+                public static extern System.IntPtr String3(System.IntPtr instance, System.IntPtr pValue);
 
-                /// <summary>
-                /// Initializes this instance of %String with the specified
-                /// character string.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6StringC2EPKc")]
-                public static extern global::System.IntPtr String4(global::System.IntPtr instance, global::System.IntPtr pValue);
+                public static extern System.IntPtr String4(System.IntPtr instance, System.IntPtr pValue);
 
-                /// <summary>
-                /// Checks the two strings for equality.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6StringeqERKS1_")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool OperatorEqualEqual0(global::System.IntPtr instance, global::System.IntPtr rhs);
+                public static extern bool OperatorEqualEqual0(System.IntPtr instance, System.IntPtr rhs);
 
-                /// <summary>
-                /// Checks the two strings for inequality.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6StringneERKS1_")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool OperatorExclaimEqual0(global::System.IntPtr instance, global::System.IntPtr rhs);
+                public static extern bool OperatorExclaimEqual0(System.IntPtr instance, System.IntPtr rhs);
 
-                /// <summary>
-                /// Checks whether the string is empty.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String7IsEmptyEv")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool IsEmpty0(global::System.IntPtr instance);
+                public static extern bool IsEmpty0(System.IntPtr instance);
 
-                /// <summary>
-                /// Appends the specified wchar_t value to this %String
-                /// instance after converting it.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEw")]
-                public static extern uint Append0(global::System.IntPtr instance, char ch);
+                public static extern uint Append0(System.IntPtr instance, char ch);
 
-                /// <summary>
-                /// Appends the specified char value to this %String
-                /// instance after converting it.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEc")]
-                public static extern uint Append1(global::System.IntPtr instance, sbyte ch);
+                public static extern uint Append1(System.IntPtr instance, sbyte ch);
 
-                /// <summary>
-                /// Appends the string representing the specified 32-bit
-                /// int value to this instance of %String.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEi")]
-                public static extern uint Append00(global::System.IntPtr instance, int i);
+                public static extern uint Append00(System.IntPtr instance, int i);
 
-                /// <summary>
-                /// Appends the string representing the specified short
-                /// value to this instance of %String.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEs")]
-                public static extern uint Append2(global::System.IntPtr instance, short s);
+                public static extern uint Append2(System.IntPtr instance, short s);
 
-                /// <summary>
-                /// Appends the string representing the specified long
-                /// value to this instance of %String.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEl")]
-                public static extern uint Append3(global::System.IntPtr instance, int l);
+                public static extern uint Append3(System.IntPtr instance, int l);
 
-                /// <summary>
-                /// Appends the string representing the specified long long
-                /// value to this instance of %String.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEx")]
-                public static extern uint Append4(global::System.IntPtr instance, long ll);
+                public static extern uint Append4(System.IntPtr instance, long ll);
 
-                /// <summary>
-                /// Appends the string representing the specified float
-                /// value to this instance of %String.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEf")]
-                public static extern uint Append5(global::System.IntPtr instance, float f);
+                public static extern uint Append5(System.IntPtr instance, float f);
 
-                /// <summary>
-                /// Appends the string representing the specified double
-                /// value to this instance of %String.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEd")]
-                public static extern uint Append6(global::System.IntPtr instance, double d);
+                public static extern uint Append6(System.IntPtr instance, double d);
 
-                /// <summary>
-                /// Appends the specified null-terminated Unicode text to
-                /// this instance of %String.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendEPKw")]
-                public static extern uint Append7(global::System.IntPtr instance, global::System.IntPtr p);
+                public static extern uint Append7(System.IntPtr instance, System.IntPtr p);
 
-                /// <summary>
-                /// Appends the specified instance of %String to this
-                /// instance of %String.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6AppendERKS1_")]
-                public static extern uint Append8(global::System.IntPtr instance, global::System.IntPtr str);
+                public static extern uint Append8(System.IntPtr instance, System.IntPtr str);
 
-                /// <summary>
-                /// Clears the current instance and sets it to an empty
-                /// %String instance. The capacity is set to 16 bytes, which is
-                /// the default capacity.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String5ClearEv")]
-                public static extern void Clear0(global::System.IntPtr instance);
+                public static extern void Clear0(System.IntPtr instance);
 
-                /// <summary>
-                /// Compares the values of the two strings.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String7CompareERKS1_S3_")]
-                public static extern int Compare0(global::System.IntPtr str0, global::System.IntPtr str1);
+                public static extern int Compare0(System.IntPtr str0, System.IntPtr str1);
 
-                /// <summary>
-                /// Compares the value of the current instance to the value
-                /// of the specified instance of %String.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String9CompareToERKS1_")]
-                public static extern int CompareTo0(global::System.IntPtr instance, global::System.IntPtr str);
+                public static extern int CompareTo0(System.IntPtr instance, System.IntPtr str);
 
-                /// <summary>
-                /// Ensures that the specified length is less than or equal
-                /// to the capacity of the current instance of %String.
-                /// Otherwise, it expands the capacity of the internal buffer
-                /// to a value that is greater than or equal to the specified
-                /// length.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String14EnsureCapacityEi")]
-                public static extern uint EnsureCapacity0(global::System.IntPtr instance, int minLength);
+                public static extern uint EnsureCapacity0(System.IntPtr instance, int minLength);
 
-                /// <summary>
-                /// Checks whether the value of the specified instance of
-                /// Object is equal to the value of the current instance of
-                /// %String.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String6EqualsERKNS0_6ObjectE")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool Equals0(global::System.IntPtr instance, global::System.IntPtr obj);
+                public static extern bool Equals0(System.IntPtr instance, System.IntPtr obj);
 
-                /// <summary>
-                /// Checks whether the value of the specified instance is
-                /// equal to the value of the current instance of %String. Case
-                /// sensitivity can be controlled.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String6EqualsERKS1_b")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool Equals1(global::System.IntPtr instance, global::System.IntPtr str, bool caseSensitive);
+                public static extern bool Equals1(System.IntPtr instance, System.IntPtr str, bool caseSensitive);
 
-                /// <summary>
-                /// Formats the inputs as per the specified format and sets
-                /// the value of the calling instance to the resultant string.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6FormatEiPKwz")]
-                public static extern uint Format0(global::System.IntPtr instance, int length, global::System.IntPtr pFormat);
+                public static extern uint Format0(System.IntPtr instance, int length, System.IntPtr pFormat);
 
-                /// <summary>
-                /// Gets the hash value of the current instance.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String11GetHashCodeEv")]
-                public static extern int GetHashCode0(global::System.IntPtr instance);
+                public static extern int GetHashCode0(System.IntPtr instance);
 
-                /// <summary>
-                /// Gets the character at the specified position.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String9GetCharAtEiRw")]
-                public static extern uint GetCharAt0(global::System.IntPtr instance, int indexAt, global::System.IntPtr ch);
+                public static extern uint GetCharAt0(System.IntPtr instance, int indexAt, System.IntPtr ch);
 
-                /// <summary>
-                /// Searches for a character in the calling instance. Gets
-                /// the index of the first character that matches to the
-                /// specified character in this instance.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String7IndexOfEwiRi")]
-                public static extern uint IndexOf0(global::System.IntPtr instance, char ch, int startIndex, global::System.IntPtr indexOf);
+                public static extern uint IndexOf0(System.IntPtr instance, char ch, int startIndex, System.IntPtr indexOf);
 
-                /// <summary>
-                /// Searches for a specified substring in the calling
-                /// instance. Gets the starting index of the first occurrence
-                /// of the specified substring.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String7IndexOfERKS1_iRi")]
-                public static extern uint IndexOf1(global::System.IntPtr instance, global::System.IntPtr str, int startIndex, global::System.IntPtr indexOf);
+                public static extern uint IndexOf1(System.IntPtr instance, System.IntPtr str, int startIndex, System.IntPtr indexOf);
 
-                /// <summary>
-                /// Inserts the string representing the specified Unicode
-                /// character at the specified position in the calling
-                /// instance.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertEwi")]
-                public static extern uint Insert0(global::System.IntPtr instance, char ch, int indexAt);
+                public static extern uint Insert0(System.IntPtr instance, char ch, int indexAt);
 
-                /// <summary>
-                /// Inserts the string representing the specified char
-                /// value at the specified position in the calling instance.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertEci")]
-                public static extern uint Insert1(global::System.IntPtr instance, sbyte ch, int indexAt);
+                public static extern uint Insert1(System.IntPtr instance, sbyte ch, int indexAt);
 
-                /// <summary>
-                /// Inserts the string representing the specified 16-bit
-                /// integer at the specified position in the calling instance.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertEsi")]
-                public static extern uint Insert2(global::System.IntPtr instance, short s, int indexAt);
+                public static extern uint Insert2(System.IntPtr instance, short s, int indexAt);
 
-                /// <summary>
-                /// Inserts the string representing the specified 32-bit
-                /// integer at the specified position in the calling instance.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertEii")]
-                public static extern uint Insert00(global::System.IntPtr instance, int i, int indexAt);
+                public static extern uint Insert00(System.IntPtr instance, int i, int indexAt);
 
-                /// <summary>
-                /// Inserts the string representing the specified long
-                /// value at the specified position in the calling instance.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertEli")]
-                public static extern uint Insert3(global::System.IntPtr instance, int l, int indexAt);
+                public static extern uint Insert3(System.IntPtr instance, int l, int indexAt);
 
-                /// <summary>
-                /// Inserts the string representing the specified long long
-                /// value at the specified position in the calling instance.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertExi")]
-                public static extern uint Insert4(global::System.IntPtr instance, long ll, int indexAt);
+                public static extern uint Insert4(System.IntPtr instance, long ll, int indexAt);
 
-                /// <summary>
-                /// Inserts the string representing the specified float
-                /// value at the specified position in the calling instance.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertEfi")]
-                public static extern uint Insert5(global::System.IntPtr instance, float f, int indexAt);
+                public static extern uint Insert5(System.IntPtr instance, float f, int indexAt);
 
-                /// <summary>
-                /// Inserts the string representing the specified double
-                /// value at the specified position in the calling instance.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertEdi")]
-                public static extern uint Insert6(global::System.IntPtr instance, double d, int indexAt);
+                public static extern uint Insert6(System.IntPtr instance, double d, int indexAt);
 
-                /// <summary>
-                /// Inserts the string representing the specified
-                /// null-terminated string at the specified position in the
-                /// calling instance.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertEPKwi")]
-                public static extern uint Insert7(global::System.IntPtr instance, global::System.IntPtr p, int indexAt);
+                public static extern uint Insert7(System.IntPtr instance, System.IntPtr p, int indexAt);
 
-                /// <summary>
-                /// Inserts the string representing the specified instance
-                /// of %String at the specified position in the calling
-                /// instance.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6InsertERKS1_i")]
-                public static extern uint Insert8(global::System.IntPtr instance, global::System.IntPtr str, int indexAt);
+                public static extern uint Insert8(System.IntPtr instance, System.IntPtr str, int indexAt);
 
-                /// <summary>
-                /// Searches the calling instance for the last occurrence
-                /// of the specified character and returns its index. The
-                /// search begins at the startIndex position and proceeds
-                /// backward towards the beginning.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String11LastIndexOfEwiRi")]
-                public static extern uint LastIndexOf0(global::System.IntPtr instance, char ch, int startIndex, global::System.IntPtr indexOf);
+                public static extern uint LastIndexOf0(System.IntPtr instance, char ch, int startIndex, System.IntPtr indexOf);
 
-                /// <summary>
-                /// Searches the calling instance for the last occurrence
-                /// of the specified substring and returns its index. The
-                /// search begins at the startIndex position and proceeds
-                /// backward towards the beginning.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String11LastIndexOfERKS1_iRi")]
-                public static extern uint LastIndexOf1(global::System.IntPtr instance, global::System.IntPtr str, int startIndex, global::System.IntPtr indexOf);
+                public static extern uint LastIndexOf1(System.IntPtr instance, System.IntPtr str, int startIndex, System.IntPtr indexOf);
 
-                /// <summary>
-                /// Removes the characters within the specified range.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String6RemoveEii")]
-                public static extern uint Remove0(global::System.IntPtr instance, int startIndex, int length);
+                public static extern uint Remove0(System.IntPtr instance, int startIndex, int length);
 
-                /// <summary>
-                /// Replaces all occurrences of the specified characters.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String7ReplaceEww")]
-                public static extern void Replace0(global::System.IntPtr instance, char original, char replace);
+                public static extern void Replace0(System.IntPtr instance, char original, char replace);
 
-                /// <summary>
-                /// Replaces all occurrences of the specified string.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String7ReplaceERKS1_S3_")]
-                public static extern uint Replace1(global::System.IntPtr instance, global::System.IntPtr original, global::System.IntPtr replace);
+                public static extern uint Replace1(System.IntPtr instance, System.IntPtr original, System.IntPtr replace);
 
-                /// <summary>
-                /// Replaces all occurrences of the specified string within
-                /// the substring of this instance of %String.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String7ReplaceERKS1_S3_i")]
-                public static extern uint Replace2(global::System.IntPtr instance, global::System.IntPtr original, global::System.IntPtr replace, int startIndex);
+                public static extern uint Replace2(System.IntPtr instance, System.IntPtr original, System.IntPtr replace, int startIndex);
 
-                /// <summary>
-                /// Reverses the sequence of characters in the calling
-                /// instance.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String7ReverseEv")]
-                public static extern void Reverse0(global::System.IntPtr instance);
+                public static extern void Reverse0(System.IntPtr instance);
 
-                /// <summary>
-                /// Sets the capacity of this instance of %String.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String11SetCapacityEi")]
-                public static extern uint SetCapacity0(global::System.IntPtr instance, int newCapacity);
+                public static extern uint SetCapacity0(System.IntPtr instance, int newCapacity);
 
-                /// <summary>
-                /// Sets the character at the specified index with the
-                /// given character.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String9SetCharAtEwi")]
-                public static extern uint SetCharAt0(global::System.IntPtr instance, char ch, int indexAt);
+                public static extern uint SetCharAt0(System.IntPtr instance, char ch, int indexAt);
 
-                /// <summary>
-                /// Sets the length of this instance of %String.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String9SetLengthEi")]
-                public static extern uint SetLength0(global::System.IntPtr instance, int newLength);
+                public static extern uint SetLength0(System.IntPtr instance, int newLength);
 
-                /// <summary>
-                /// Gets a substring starting from the given index.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String9SubStringEiRS1_")]
-                public static extern uint SubString0(global::System.IntPtr instance, int startIndex, global::System.IntPtr @out);
+                public static extern uint SubString0(System.IntPtr instance, int startIndex, System.IntPtr @out);
 
-                /// <summary>
-                /// Gets a substring of the given length starting from the
-                /// specified index.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String9SubStringEiiRS1_")]
-                public static extern uint SubString1(global::System.IntPtr instance, int startIndex, int length, global::System.IntPtr @out);
+                public static extern uint SubString1(System.IntPtr instance, int startIndex, int length, System.IntPtr @out);
 
-                /// <summary>
-                /// Checks whether this instance contains the specified
-                /// text from the given index.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String10StartsWithERKS1_i")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool StartsWith0(global::System.IntPtr instance, global::System.IntPtr str, int startIndex);
+                public static extern bool StartsWith0(System.IntPtr instance, System.IntPtr str, int startIndex);
 
-                /// <summary>
-                /// Checks whether the given string is present at the end
-                /// of the calling instance.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String8EndsWithERKS1_")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool EndsWith0(global::System.IntPtr instance, global::System.IntPtr str);
+                public static extern bool EndsWith0(System.IntPtr instance, System.IntPtr str);
 
-                /// <summary>
-                /// [Deprecated]
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String7ToLowerERS1_")]
-                public static extern uint ToLower0(global::System.IntPtr instance, global::System.IntPtr @out);
+                public static extern uint ToLower0(System.IntPtr instance, System.IntPtr @out);
 
-                /// <summary>
-                /// Gets the lowercase form of the string in the calling
-                /// instance. Unicode characters other than the English
-                /// alphabets are also supported.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String11ToLowerCaseERS1_")]
-                public static extern uint ToLowerCase0(global::System.IntPtr instance, global::System.IntPtr @out);
+                public static extern uint ToLowerCase0(System.IntPtr instance, System.IntPtr @out);
 
-                /// <summary>
-                /// [Deprecated]
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String7ToUpperERS1_")]
-                public static extern uint ToUpper0(global::System.IntPtr instance, global::System.IntPtr @out);
+                public static extern uint ToUpper0(System.IntPtr instance, System.IntPtr @out);
 
-                /// <summary>
-                /// Gets the uppercase form of the string in the calling
-                /// instance. Unicode characters other than the English
-                /// alphabets are also supported.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String11ToUpperCaseERS1_")]
-                public static extern uint ToUpperCase0(global::System.IntPtr instance, global::System.IntPtr @out);
+                public static extern uint ToUpperCase0(System.IntPtr instance, System.IntPtr @out);
 
-                /// <summary>
-                /// [Deprecated]
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String7ToLowerEv")]
-                public static extern void ToLower1(global::System.IntPtr instance);
+                public static extern void ToLower1(System.IntPtr instance);
 
-                /// <summary>
-                /// Converts all the letters in this instance to lowercase.
-                /// Unicode characters other than the English alphabets are
-                /// also supported.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String11ToLowerCaseEv")]
-                public static extern void ToLowerCase1(global::System.IntPtr instance);
+                public static extern void ToLowerCase1(System.IntPtr instance);
 
-                /// <summary>
-                /// [Deprecated]
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String7ToUpperEv")]
-                public static extern void ToUpper1(global::System.IntPtr instance);
+                public static extern void ToUpper1(System.IntPtr instance);
 
-                /// <summary>
-                /// Converts all the letters in this instance to uppercase.
-                /// Unicode characters other than the English alphabets are
-                /// also supported.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String11ToUpperCaseEv")]
-                public static extern void ToUpperCase1(global::System.IntPtr instance);
+                public static extern void ToUpperCase1(System.IntPtr instance);
 
-                /// <summary>
-                /// Trims the leading and trailing whitespace characters.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6String4TrimEv")]
-                public static extern void Trim0(global::System.IntPtr instance);
+                public static extern void Trim0(System.IntPtr instance);
 
-                /// <summary>
-                /// Gets the current capacity of this %String instance.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String11GetCapacityEv")]
-                public static extern int GetCapacity0(global::System.IntPtr instance);
+                public static extern int GetCapacity0(System.IntPtr instance);
 
-                /// <summary>
-                /// Gets the length of the text contained in this %String
-                /// instance.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String9GetLengthEv")]
-                public static extern int GetLength0(global::System.IntPtr instance);
+                public static extern int GetLength0(System.IntPtr instance);
 
-                /// <summary>
-                /// Gets a pointer to the instance's internal buffer.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String10GetPointerEv")]
-                public static extern global::System.IntPtr GetPointer0(global::System.IntPtr instance);
+                public static extern System.IntPtr GetPointer0(System.IntPtr instance);
 
-                /// <summary>
-                /// Checks whether this instance contains the specified
-                /// substring.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6String8ContainsERKS1_")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool Contains0(global::System.IntPtr instance, global::System.IntPtr str);
+                public static extern bool Contains0(System.IntPtr instance, System.IntPtr str);
             }
 
             internal String(String.Internal* native)
-                : this(new global::System.IntPtr(native))
+                : this(new System.IntPtr(native))
             {
             }
 
@@ -632,16 +364,11 @@ namespace Tizen
             {
             }
 
-            internal String(global::System.IntPtr native)
+            internal String(System.IntPtr native)
                 : base(native)
             {
             }
 
-            /// <summary>
-            /// This is the default constructor for this class. It creates
-            /// an empty %String instance with the default capacity of 16
-            /// bytes.
-            /// </summary>
             public String()
                 : this(IntPtr.Zero)
             {
@@ -649,10 +376,6 @@ namespace Tizen
                 Internal.String0(_Instance);
             }
 
-            /// <summary>
-            /// Initializes this instance of %String with the specified
-            /// capacity.
-            /// </summary>
             public String(int capacity)
                 : this(IntPtr.Zero)
             {
@@ -660,10 +383,6 @@ namespace Tizen
                 Internal.String1(_Instance, capacity);
             }
 
-            /// <summary>
-            /// Initializes this instance of %String with the specified
-            /// Unicode character.
-            /// </summary>
             public String(char ch)
                 : this(IntPtr.Zero)
             {
@@ -671,11 +390,7 @@ namespace Tizen
                 Internal.String2(_Instance, ch);
             }
 
-            /// <summary>
-            /// Initializes this instance of %String with the specified
-            /// Unicode string.
-            /// </summary>
-            public String(global::System.IntPtr pValue)
+            public String(System.IntPtr pValue)
                 : this(IntPtr.Zero)
             {
                 var arg0 = Marshal.StringToHGlobalAnsi(pValue);
@@ -683,10 +398,6 @@ namespace Tizen
                 Internal.String3(_Instance, arg0);
             }
 
-            /// <summary>
-            /// Initializes this instance of %String with the specified
-            /// character string.
-            /// </summary>
             public String(string pValue)
                 : this(IntPtr.Zero)
             {
@@ -700,10 +411,7 @@ namespace Tizen
                 base.Dispose(disposing);
             }
 
-            /// <summary>
-            /// Checks the two strings for equality.
-            /// </summary>
-            public static bool operator ==(String _op, String rhs)
+            public static bool operator ==(Tizen.Base.String _op, Tizen.Base.String rhs)
             {
                 var arg0 = _op._Instance;
                 var arg1 = rhs._Instance;
@@ -711,10 +419,7 @@ namespace Tizen
                 return ret;
             }
 
-            /// <summary>
-            /// Checks the two strings for inequality.
-            /// </summary>
-            public static bool operator !=(String _op, String rhs)
+            public static bool operator !=(Tizen.Base.String _op, Tizen.Base.String rhs)
             {
                 var arg0 = _op._Instance;
                 var arg1 = rhs._Instance;
@@ -722,100 +427,61 @@ namespace Tizen
                 return ret;
             }
 
-            /// <summary>
-            /// Checks whether the string is empty.
-            /// </summary>
             public bool IsEmpty()
             {
                 var ret = Internal.IsEmpty0(_Instance);
                 return ret;
             }
 
-            /// <summary>
-            /// Appends the specified wchar_t value to this %String
-            /// instance after converting it.
-            /// </summary>
             public uint Append(char ch)
             {
                 var ret = Internal.Append0(_Instance, ch);
                 return ret;
             }
 
-            /// <summary>
-            /// Appends the specified char value to this %String instance
-            /// after converting it.
-            /// </summary>
             public uint Append(sbyte ch)
             {
                 var ret = Internal.Append1(_Instance, ch);
                 return ret;
             }
 
-            /// <summary>
-            /// Appends the string representing the specified 32-bit int
-            /// value to this instance of %String.
-            /// </summary>
             public uint Append0(int i)
             {
                 var ret = Internal.Append00(_Instance, i);
                 return ret;
             }
 
-            /// <summary>
-            /// Appends the string representing the specified short value
-            /// to this instance of %String.
-            /// </summary>
             public uint Append(short s)
             {
                 var ret = Internal.Append2(_Instance, s);
                 return ret;
             }
 
-            /// <summary>
-            /// Appends the string representing the specified long value to
-            /// this instance of %String.
-            /// </summary>
             public uint Append(int l)
             {
                 var ret = Internal.Append3(_Instance, l);
                 return ret;
             }
 
-            /// <summary>
-            /// Appends the string representing the specified long long
-            /// value to this instance of %String.
-            /// </summary>
             public uint Append(long ll)
             {
                 var ret = Internal.Append4(_Instance, ll);
                 return ret;
             }
 
-            /// <summary>
-            /// Appends the string representing the specified float value
-            /// to this instance of %String.
-            /// </summary>
             public uint Append(float f)
             {
                 var ret = Internal.Append5(_Instance, f);
                 return ret;
             }
 
-            /// <summary>
-            /// Appends the string representing the specified double value
-            /// to this instance of %String.
-            /// </summary>
             public uint Append(double d)
             {
                 var ret = Internal.Append6(_Instance, d);
                 return ret;
             }
 
-            /// <summary>
-            /// Appends the specified null-terminated Unicode text to this
-            /// instance of %String.
-            /// </summary>
-            public uint Append(global::System.IntPtr p)
+            public uint Append(System.IntPtr p)
             {
                 var arg0 = Marshal.StringToHGlobalAnsi(p);
                 var ret = Internal.Append7(_Instance, arg0);
@@ -823,79 +489,46 @@ namespace Tizen
                 return ret;
             }
 
-            /// <summary>
-            /// Appends the specified instance of %String to this instance
-            /// of %String.
-            /// </summary>
-            public uint Append(String str)
+            public uint Append(Tizen.Base.String str)
             {
                 var arg0 = str._Instance;
                 var ret = Internal.Append8(_Instance, arg0);
                 return ret;
             }
 
-            /// <summary>
-            /// Clears the current instance and sets it to an empty %String
-            /// instance. The capacity is set to 16 bytes, which is the default
-            /// capacity.
-            /// </summary>
             public void Clear()
             {
                 Internal.Clear0(_Instance);
             }
 
-            /// <summary>
-            /// Compares the value of the current instance to the value of
-            /// the specified instance of %String.
-            /// </summary>
-            public int CompareTo(String str)
+            public int CompareTo(Tizen.Base.String str)
             {
                 var arg0 = str._Instance;
                 var ret = Internal.CompareTo0(_Instance, arg0);
                 return ret;
             }
 
-            /// <summary>
-            /// Ensures that the specified length is less than or equal to
-            /// the capacity of the current instance of %String. Otherwise, it
-            /// expands the capacity of the internal buffer to a value that is
-            /// greater than or equal to the specified length.
-            /// </summary>
             public uint EnsureCapacity(int minLength)
             {
                 var ret = Internal.EnsureCapacity0(_Instance, minLength);
                 return ret;
             }
 
-            /// <summary>
-            /// Checks whether the value of the specified instance of
-            /// Object is equal to the value of the current instance of
-            /// %String.
-            /// </summary>
-            public bool Equals(Object obj)
+            public bool Equals(Tizen.Base.Object obj)
             {
                 var arg0 = obj._Instance;
                 var ret = Internal.Equals0(_Instance, arg0);
                 return ret;
             }
 
-            /// <summary>
-            /// Checks whether the value of the specified instance is equal
-            /// to the value of the current instance of %String. Case
-            /// sensitivity can be controlled.
-            /// </summary>
-            public bool Equals(String str, bool caseSensitive)
+            public bool Equals(Tizen.Base.String str, bool caseSensitive)
             {
                 var arg0 = str._Instance;
                 var ret = Internal.Equals1(_Instance, arg0, caseSensitive);
                 return ret;
             }
 
-            /// <summary>
-            /// Formats the inputs as per the specified format and sets the
-            /// value of the calling instance to the resultant string.
-            /// </summary>
-            public uint Format(int length, global::System.IntPtr pFormat)
+            public uint Format(int length, System.IntPtr pFormat)
             {
                 var arg1 = Marshal.StringToHGlobalAnsi(pFormat);
                 var ret = Internal.Format0(_Instance, length, arg1);
@@ -903,19 +536,13 @@ namespace Tizen
                 return ret;
             }
 
-            /// <summary>
-            /// Gets the hash value of the current instance.
-            /// </summary>
             public int GetHashCode()
             {
                 var ret = Internal.GetHashCode0(_Instance);
                 return ret;
             }
 
-            /// <summary>
-            /// Gets the character at the specified position.
-            /// </summary>
-            public uint GetCharAt(int indexAt, global::System.IntPtr ch)
+            public uint GetCharAt(int indexAt, System.IntPtr ch)
             {
                 var arg1 = Marshal.StringToHGlobalAnsi(ch);
                 var ret = Internal.GetCharAt0(_Instance, indexAt, arg1);
@@ -923,24 +550,14 @@ namespace Tizen
                 return ret;
             }
 
-            /// <summary>
-            /// Searches for a character in the calling instance. Gets the
-            /// index of the first character that matches to the specified
-            /// character in this instance.
-            /// </summary>
-            public uint IndexOf(char ch, int startIndex, global::System.IntPtr indexOf)
+            public uint IndexOf(char ch, int startIndex, System.IntPtr indexOf)
             {
                 var arg2 = indexOf;
                 var ret = Internal.IndexOf0(_Instance, ch, startIndex, arg2);
                 return ret;
             }
 
-            /// <summary>
-            /// Searches for a specified substring in the calling instance.
-            /// Gets the starting index of the first occurrence of the
-            /// specified substring.
-            /// </summary>
-            public uint IndexOf(String str, int startIndex, global::System.IntPtr indexOf)
+            public uint IndexOf(Tizen.Base.String str, int startIndex, System.IntPtr indexOf)
             {
                 var arg0 = str._Instance;
                 var arg2 = indexOf;
@@ -948,92 +565,55 @@ namespace Tizen
                 return ret;
             }
 
-            /// <summary>
-            /// Inserts the string representing the specified Unicode
-            /// character at the specified position in the calling instance.
-            /// </summary>
             public uint Insert(char ch, int indexAt)
             {
                 var ret = Internal.Insert0(_Instance, ch, indexAt);
                 return ret;
             }
 
-            /// <summary>
-            /// Inserts the string representing the specified char value at
-            /// the specified position in the calling instance.
-            /// </summary>
             public uint Insert(sbyte ch, int indexAt)
             {
                 var ret = Internal.Insert1(_Instance, ch, indexAt);
                 return ret;
             }
 
-            /// <summary>
-            /// Inserts the string representing the specified 16-bit
-            /// integer at the specified position in the calling instance.
-            /// </summary>
             public uint Insert(short s, int indexAt)
             {
                 var ret = Internal.Insert2(_Instance, s, indexAt);
                 return ret;
             }
 
-            /// <summary>
-            /// Inserts the string representing the specified 32-bit
-            /// integer at the specified position in the calling instance.
-            /// </summary>
             public uint Insert0(int i, int indexAt)
             {
                 var ret = Internal.Insert00(_Instance, i, indexAt);
                 return ret;
             }
 
-            /// <summary>
-            /// Inserts the string representing the specified long value at
-            /// the specified position in the calling instance.
-            /// </summary>
             public uint Insert(int l, int indexAt)
             {
                 var ret = Internal.Insert3(_Instance, l, indexAt);
                 return ret;
             }
 
-            /// <summary>
-            /// Inserts the string representing the specified long long
-            /// value at the specified position in the calling instance.
-            /// </summary>
             public uint Insert(long ll, int indexAt)
             {
                 var ret = Internal.Insert4(_Instance, ll, indexAt);
                 return ret;
             }
 
-            /// <summary>
-            /// Inserts the string representing the specified float value
-            /// at the specified position in the calling instance.
-            /// </summary>
             public uint Insert(float f, int indexAt)
             {
                 var ret = Internal.Insert5(_Instance, f, indexAt);
                 return ret;
             }
 
-            /// <summary>
-            /// Inserts the string representing the specified double value
-            /// at the specified position in the calling instance.
-            /// </summary>
             public uint Insert(double d, int indexAt)
             {
                 var ret = Internal.Insert6(_Instance, d, indexAt);
                 return ret;
             }
 
-            /// <summary>
-            /// Inserts the string representing the specified
-            /// null-terminated string at the specified position in the calling
-            /// instance.
-            /// </summary>
-            public uint Insert(global::System.IntPtr p, int indexAt)
+            public uint Insert(System.IntPtr p, int indexAt)
             {
                 var arg0 = Marshal.StringToHGlobalAnsi(p);
                 var ret = Internal.Insert7(_Instance, arg0, indexAt);
@@ -1041,37 +621,21 @@ namespace Tizen
                 return ret;
             }
 
-            /// <summary>
-            /// Inserts the string representing the specified instance of
-            /// %String at the specified position in the calling instance.
-            /// </summary>
-            public uint Insert(String str, int indexAt)
+            public uint Insert(Tizen.Base.String str, int indexAt)
             {
                 var arg0 = str._Instance;
                 var ret = Internal.Insert8(_Instance, arg0, indexAt);
                 return ret;
             }
 
-            /// <summary>
-            /// Searches the calling instance for the last occurrence of
-            /// the specified character and returns its index. The search
-            /// begins at the startIndex position and proceeds backward towards
-            /// the beginning.
-            /// </summary>
-            public uint LastIndexOf(char ch, int startIndex, global::System.IntPtr indexOf)
+            public uint LastIndexOf(char ch, int startIndex, System.IntPtr indexOf)
             {
                 var arg2 = indexOf;
                 var ret = Internal.LastIndexOf0(_Instance, ch, startIndex, arg2);
                 return ret;
             }
 
-            /// <summary>
-            /// Searches the calling instance for the last occurrence of
-            /// the specified substring and returns its index. The search
-            /// begins at the startIndex position and proceeds backward towards
-            /// the beginning.
-            /// </summary>
-            public uint LastIndexOf(String str, int startIndex, global::System.IntPtr indexOf)
+            public uint LastIndexOf(Tizen.Base.String str, int startIndex, System.IntPtr indexOf)
             {
                 var arg0 = str._Instance;
                 var arg2 = indexOf;
@@ -1079,27 +643,18 @@ namespace Tizen
                 return ret;
             }
 
-            /// <summary>
-            /// Removes the characters within the specified range.
-            /// </summary>
             public uint Remove(int startIndex, int length)
             {
                 var ret = Internal.Remove0(_Instance, startIndex, length);
                 return ret;
             }
 
-            /// <summary>
-            /// Replaces all occurrences of the specified characters.
-            /// </summary>
             public void Replace(char original, char replace)
             {
                 Internal.Replace0(_Instance, original, replace);
             }
 
-            /// <summary>
-            /// Replaces all occurrences of the specified string.
-            /// </summary>
-            public uint Replace(String original, String replace)
+            public uint Replace(Tizen.Base.String original, Tizen.Base.String replace)
             {
                 var arg0 = original._Instance;
                 var arg1 = replace._Instance;
@@ -1107,11 +662,7 @@ namespace Tizen
                 return ret;
             }
 
-            /// <summary>
-            /// Replaces all occurrences of the specified string within the
-            /// substring of this instance of %String.
-            /// </summary>
-            public uint Replace(String original, String replace, int startIndex)
+            public uint Replace(Tizen.Base.String original, Tizen.Base.String replace, int startIndex)
             {
                 var arg0 = original._Instance;
                 var arg1 = replace._Instance;
@@ -1119,217 +670,136 @@ namespace Tizen
                 return ret;
             }
 
-            /// <summary>
-            /// Reverses the sequence of characters in the calling
-            /// instance.
-            /// </summary>
             public void Reverse()
             {
                 Internal.Reverse0(_Instance);
             }
 
-            /// <summary>
-            /// Sets the capacity of this instance of %String.
-            /// </summary>
             public uint SetCapacity(int newCapacity)
             {
                 var ret = Internal.SetCapacity0(_Instance, newCapacity);
                 return ret;
             }
 
-            /// <summary>
-            /// Sets the character at the specified index with the given
-            /// character.
-            /// </summary>
             public uint SetCharAt(char ch, int indexAt)
             {
                 var ret = Internal.SetCharAt0(_Instance, ch, indexAt);
                 return ret;
             }
 
-            /// <summary>
-            /// Sets the length of this instance of %String.
-            /// </summary>
             public uint SetLength(int newLength)
             {
                 var ret = Internal.SetLength0(_Instance, newLength);
                 return ret;
             }
 
-            /// <summary>
-            /// Gets a substring starting from the given index.
-            /// </summary>
-            public uint SubString(int startIndex, String @out)
+            public uint SubString(int startIndex, Tizen.Base.String @out)
             {
                 var arg1 = @out._Instance;
                 var ret = Internal.SubString0(_Instance, startIndex, arg1);
                 return ret;
             }
 
-            /// <summary>
-            /// Gets a substring of the given length starting from the
-            /// specified index.
-            /// </summary>
-            public uint SubString(int startIndex, int length, String @out)
+            public uint SubString(int startIndex, int length, Tizen.Base.String @out)
             {
                 var arg2 = @out._Instance;
                 var ret = Internal.SubString1(_Instance, startIndex, length, arg2);
                 return ret;
             }
 
-            /// <summary>
-            /// Checks whether this instance contains the specified text
-            /// from the given index.
-            /// </summary>
-            public bool StartsWith(String str, int startIndex)
+            public bool StartsWith(Tizen.Base.String str, int startIndex)
             {
                 var arg0 = str._Instance;
                 var ret = Internal.StartsWith0(_Instance, arg0, startIndex);
                 return ret;
             }
 
-            /// <summary>
-            /// Checks whether the given string is present at the end of
-            /// the calling instance.
-            /// </summary>
-            public bool EndsWith(String str)
+            public bool EndsWith(Tizen.Base.String str)
             {
                 var arg0 = str._Instance;
                 var ret = Internal.EndsWith0(_Instance, arg0);
                 return ret;
             }
 
-            /// <summary>
-            /// [Deprecated]
-            /// </summary>
-            public uint ToLower(String @out)
+            public uint ToLower(Tizen.Base.String @out)
             {
                 var arg0 = @out._Instance;
                 var ret = Internal.ToLower0(_Instance, arg0);
                 return ret;
             }
 
-            /// <summary>
-            /// Gets the lowercase form of the string in the calling
-            /// instance. Unicode characters other than the English alphabets
-            /// are also supported.
-            /// </summary>
-            public uint ToLowerCase(String @out)
+            public uint ToLowerCase(Tizen.Base.String @out)
             {
                 var arg0 = @out._Instance;
                 var ret = Internal.ToLowerCase0(_Instance, arg0);
                 return ret;
             }
 
-            /// <summary>
-            /// [Deprecated]
-            /// </summary>
-            public uint ToUpper(String @out)
+            public uint ToUpper(Tizen.Base.String @out)
             {
                 var arg0 = @out._Instance;
                 var ret = Internal.ToUpper0(_Instance, arg0);
                 return ret;
             }
 
-            /// <summary>
-            /// Gets the uppercase form of the string in the calling
-            /// instance. Unicode characters other than the English alphabets
-            /// are also supported.
-            /// </summary>
-            public uint ToUpperCase(String @out)
+            public uint ToUpperCase(Tizen.Base.String @out)
             {
                 var arg0 = @out._Instance;
                 var ret = Internal.ToUpperCase0(_Instance, arg0);
                 return ret;
             }
 
-            /// <summary>
-            /// [Deprecated]
-            /// </summary>
             public void ToLower()
             {
                 Internal.ToLower1(_Instance);
             }
 
-            /// <summary>
-            /// Converts all the letters in this instance to lowercase.
-            /// Unicode characters other than the English alphabets are also
-            /// supported.
-            /// </summary>
             public void ToLowerCase()
             {
                 Internal.ToLowerCase1(_Instance);
             }
 
-            /// <summary>
-            /// [Deprecated]
-            /// </summary>
             public void ToUpper()
             {
                 Internal.ToUpper1(_Instance);
             }
 
-            /// <summary>
-            /// Converts all the letters in this instance to uppercase.
-            /// Unicode characters other than the English alphabets are also
-            /// supported.
-            /// </summary>
             public void ToUpperCase()
             {
                 Internal.ToUpperCase1(_Instance);
             }
 
-            /// <summary>
-            /// Trims the leading and trailing whitespace characters.
-            /// </summary>
             public void Trim()
             {
                 Internal.Trim0(_Instance);
             }
 
-            /// <summary>
-            /// Gets the current capacity of this %String instance.
-            /// </summary>
             public int GetCapacity()
             {
                 var ret = Internal.GetCapacity0(_Instance);
                 return ret;
             }
 
-            /// <summary>
-            /// Gets the length of the text contained in this %String
-            /// instance.
-            /// </summary>
             public int GetLength()
             {
                 var ret = Internal.GetLength0(_Instance);
                 return ret;
             }
 
-            /// <summary>
-            /// Gets a pointer to the instance's internal buffer.
-            /// </summary>
-            public global::System.IntPtr GetPointer()
+            public System.IntPtr GetPointer()
             {
                 var ret = Internal.GetPointer0(_Instance);
                 return ret;
             }
 
-            /// <summary>
-            /// Checks whether this instance contains the specified
-            /// substring.
-            /// </summary>
-            public bool Contains(String str)
+            public bool Contains(Tizen.Base.String str)
             {
                 var arg0 = str._Instance;
                 var ret = Internal.Contains0(_Instance, arg0);
                 return ret;
             }
 
-            /// <summary>
-            /// Compares the values of the two strings.
-            /// </summary>
-            public static int Compare(String str0, String str1)
+            public static int Compare(Tizen.Base.String str0, Tizen.Base.String str1)
             {
                 var arg0 = str0._Instance;
                 var arg1 = str1._Instance;

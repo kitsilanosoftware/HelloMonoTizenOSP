@@ -6,16 +6,6 @@ using System;
 using System.Runtime.InteropServices;
 using System.Security;
 
-/// <summary>
-/// byte is an unsigned char datatype.
-/// </summary>
-/// <summary>
-/// result is an unsigned long type and indicates the result of the method
-/// execution.
-/// </summary>
-/// <summary>
-/// The invocation ID is returned when a request is sent.
-/// </summary>
 public unsafe partial class UUID_ : IDisposable
 {
     [StructLayout(LayoutKind.Explicit, Size = 16)]
@@ -36,13 +26,13 @@ public unsafe partial class UUID_ : IDisposable
         [SuppressUnmanagedCodeSecurity]
         [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
             EntryPoint="_ZN5UUID_C2Ev")]
-        public static extern global::System.IntPtr UUID_0(global::System.IntPtr instance);
+        public static extern System.IntPtr UUID_0(System.IntPtr instance);
     }
 
-    public global::System.IntPtr _Instance { get; protected set; }
+    public System.IntPtr _Instance { get; protected set; }
 
     internal UUID_(UUID_.Internal* native)
-        : this(new global::System.IntPtr(native))
+        : this(new System.IntPtr(native))
     {
     }
 
@@ -51,7 +41,7 @@ public unsafe partial class UUID_ : IDisposable
     {
     }
 
-    internal UUID_(global::System.IntPtr native)
+    internal UUID_(System.IntPtr native)
     {
         _Instance = native;
     }
@@ -133,6 +123,7 @@ public unsafe partial class UUID_ : IDisposable
         }
     }
 }
+
 namespace Tizen
 {
     namespace Base

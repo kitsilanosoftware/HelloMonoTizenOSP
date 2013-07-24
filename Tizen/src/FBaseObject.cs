@@ -10,45 +10,32 @@ namespace Tizen
 {
     namespace Base
     {
-        /// <summary>
-        /// This class is the root class of Tizen.
-        /// </summary>
         public unsafe partial class Object : IDisposable
         {
             [StructLayout(LayoutKind.Explicit, Size = 4)]
             public struct Internal
             {
-                /// <summary>
-                /// This is the default constructor for this class.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZN5Tizen4Base6ObjectC2Ev")]
-                public static extern global::System.IntPtr Object0(global::System.IntPtr instance);
+                public static extern System.IntPtr Object0(System.IntPtr instance);
 
-                /// <summary>
-                /// Checks whether the value of the specified instance is
-                /// equal to the value of the current instance of %Object.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6Object6EqualsERKS1_")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
-                public static extern bool Equals0(global::System.IntPtr instance, global::System.IntPtr obj);
+                public static extern bool Equals0(System.IntPtr instance, System.IntPtr obj);
 
-                /// <summary>
-                /// Gets the hash value of the current instance of %Object.
-                /// </summary>
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
                     EntryPoint="_ZNK5Tizen4Base6Object11GetHashCodeEv")]
-                public static extern int GetHashCode0(global::System.IntPtr instance);
+                public static extern int GetHashCode0(System.IntPtr instance);
             }
 
-            public global::System.IntPtr _Instance { get; protected set; }
+            public System.IntPtr _Instance { get; protected set; }
 
             internal Object(Object.Internal* native)
-                : this(new global::System.IntPtr(native))
+                : this(new System.IntPtr(native))
             {
             }
 
@@ -57,14 +44,11 @@ namespace Tizen
             {
             }
 
-            internal Object(global::System.IntPtr native)
+            internal Object(System.IntPtr native)
             {
                 _Instance = native;
             }
 
-            /// <summary>
-            /// This is the default constructor for this class.
-            /// </summary>
             public Object()
             {
                 _Instance = Marshal.AllocHGlobal(4);
@@ -82,20 +66,13 @@ namespace Tizen
                 Marshal.FreeHGlobal(_Instance);
             }
 
-            /// <summary>
-            /// Checks whether the value of the specified instance is equal
-            /// to the value of the current instance of %Object.
-            /// </summary>
-            public bool Equals(Object obj)
+            public bool Equals(Tizen.Base.Object obj)
             {
                 var arg0 = obj._Instance;
                 var ret = Internal.Equals0(_Instance, arg0);
                 return ret;
             }
 
-            /// <summary>
-            /// Gets the hash value of the current instance of %Object.
-            /// </summary>
             public int GetHashCode()
             {
                 var ret = Internal.GetHashCode0(_Instance);
