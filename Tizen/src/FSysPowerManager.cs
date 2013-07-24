@@ -11,9 +11,10 @@ namespace Tizen
     namespace System
     {
         /// <summary>
-        /// Defines the representation of the remaining charge in the battery.
+        /// Defines the representation of the remaining charge in the
+        /// battery.
         /// </summary>
-        public enum BatteryLevel
+        public enum BatteryLevel : uint
         {
             BATTERY_FULL = 0,
             BATTERY_HIGH = 1,
@@ -33,9 +34,10 @@ namespace Tizen
         }
 
         /// <summary>
-        /// Defines the representation of the charge remaining in the battery.
+        /// Defines the representation of the charge remaining in the
+        /// battery.
         /// </summary>
-        public enum PowerMode
+        public enum PowerMode : uint
         {
             POWER_STANDBY = 0,
             POWER_SLEEP = 1,
@@ -45,57 +47,59 @@ namespace Tizen
             POWER_MODE_SLEEP = 1
         }
 
-        public unsafe partial class PowerManager : IDisposable
+        public unsafe partial class PowerManager : Tizen.Base.Object, IDisposable
         {
             [StructLayout(LayoutKind.Explicit, Size = 8)]
-            public struct Internal
+            public new struct Internal
             {
                 /// <summary>
-                /// This is the default constructor for this class. This default constructor is intentionally declared as private so that only the platform can create an instance.
+                /// This is the default constructor for this class. This
+                /// default constructor is intentionally declared as private so
+                /// that only the platform can create an instance.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.ThisCall,
-                    EntryPoint="??0PowerManager@System@Tizen@@AAE@XZ")]
-                public static extern System.IntPtr PowerManager0(System.IntPtr instance);
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen6System12PowerManagerC2Ev")]
+                public static extern global::System.IntPtr PowerManager0(global::System.IntPtr instance);
 
                 /// <summary>
                 /// Changes the policy of the screen power management.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
-                    EntryPoint="?KeepScreenOnState@PowerManager@System@Tizen@@SAK_N0@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen6System12PowerManager17KeepScreenOnStateEbb")]
                 public static extern uint KeepScreenOnState0(bool keepOn, bool dimming);
 
                 /// <summary>
                 /// Restores the screen brightness control.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
-                    EntryPoint="?RestoreScreenBrightness@PowerManager@System@Tizen@@SAKXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen6System12PowerManager23RestoreScreenBrightnessEv")]
                 public static extern uint RestoreScreenBrightness0();
 
                 /// <summary>
                 /// Sets the screen brightness level for an application.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
-                    EntryPoint="?SetScreenBrightness@PowerManager@System@Tizen@@SAKH@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen6System12PowerManager19SetScreenBrightnessEi")]
                 public static extern uint SetScreenBrightness0(int brightness);
 
                 /// <summary>
                 /// Gets the screen brightness level of an application.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
-                    EntryPoint="?GetScreenBrightness@PowerManager@System@Tizen@@SAHXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen6System12PowerManager19GetScreenBrightnessEv")]
                 public static extern int GetScreenBrightness0();
 
                 /// <summary>
                 /// Checks whether the screen is on.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
-                    EntryPoint="?IsScreenOn@PowerManager@System@Tizen@@SA_NXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen6System12PowerManager10IsScreenOnEv")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
                 public static extern bool IsScreenOn0();
 
@@ -103,56 +107,56 @@ namespace Tizen
                 /// Turns on the screen.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
-                    EntryPoint="?TurnScreenOn@PowerManager@System@Tizen@@SAKXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen6System12PowerManager12TurnScreenOnEv")]
                 public static extern uint TurnScreenOn0();
 
                 /// <summary>
                 /// Turns off the screen.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
-                    EntryPoint="?TurnScreenOff@PowerManager@System@Tizen@@SAKXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen6System12PowerManager13TurnScreenOffEv")]
                 public static extern uint TurnScreenOff0();
 
                 /// <summary>
-                /// Changes the policy of the CPU (Central Processing Unit) power management.
+                /// Changes the policy of the CPU (Central Processing Unit)
+                /// power management.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
-                    EntryPoint="?KeepCpuAwake@PowerManager@System@Tizen@@SAK_N@Z")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen6System12PowerManager12KeepCpuAwakeEb")]
                 public static extern uint KeepCpuAwake0(bool enable);
 
                 /// <summary>
-                /// Gets the current charge remaining in the battery as a percentage.
+                /// Gets the current charge remaining in the battery as a
+                /// percentage.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
-                    EntryPoint="?GetCurrentBatteryLevelInPercentage@PowerManager@System@Tizen@@SAHXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen6System12PowerManager34GetCurrentBatteryLevelInPercentageEv")]
                 public static extern int GetCurrentBatteryLevelInPercentage0();
 
                 /// <summary>
                 /// Gets the current charging level of the battery.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
-                    EntryPoint="?GetCurrentBatteryLevel@PowerManager@System@Tizen@@SA?AW4BatteryLevel@23@XZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen6System12PowerManager22GetCurrentBatteryLevelEv")]
                 public static extern BatteryLevel GetCurrentBatteryLevel0();
 
                 /// <summary>
                 /// Checks whether the battery is currently charging.
                 /// </summary>
                 [SuppressUnmanagedCodeSecurity]
-                [DllImport("SymbolNotFound", CallingConvention = CallingConvention.Cdecl,
-                    EntryPoint="?IsCharging@PowerManager@System@Tizen@@SA_NXZ")]
+                [DllImport("libosp-appfw.so.1.2.1", CallingConvention = CallingConvention.Cdecl,
+                    EntryPoint="_ZN5Tizen6System12PowerManager10IsChargingEv")]
                 [return: MarshalAsAttribute(UnmanagedType.I1)]
                 public static extern bool IsCharging0();
             }
 
-            public System.IntPtr _Instance { get; protected set; }
-
             internal PowerManager(PowerManager.Internal* native)
-                : this(new System.IntPtr(native))
+                : this(new global::System.IntPtr(native))
             {
             }
 
@@ -161,20 +165,14 @@ namespace Tizen
             {
             }
 
-            internal PowerManager(System.IntPtr native)
+            internal PowerManager(global::System.IntPtr native)
+                : base(native)
             {
-                _Instance = native;
             }
 
-            public void Dispose()
+            protected override void Dispose(bool disposing)
             {
-                Dispose(disposing: true);
-                GC.SuppressFinalize(this);
-            }
-
-            protected virtual void Dispose(bool disposing)
-            {
-                Marshal.FreeHGlobal(_Instance);
+                base.Dispose(disposing);
             }
 
             /// <summary>
@@ -241,7 +239,8 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Changes the policy of the CPU (Central Processing Unit) power management.
+            /// Changes the policy of the CPU (Central Processing Unit)
+            /// power management.
             /// </summary>
             public static uint KeepCpuAwake(bool enable)
             {
@@ -250,7 +249,8 @@ namespace Tizen
             }
 
             /// <summary>
-            /// Gets the current charge remaining in the battery as a percentage.
+            /// Gets the current charge remaining in the battery as a
+            /// percentage.
             /// </summary>
             public static int GetCurrentBatteryLevelInPercentage()
             {

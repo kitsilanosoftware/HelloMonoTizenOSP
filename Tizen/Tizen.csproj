@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -19,6 +19,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -29,38 +30,11 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="mscorlib" />
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tizen\Ui\Controls\Frame.cs" />
-    <Compile Include="Tizen\App\AppRegistry.cs" />
-    <Compile Include="Tizen\App\App.cs" />
-    <Compile Include="Tizen\App\UiApp.cs" />
-    <Compile Include="Tizen\System\IScreenEventListener.cs" />
-    <Compile Include="Tizen\System\BatteryLevel.cs" />
-    <Compile Include="Tizen\Ui\Window.cs" />
-    <Compile Include="Tizen\Ui\Container.cs" />
-    <Compile Include="Tizen\Ui\Control.cs" />
-    <Compile Include="Tizen\Constants.cs" />
-    <Compile Include="Tizen\Utilities.cs" />
-    <Compile Include="Tizen\Ui\Scenes\IPanelFactory.cs" />
-    <Compile Include="Tizen\Ui\Controls\Panel.cs" />
-    <Compile Include="Tizen\Base\String.cs" />
-    <Compile Include="Tizen\Ui\Scenes\SceneId.cs" />
-    <Compile Include="Tizen\Ui\Scenes\SceneManager.cs" />
-    <Compile Include="Tizen\Ui\Scenes\IFormFactory.cs" />
-    <Compile Include="Tizen\Ui\Controls\Form.cs" />
-    <Compile Include="Tizen\Ui\IActionEventListener.cs" />
-    <Compile Include="Tizen\Ui\Controls\IFormBackEventListener.cs" />
-    <Compile Include="Tizen\Ui\Scenes\ISceneEventListener.cs" />
-    <Compile Include="Tizen\Base\Collection\IList.cs" />
-    <Compile Include="Tizen\Ui\Controls\Button.cs" />
-    <Compile Include="Tizen\System\PowerManager.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tizen\Ui\Scenes\" />
-    <Folder Include="Tizen\Base\" />
-    <Folder Include="Tizen\Base\Collection\" />
+    <Compile Include="src\*.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

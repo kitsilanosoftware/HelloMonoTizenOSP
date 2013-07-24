@@ -1,5 +1,5 @@
 
-# File which we don't want Git to track
+# Generated files which should not be under version-control
 
 *.DS_Store
 *.suo
