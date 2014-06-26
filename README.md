@@ -1,23 +1,24 @@
 HelloTizen
 ==========
 
-The "Hello World" app from the Tizen SDK, converted from C++ to C#.
+The "Hello World" app from the Tizen SDK, converted from C++ to C#.   These instructions assume a PC host machine.
 
     /HelloTizen                   The HelloTizen sample application from the Tizen SDK, converted by hand to C#
     /Tizen                        Mocked up managed assembly for the Tizen SDK.   Just the subset needed for HelloTizen.
 
 Workspace setup
 
-    Create workspace directory (mine is C:\SourceTreeProjects)
-    Clone https://github.com/brighttwin/HelloTizen.git to C:\SourceTreeProjects\HelloTizen
-    Clone https://github.com/brighttwin/clang.git to C:\SourceTreeProjects\clang
-    Clone https://github.com/brighttwin/llvm.git to C:\SourceTreeProjects\llvm
-    Clone https://github.com/brighttwin/CppSharp.git to C:\SourceTreeProjects\CppSharp
-    Clone https://github.com/brighttwin/CppSharpTizen.git to C:\SourceTreeProjects\CppSharpTizen
+    Create workspace directory (mine is C:\SourceTreeProjects) and make it your current directory
+    
+    git clone https://github.com/kitsilanosoftware/HelloTizen.git
+    git clone https://github.com/kitsilanosoftware/clang.git
+    git clone https://github.com/kitsilanosoftware/llvm.git
+    git clone https://github.com/kitsilanosoftware/CppSharp.git
+    git clone https://github.com/kitsilanosoftware/CppSharpTizen.git
 
-    mklink /J C:\SourceTreeProjects\llvm\tools\clang C:\SourceTreeProjects\clang
-    mklink /J C:\SourceTreeProjects\CppSharp\deps\llvm C:\SourceTreeProjects\llvm
-    mklink /J C:\SourceTreeProjects\CppSharp\examples\Tizen C:\SourceTreeProjects\CppSharpTizen
+    mklink /J llvm\tools\clang clang
+    mklink /J CppSharp\deps\llvm llvm
+    mklink /J CppSharp\examples\Tizen CppSharpTizen
 
 How to build
 
@@ -29,7 +30,7 @@ How to build
     We only need to build Clang, not the whole LLVM toolset.
     It has to be on Windows for the time being, because CppSharp requires a C++/CLI compiler.
 
-    cd C:\SourceTreeProjects\llvm
+    cd llvm
     md build
     cd build
     cmake -G "Visual Studio 11" ..                       (this is slow, like maybe 10 mins)
@@ -37,10 +38,12 @@ How to build
     build the clang project, in RelWithDebInfo config    (this is incredibly slow, maybe 2 hours)
 
     Only at that stage can this junction be set up (which should maybe be replaced by a build step?)
-    mklink /J C:\SourceTreeProjects\CppSharp\build\vs2012\lib\lib C:\SourceTreeProjects\CppSharp\deps\llvm\build\bin\lib
+    cd ..
+    mklink /J CppSharp\build\vs2012\lib\lib CppSharp\deps\llvm\build\bin\lib
 
-    Switch to C:\SourceTreeProjects\CppSharp\build
-    run GenerateProjects.bat
+    cd CppSharp
+    cd build
+    call GenerateProjects.bat
     choose [2] for VS2012 generation
     cd vs2012
     open CppSharp.sln
