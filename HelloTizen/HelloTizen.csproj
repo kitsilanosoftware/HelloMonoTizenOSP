@@ -5,6 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">Tizen</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{3FD4C4E6-4E66-4B72-9776-A9D37F06ACE0};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{A42FA1F1-D00A-45D4-A7D6-B063F4ACF861}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>HelloTizen</RootNamespace>
