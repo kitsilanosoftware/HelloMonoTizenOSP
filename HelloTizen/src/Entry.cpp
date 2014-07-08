@@ -23,6 +23,24 @@ extern "C"
 #define STRINGIFY(x) #x
 #define TOSTRING(x) STRINGIFY(x)
 
+int
+MonoTizenExecuteApp(int argc, char* pArgv[])
+{
+	AppLog("Application started.");
+	ArrayList args(SingleObjectDeleter);
+	args.Construct();
+	for (int i = 0; i < argc; i++)
+	{
+		args.Add(new (std::nothrow) String(pArgv[i]));
+	}
+
+	result r = Tizen::App::UiApp::Execute(HelloTizenApp::CreateInstance, &args);
+	TryLog(r == E_SUCCESS, "[%s] Application execution failed.", GetErrorMessage(r));
+	AppLog("Application finished.");
+
+	return static_cast< int >(r);
+}
+
 static void
 mono_tizen_jit_exec_main (MonoDomain *domain, const char *file, int argc, char** argv)
 {
@@ -87,19 +105,7 @@ mono_tizen_main(int argc, char* argv[]) {
 _EXPORT_ int
 OspMain(int argc, char* pArgv[])
 {
-	AppLog("Application started.");
-	ArrayList args(SingleObjectDeleter);
-	args.Construct();
-	for (int i = 0; i < argc; i++)
-	{
-		args.Add(new (std::nothrow) String(pArgv[i]));
-	}
-
-	result r = Tizen::App::UiApp::Execute(HelloTizenApp::CreateInstance, &args);
-	TryLog(r == E_SUCCESS, "[%s] Application execution failed.", GetErrorMessage(r));
-	AppLog("Application finished.");
-
-	return static_cast< int >(r);
+	return mono_tizen_main(argc, pArgv);
 }
 #ifdef __cplusplus
 }

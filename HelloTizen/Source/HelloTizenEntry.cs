@@ -7,20 +7,26 @@
 // The entry function of Tizen application called by the operating system.
 //
 
-using Tizen;
+using System.Runtime.InteropServices;
 
+using Tizen;
 
 public class EntryPoint
 {
+	[DllImport ("__Internal", EntryPoint="MonoTizenExecuteApp")]
+	static extern int MonoTizenExecuteApp (int argc, System.IntPtr argv);
+
 	static int Main(string[] args)
 	{
-		Utilities.AppLog("Application started.");
+		// TODO: Main loop from C#.
 
-		int r = Tizen.App.UiApp.Execute(HelloTizenApp.CreateInstance, args);
-		Utilities.TryLog(r == Tizen.Constants.E_SUCCESS, "[%s] Application execution failed", Utilities.GetErrorMessage(r));
+		// Utilities.AppLog("Application started.");
 
-		Utilities.AppLog("Application finished.");
+		// int r = Tizen.App.UiApp.Execute(HelloTizenApp.CreateInstance, args);
+		// Utilities.TryLog(r == Tizen.Constants.E_SUCCESS, "[%s] Application execution failed", Utilities.GetErrorMessage(r));
 
-		return r;
+		// Utilities.AppLog("Application finished.");
+
+		return MonoTizenExecuteApp (0, System.IntPtr.Zero);
 	}
 }
