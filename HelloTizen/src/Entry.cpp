@@ -4,6 +4,7 @@
 #include <FUi.h>
 
 #include <new>
+#include "HelloTizenApp.h"
 
 using namespace Tizen::Base;
 using namespace Tizen::Base::Collection;
@@ -87,13 +88,18 @@ _EXPORT_ int
 OspMain(int argc, char* pArgv[])
 {
 	AppLog("Application started.");
+	ArrayList args(SingleObjectDeleter);
+	args.Construct();
+	for (int i = 0; i < argc; i++)
+	{
+		args.Add(new (std::nothrow) String(pArgv[i]));
+	}
 
-        int r = mono_tizen_main(argc, pArgv);
-
-	TryLog(r != 0, "[%d] Application execution failed.", r);
+	result r = Tizen::App::UiApp::Execute(HelloTizenApp::CreateInstance, &args);
+	TryLog(r == E_SUCCESS, "[%s] Application execution failed.", GetErrorMessage(r));
 	AppLog("Application finished.");
 
-	return r;
+	return static_cast< int >(r);
 }
 #ifdef __cplusplus
 }

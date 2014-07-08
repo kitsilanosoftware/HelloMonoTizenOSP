@@ -3,8 +3,11 @@
 	<Id>PNNaLRUqDm</Id>
 	<Version>1.0.0</Version>
 	<Type>C++App</Type>
+	<Requirements>
+	<Feature Name="http://tizen.org/feature/platform.native.api.version">2.2</Feature>
+	</Requirements>
 	<Apps>
-		<ApiVersion>2.1</ApiVersion>
+		<ApiVersion>2.2</ApiVersion>
 		<Privileges></Privileges>
 		<UiApp Name="HelloTizen" Main="True" MenuIconVisible="True">
 			<UiScalability CoordinateSystem="Logical" BaseScreenSize="Normal" LogicalCoordinate="720"></UiScalability>
