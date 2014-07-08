@@ -14,6 +14,14 @@ public class HelloTizenApp : Tizen.App.UiApp, Tizen.System.IScreenEventListener
 		return new HelloTizenApp();
 	}
 
+	public static string GetHeaderTitleText()
+	{
+		var ht = "Hello, Tizen";
+		var fm = "From Mono!";
+
+		return ht + ", " + fm;
+	}
+
 	// Called when the UiApp is initializing.
 	public override bool OnAppInitializing(Tizen.App.AppRegistry appRegistry)
 	{

@@ -23,6 +23,14 @@ extern "C"
 #define STRINGIFY(x) #x
 #define TOSTRING(x) STRINGIFY(x)
 
+MonoAssembly *assembly;
+
+MonoAssembly *
+mono_tizen_get_main_assembly()
+{
+        return assembly;
+}
+
 int
 MonoTizenExecuteApp(int argc, char* pArgv[])
 {
@@ -44,8 +52,6 @@ MonoTizenExecuteApp(int argc, char* pArgv[])
 static void
 mono_tizen_jit_exec_main (MonoDomain *domain, const char *file, int argc, char** argv)
 {
-	MonoAssembly *assembly;
-
 	assembly = mono_domain_assembly_open (domain, file);
 	if (!assembly)
 		exit (2);
