@@ -1,7 +1,9 @@
-HelloTizen
-==========
+HelloMonoTizenOSP
+=================
 
-The "Hello World" application from the Tizen SDK, converted from C++ to C#.
+The "Hello World" UI application from the Tizen SDK, converted from C++ to C#.
+
+OSP is "Open Service Platform" and is the name of the Bada platform which was integrated into Tizen 2.0.   It is dual-licensed as Apache and Flora.
 
 This application can only be opened in MonoDevelop / Xamarin Studio.  We do not plan to build any IDE integration for Visual Studio at the time of writing.
 
