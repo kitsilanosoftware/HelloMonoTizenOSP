@@ -49,6 +49,12 @@ MonoTizenExecuteApp(int argc, char* pArgv[])
 	return static_cast< int >(r);
 }
 
+void
+MonoTizenAppLogInternal(const char *pFunction, int lineNumber, const char *pMessage)
+{
+	AppLogInternal(pFunction, lineNumber, "%s", pMessage);
+}
+
 static void
 mono_tizen_jit_exec_main (MonoDomain *domain, const char *file, int argc, char** argv)
 {
