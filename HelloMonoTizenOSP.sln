@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloTizen", "HelloTizen\HelloTizen.csproj", "{A42FA1F1-D00A-45D4-A7D6-B063F4ACF861}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloTizen", "HelloMonoTizenOSP\HelloMonoTizenOSP.csproj", "{A42FA1F1-D00A-45D4-A7D6-B063F4ACF861}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TizenSDK", "TizenSDK\TizenSDK.csproj", "{9EDF0E89-8D2A-4213-80A1-AD04E3285A42}"
 EndProject
@@ -34,6 +34,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = HelloTizen\HelloTizen.csproj
+		StartupItem = HelloMonoTizenOSP\HelloMonoTizenOSP.csproj
 	EndGlobalSection
 EndGlobal
