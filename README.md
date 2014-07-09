@@ -3,14 +3,14 @@ HelloTizen
 
 The "Hello World" app from the Tizen SDK, converted from C++ to C#.   These instructions assume a PC host machine.
 
-    /HelloTizen                   The HelloTizen sample application from the Tizen SDK, converted by hand to C#
-    /Tizen                        Mocked up managed assembly for the Tizen SDK.   Just the subset needed for HelloTizen.
+    /HelloMonoTizenOSP            The HelloTizen sample application from the Tizen SDK, converted by hand to C#
+    /TizenSDK                     Mocked up managed assembly for the Tizen SDK.   Just the subset needed for HelloTizen.
 
 Workspace setup
 
     Create workspace directory (mine is C:\SourceTreeProjects) and make it your current directory
     
-    git clone https://github.com/kitsilanosoftware/HelloTizen.git
+    git clone https://github.com/kitsilanosoftware/HelloMonoTizenOSP.git
     git clone https://github.com/kitsilanosoftware/clang.git
     git clone https://github.com/kitsilanosoftware/llvm.git
     git clone https://github.com/kitsilanosoftware/CppSharp.git
