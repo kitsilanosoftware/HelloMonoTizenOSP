@@ -7,6 +7,6 @@ This application can only be opened in MonoDevelop / Xamarin Studio.  We do not 
 
 The application runs successfully on a Samsung Z physical device and will be submitted to the Tizen Store imminently.
 
-- <li>Install <a href="http://monodevelop.com/Download">MonoDevelop</a> or <a href="http://xamarin.com/download">Xamarin Studio</a>.</li>
+- Install <a href="http://monodevelop.com/Download">MonoDevelop</a> or <a href="http://xamarin.com/download">Xamarin Studio</a>.
 - Install the <a href="http://kitsilanosoftware.github.io/MonoDevelop.Tizen/">MonoDevelop.Tizen add-in</a>.
 - Open HelloMonoTizenOSP.sln.
