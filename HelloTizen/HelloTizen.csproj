@@ -64,7 +64,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Tizen\Tizen.csproj">
+    <ProjectReference Include="..\TizenSDK\TizenSDK.csproj">
       <Project>{9EDF0E89-8D2A-4213-80A1-AD04E3285A42}</Project>
       <Name>Tizen</Name>
     </ProjectReference>
