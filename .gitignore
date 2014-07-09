@@ -7,3 +7,13 @@
 
 bin/
 obj/
+
+# Build dependencies and products
+
+/HelloTizen/inc/mono/
+/HelloTizen/lib/libmono*.so*
+/HelloTizen/lib/mono/
+/HelloTizen/CommandLineBuild/src/
+/HelloTizen/CommandLineBuild/.tpk/
+/HelloTizen/CommandLineBuild/*.tpk
+/HelloTizen/CommandLineBuild/*.exe
