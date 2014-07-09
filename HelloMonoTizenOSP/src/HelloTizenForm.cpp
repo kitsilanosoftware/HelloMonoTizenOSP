@@ -7,6 +7,7 @@ extern "C"
 #include <mono/metadata/environment.h>
 #include <mono/metadata/assembly.h>
 #include <mono/metadata/object.h>
+#include <mono/metadata/class.h>
 #include <mono/metadata/debug-helpers.h>
 
 MonoAssembly *mono_tizen_get_main_assembly();
@@ -19,16 +20,26 @@ using namespace Tizen::Ui::Controls;
 
 HelloTizenForm::HelloTizenForm(void)
 {
-	MonoDomain *domain = mono_domain_get ();
-	MonoAssembly *assembly = mono_tizen_get_main_assembly();
-	MonoImage *image = mono_assembly_get_image(assembly);
-	MonoClass *klass = mono_class_from_name (image, "", "HelloTizenMainForm");
+        MonoDomain *domain = mono_domain_get ();
+        MonoAssembly *assembly = mono_tizen_get_main_assembly();
+        MonoImage *image = mono_assembly_get_image(assembly);
+        MonoClass *klass = mono_class_from_name (image, "", "HelloTizenMainForm");
 
-	MonoObject *instance = mono_object_new(domain, klass);
-	/* execute the default argument-less constructor */
-	mono_runtime_object_init(instance);
+        MonoObject *obj = mono_object_new(domain, klass);
+        // execute the default argument-less constructor.
+        mono_runtime_object_init(obj);
 
-	handle_ = mono_gchandle_new(instance, false);
+        handle_ = mono_gchandle_new(obj, false);
+
+        // Register ourselves as native peer.
+        MonoMethodDesc *desc = mono_method_desc_new("Tizen.Ui.Controls.Form:SetNativeHandle", true);
+        MonoClass *form_klass = mono_class_get_parent(klass);
+        MonoMethod *method = mono_method_desc_search_in_class(desc, form_klass);
+
+        void *args[1];
+        void *this_ptr = this;
+        args[0] = &this_ptr;
+        mono_runtime_invoke(method, obj, args, NULL);
 }
 
 HelloTizenForm::~HelloTizenForm(void)
@@ -90,10 +101,8 @@ HelloTizenForm::OnActionPerformed(const Tizen::Ui::Control& source, int actionId
 	}
 
 	void *args[2];
-
 	args[0] = NULL;
 	args[1] = &actionId;
-
 	mono_runtime_invoke(method, obj, args, NULL);
 }
 
@@ -105,4 +114,22 @@ HelloTizenForm::OnFormBackRequested(Tizen::Ui::Controls::Form& source)
 	pApp->Terminate();
 }
 
+void
+HelloTizenForm::SetHeaderTitleText(const char *text)
+{
+	Header *header = GetHeader();
+	if (!header)
+		return;
 
+	header->SetTitleText(text);
+
+	Invalidate(true);
+}
+
+extern "C" {
+void
+HelloTizenFormSetHeaderTitleText(HelloTizenForm *form, const char *text)
+{
+	form->SetHeaderTitleText(text);
+}
+}

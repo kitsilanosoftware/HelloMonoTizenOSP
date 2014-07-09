@@ -18,6 +18,7 @@ public:
 	HelloTizenForm(void);
 	virtual ~HelloTizenForm(void);
 	bool Initialize(void);
+	void SetHeaderTitleText(const char *text);
 
 private:
 	virtual result OnInitializing(void);

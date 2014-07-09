@@ -1,6 +1,6 @@
-
 using Tizen;
 using System;
+using System.Text;
 
 public class HelloTizenMainForm : Tizen.Ui.Controls.Form,
                                   Tizen.Ui.IActionEventListener,
@@ -8,6 +8,8 @@ public class HelloTizenMainForm : Tizen.Ui.Controls.Form,
                                   Tizen.Ui.Scenes.ISceneEventListener
 {
 	public const int ID_BUTTON_OK = 101;
+
+	int clicks = 0;
 
 	public bool Initialize()
 	{
@@ -54,6 +56,14 @@ public class HelloTizenMainForm : Tizen.Ui.Controls.Form,
 		{
 		case ID_BUTTON_OK:
 			Utilities.AppLog("OK Button is clicked!");
+
+			clicks++;
+
+			var sb = new StringBuilder("Hello, Tizen");
+			for (var i = 0; i < clicks; i++)
+				sb.Append ("!");
+			SetHeaderTitleText(sb.ToString());
+
 			break;
 
 		default:
