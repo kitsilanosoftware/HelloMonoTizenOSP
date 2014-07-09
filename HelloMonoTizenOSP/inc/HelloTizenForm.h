@@ -27,6 +27,9 @@ private:
 
 protected:
 	static const int IDA_BUTTON_OK = 101;
+
+private:
+        uint32_t handle_;
 };
 
 #endif	//_HELLO_TIZEN_FORM_H_

@@ -1,6 +1,6 @@
 
 using Tizen;
-
+using System;
 
 public class HelloTizenMainForm : Tizen.Ui.Controls.Form,
                                   Tizen.Ui.IActionEventListener,
@@ -53,7 +53,8 @@ public class HelloTizenMainForm : Tizen.Ui.Controls.Form,
 		switch(actionId)
 		{
 		case ID_BUTTON_OK:
-			Utilities.AppLog("OK Button is clicked!");
+			Console.WriteLine("OK Button is clicked!");
+			// Utilities.AppLog("OK Button is clicked!");
 			break;
 
 		default:
